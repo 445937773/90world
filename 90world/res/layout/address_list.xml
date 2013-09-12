@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title_bar_address_list"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#666666" >
+		<RelativeLayout
+		    android:id="@+id/ly_back" 
+		    android:layout_width="wrap_content"
+        	android:layout_height="fill_parent"
+        	android:paddingRight="5dp"
+        	android:background="@drawable/btn_back">
+	        <ImageView
+			    android:id="@+id/iv_back"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerVertical="true"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:background="@drawable/back" />
+	        
+	        <TextView
+	            android:id="@+id/title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_toRightOf="@+id/iv_back"
+	            android:text="@string/address_setting"
+	            android:textColor="#ffffff"
+	            android:textSize="20sp"
+	            android:textStyle="bold" />
+		</RelativeLayout>
+    </RelativeLayout>
+
+	<TextView
+	    android:id="@+id/tv_default_address_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/layout_title_bar_address_list"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp"
+	    android:layout_marginTop="5dp"
+	    android:text="默认收货地址"
+	    android:textColor="#000000"
+	    android:textSize="18sp"
+	    android:paddingBottom="5dp"
+	    android:paddingLeft="3dp"
+	    android:background="#ffffff" />
+
+    <ListView
+        android:id="@+id/lv_addressList_adddress_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_add_address_address_list"
+        android:layout_below="@+id/layout_address_selected_address_list"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdgeLength="30dp"
+        android:scrollbarStyle="insideOverlay" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_add_address_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/btn_green"
+        android:text="新增收货地址"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_address_selected_address_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_add_address_address_list"
+        android:layout_below="@+id/tv_default_address_list"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/title_bar_green"
+        android:clickable="true"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_name_address_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ff4500"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_phone_number_address_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_detail_address_address_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name_address_list"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="2dp"
+            android:text="可在下面的地址列表进行设置"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        
+
+    </RelativeLayout>
+
+</RelativeLayout>

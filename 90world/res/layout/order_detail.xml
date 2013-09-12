@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title_bar_order_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#666666" >
+		<RelativeLayout
+		    android:id="@+id/ly_back" 
+		    android:layout_width="wrap_content"
+        	android:layout_height="fill_parent"
+        	android:paddingRight="5dp"
+        	android:background="@drawable/btn_back">
+        <ImageView
+		    android:id="@+id/iv_back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+		    android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_back"
+            android:text="@string/order_detail"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+		</RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/order_info_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_title_bar_order_detail"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/order_detail_status_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3.0dip"
+            android:layout_marginLeft="14.0dip"
+            android:layout_marginRight="14.0dip"
+            android:layout_marginTop="14.0dip" >
+
+            <RelativeLayout
+                android:id="@+id/layout_common_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/detail_order_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_status"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/detail_order_status_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/detail_order_status"
+                    android:layout_toRightOf="@+id/detail_order_status"
+                    android:textColor="#ffff0000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/detail_order_id_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_order_status"
+                    android:text="@string/order_bumber"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/detail_order_id_number_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_order_status"
+                    android:layout_toRightOf="@+id/detail_order_id_number"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip" 
+                    android:singleLine="true"
+                    android:layout_toLeftOf="@+id/btn_cancel_order_detail"/>
+
+                <TextView
+                    android:id="@+id/detail_order_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_order_id_number"
+                    android:text="@string/address_order"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/detail_order_address_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_order_id_number"
+                    android:layout_toRightOf="@+id/detail_order_address"
+                    android:textColor="#ff000000"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="12.0dip" />
+                <TextView
+                    android:id="@+id/tv_text_comment_order_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_order_address"
+                    android:text="@string/comment"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_comment_order_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_order_address"
+                    android:layout_toRightOf="@+id/tv_text_comment_order_detail"
+                    android:textColor="#ff000000"
+                    android:lines="3"
+                    android:ellipsize="end"
+                    android:textSize="12.0dip" />
+
+                <Button
+                    android:id="@+id/btn_cancel_order_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/btn_green"
+                    android:duplicateParentState="false"
+                    android:text="取消订单 "
+                    android:textColor="#ffffff"
+                    android:visibility="gone" 
+                    android:padding="10dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14.0dip"
+            android:layout_marginRight="14.0dip"
+            android:layout_marginTop="1.0dip"
+            android:background="@drawable/android_my_order_item_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="9.0dip" >
+
+                <RelativeLayout
+                    android:id="@+id/order_money_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#666666" >
+
+                    <TextView
+                        android:id="@+id/order_money_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:paddingBottom="1.0dip"
+                        android:paddingTop="1.0dip"
+                        android:text="@string/total_value"
+                        android:textColor="#ffffffff"
+                        android:textSize="14.0dip" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/product_all_money_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/order_money_layout"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="9.0dip"
+                    android:lineSpacingMultiplier="1.1"
+                    android:text="@string/content_product_all_money"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/product_all_money_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/product_all_money_id"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="9.0dip"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textColor="#ffff0000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/cheap_money_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_all_money_id"
+                    android:layout_marginLeft="10.0dip"
+                    android:lineSpacingMultiplier="1.1"
+                    android:text="@string/content_cheap_money"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/cheap_money_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/cheap_money_id"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10.0dip"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textColor="#ffff0000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/should_pay_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cheap_money_id"
+                    android:layout_marginLeft="10.0dip"
+                    android:lineSpacingMultiplier="1.1"
+                    android:text="@string/content_should_pay_money"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/should_pay_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/should_pay_id"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10.0dip"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textColor="#ffff0000"
+                    android:textSize="12.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/order_product_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4.0dip"
+            android:layout_marginLeft="14.0dip"
+            android:layout_marginRight="14.0dip"
+            android:layout_marginTop="4.0dip"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/takeout_line_xuxian_short"
+            android:dividerHeight="1.0dip"
+            android:footerDividersEnabled="false"
+            android:minHeight="200.0dip"
+            android:padding="1.0dip"
+            android:scrollbarStyle="insideOverlay"
+            android:background="#ffffff" >
+
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

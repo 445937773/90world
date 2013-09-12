@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5.0dip"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/search_bgcolor"
+    >
+
+<RelativeLayout
+    android:id="@+id/ly_picture_my_favorite_i"
+    android:layout_width="80.0dip"
+    android:layout_height="80.0dip"
+    android:layout_marginTop="5dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="5.0dip" >
+
+    <ImageView
+        android:id="@+id/iv_picture_my_favorite_i"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_corners"
+        android:padding="5.0dip"
+        android:scaleType="fitCenter" />
+
+</RelativeLayout>
+    
+<LinearLayout
+    android:id="@+id/layout_product_show_my_favorite"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/ly_picture_my_favorite_i"
+    android:layout_alignTop="@+id/ly_picture_my_favorite_i"
+    android:layout_toRightOf="@+id/ly_picture_my_favorite_i"
+    android:orientation="vertical"
+    android:weightSum="3" >
+
+    <TextView
+        android:id="@+id/tv_product_name_my_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="商品名字"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_marginTop="2dp"
+    android:layout_weight="1"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/tv_text_price_my_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:text="售价:"
+        android:textSize="14sp"
+        android:textColor="#ffff0033" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="¥"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/tv_price_my_favorite"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="1dp"
+         android:ellipsize="end"
+         android:singleLine="true"
+         android:text="8.0"
+         android:textColor="#000000"
+         android:textSize="14sp" />
+
+    </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="0dp"
+         android:layout_marginLeft="5dp"
+         android:layout_marginTop="2dp"
+         android:layout_weight="1"
+         android:visibility="visible" >
+
+         <TextView
+             android:id="@+id/standard_goods_item"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="商品规格："
+             android:textColor="#ff000000"
+             android:textSize="14sp" />
+
+	     <TextView
+	        android:id="@+id/tv_standard_goods_item"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textSize="14sp"
+	        android:text="330ml/瓶"
+	        android:textColor="#ff000000" 
+	        android:visibility="visible"/>
+     
+     </LinearLayout>
+</LinearLayout>
+	<ImageView
+	    android:id="@+id/btn_add_shoppingcar"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_centerVertical="true"
+	    android:layout_marginLeft="10dp"
+	    android:layout_toLeftOf="@+id/mm_submenu_pic"
+	    android:scaleType="centerInside"
+	    android:src="@drawable/btn_add_to_shoppingcar"
+	    android:focusable="false"
+	    android:focusableInTouchMode="false"
+	    android:onClick="setAddShoppingcarListener"
+	     />
+
+	<ImageView
+	    android:id="@+id/mm_submenu_pic"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="5dp"
+	    android:scaleType="matrix"
+	    android:src="@drawable/mm_submenu" />
+
+</RelativeLayout>
+

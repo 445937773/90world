@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee" >
+	<ViewFlipper 
+	    android:id="@+id/layout_main_relative"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_above="@+id/layout_bbar"
+    	android:layout_alignParentTop="true"
+    	>
+    	
+	</ViewFlipper>
+	<include
+	    android:id="@+id/layout_bbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    
+	    layout="@layout/bbar" />
+	<FrameLayout 
+	    android:id="@+id/home_gard"
+	  	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="@drawable/home_gard"
+    	android:focusable="true"
+    	android:focusableInTouchMode="true"  >
+	    
+	</FrameLayout>
+	
+</RelativeLayout>
