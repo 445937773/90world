@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#eeeeee"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+	<RelativeLayout 
+        android:id="@+id/shoppingcar_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#666666">
+        
+        
+
+         <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="每日推荐"
+           />
+        
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"      
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+       <RadioGroup
+            android:id="@+id/trans_type_tab_rg"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/rb_supermarket"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="@string/supermaket"
+            android:gravity="center"
+            android:background="@drawable/android_search_button_selector"
+         	android:button="@null"
+             />
+
+        <RadioButton
+            android:id="@+id/rb_orderfood"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="@string/orderfood"
+            android:gravity="center"
+            android:background="@drawable/android_search_button_selector"
+            android:button="@null"
+             />
+
+
+        </RadioGroup>
+
+        <GridView
+            android:id="@+id/lv_supermarket_or_orderfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:cacheColorHint="#00000000"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:orientation="horizontal"
+            android:verticalSpacing="5dp"
+            android:visibility="gone" >
+        
+		</GridView>
+    </LinearLayout>
+	<RelativeLayout
+		        android:id="@+id/no_cart_item"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="15.0dip"
+		        android:layout_marginRight="15.0dip"
+		        android:layout_marginTop="15.0dip"
+		        android:padding="15.0dip"
+		        android:visibility="visible" 
+		        android:layout_below="@+id/shoppingcar_top_layout">
+
+	        <ImageView
+	            android:id="@+id/shopping_cat_icon"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="30.0dip"
+	            android:src="@drawable/un_open" />
+	
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/shopping_cat_icon"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="20.0dip"
+	            android:text="功能暂未开放，敬请期待！"
+	            android:textColor="#999999" />
+    		</RelativeLayout>
+</RelativeLayout>

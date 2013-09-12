@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title_bar_address_edit_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#666666" >
+		<RelativeLayout
+		    android:id="@+id/ly_back" 
+		    android:layout_width="wrap_content"
+        	android:layout_height="fill_parent"
+        	android:paddingRight="5dp"
+        	android:background="@drawable/btn_back"
+		    >
+		    <ImageView
+		    android:id="@+id/iv_back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+		    android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_back"
+            android:text="@string/address_add"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+		</RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_address_show_address_edit_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title_bar_address_edit_detail"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_name_address_edit_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp" >
+
+            <TextView
+                android:id="@+id/tv_name_address_edit_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="名字"
+                android:textColor="#333333"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/et_name_address_edit_detail_i"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_name_address_edit_detail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:hint="点击此处编辑收件人姓名"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:id="@+id/layout_phone_address_edit_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp" >
+
+            <TextView
+                android:id="@+id/tv_phone_address_edit_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="电话"
+                android:textColor="#333333"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/et_phone_address_edit_detail_i"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_phone_address_edit_detail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:hint="点击此处编辑收件人电话"
+                android:inputType="number"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:id="@+id/layout_address_address_edit_detail_i"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp" >
+
+            <TextView
+                android:id="@+id/tv_address_address_edit_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="地址"
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/et_address_address_edit_detail_i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_address_address_edit_detail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:hint="点击此处编辑收件地址"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:id="@+id/layout_addressId_address_edit_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_addressId_address_edit_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="地址id"
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_addressId_address_edit_detail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="地址id"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#000000"
+            android:visibility="gone" />
+         <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#000000" />
+    </LinearLayout>
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_address_show_address_edit_detail"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+        
+		 <LinearLayout
+		     android:id="@+id/ly_cancel"
+		     android:layout_width="wrap_content"
+		     android:layout_height="wrap_content"
+		     android:layout_marginRight="5dp"
+		     android:layout_weight="1"
+		     android:background="@drawable/btn_green"
+		     android:gravity="center"
+		     android:paddingTop="5dp"
+		     android:paddingBottom="5dp" >
+
+         	 <TextView 
+         	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="取消"
+	        	android:textColor="#ffffff"
+	        	android:textSize="25sp"/>
+
+         </LinearLayout>
+          <LinearLayout
+            android:id="@+id/btn_ok_address_edit_detail"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:background="@drawable/btn_green"
+	        android:gravity="center"
+	        android:paddingTop="5dp"
+		    android:paddingBottom="5dp"
+	        >
+         	<TextView 
+         	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="完成"
+	        	android:textColor="#ffffff"
+	        	android:textSize="25sp"/>
+         </LinearLayout>
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>
