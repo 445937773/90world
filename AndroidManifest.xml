@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zero.www"
+    android:versionCode="1"
+    android:versionName="v1.0.0" >
+	<uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<!-- 往SDCard写入数据权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <permission
+        android:name="com.zero.www.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.zero.www.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+
+    
+    
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    
+    
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/mylogo"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar"
+        android:name="com.zero.service.ExampleApplication"
+       >
+        <activity
+            android:name="com.zero.activity.WellcomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zero.activity.Login" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.Register" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.Agreement" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.HomeActivity"
+            	  android:launchMode="singleInstance" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.MainTopRightDialog" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.ServiceCategoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.GoodsLastCategoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.GoodsCategoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.ShoppingCarActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.SomeProductActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.SearchActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.MoreActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.UserInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.ChangePwdActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.DishDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.OrderFoodActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.SortFoodInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.SortFoodActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.GoodscategorySmallActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.SettingsActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.ShakeActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.GoodsParticularInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.AddAddressActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.AddressActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zero.activity.AddressEditActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.UpdateGoodsParticularInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.MyOrderCategoryActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.MyOrderListActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.MyFavoriteActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.OrderFoodDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.Intentctivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.AddressItemActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.IndentInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.SortFoodCanguanActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.IndentDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.FoodsCategoryResActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.IntentAddressActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.zero.activity.MyWebViewActivity" 
+            android:theme="@android:style/Theme.Black" android:screenOrientation="portrait" />
+        
+        
+        
+        
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.zero.www" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+    
+        
+        <!-- Required SDK 核心功能-->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+                
+            </intent-filter>
+        </service>
+        
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+             <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.zero.www" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+             <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+   
+        </receiver>
+        
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.zero.service.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />  
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <category android:name="com.zero.www" />
+            </intent-filter>
+        </receiver>
+ 
+        
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="389677c79a6853116ab9586a" /> <!--  </>值来自开发者平台取得的AppKey-->
+    </application>
+
+</manifest>
