@@ -18,5 +18,6 @@ public class MySharedPreferences {
 		public static final String STUDENT_IS_LOGIN = "student_is_login";
 		
 		public static final String SETTINGS = "settings_for_90world";
+		public static final String GET_ADDVER_OK = "get_addver_ok";
 	
 }

@@ -10,9 +10,6 @@
         android:layout_height="45dp"
         android:layout_alignParentTop="true"
         android:background="#666666">
-        
-        
-
          <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
@@ -25,59 +22,242 @@
             android:textColor="#ffffff"
             android:text="每日推荐"
            />
-        
     </RelativeLayout>
-    <LinearLayout
+	<ScrollView 
+	    android:id="@+id/sv_all_addversting"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"      
-        android:orientation="vertical"
-        android:visibility="gone" >
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/shoppingcar_top_layout">
+        <RelativeLayout 
+		    android:id="@+id/ly_all_addversting"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content">
+<!-- **********************第一个广告位置**************************************************************** -->
 
-       <RadioGroup
-            android:id="@+id/trans_type_tab_rg"
-            android:layout_width="fill_parent"
-            android:layout_height="45dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
-        <RadioButton
-            android:id="@+id/rb_supermarket"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="@string/supermaket"
-            android:gravity="center"
-            android:background="@drawable/android_search_button_selector"
-         	android:button="@null"
-             />
+		    <RelativeLayout
+		        android:id="@+id/ly_1st_addversting"
+		        android:layout_width="412dp"
+		        android:layout_height="178dp"
+		        android:layout_centerHorizontal="true"
+		        android:layout_margin="10dp"
+		        android:background="#ffffff" >
 
-        <RadioButton
-            android:id="@+id/rb_orderfood"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="@string/orderfood"
-            android:gravity="center"
-            android:background="@drawable/android_search_button_selector"
-            android:button="@null"
-             />
+		        <RelativeLayout
+		            android:id="@+id/ly_1st_riht"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentRight="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_1st_left"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentLeft="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_1st_bottom"
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:layout_alignParentBottom="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <!-- 图片 -->
 
+		        <ImageView
+		            android:id="@+id/iv_1st_add"
+		            android:layout_width="400dp"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/ly_1st_bottom"
+		            android:layout_alignParentTop="true"
+		            android:layout_margin="5dp"
+		            android:scaleType="centerCrop" />
 
-        </RadioGroup>
+		    </RelativeLayout>
+<!-- **********************第二个广告位置**************************************************************** -->
 
-        <GridView
-            android:id="@+id/lv_supermarket_or_orderfood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:cacheColorHint="#00000000"
-            android:horizontalSpacing="5dp"
-            android:numColumns="3"
-            android:orientation="horizontal"
-            android:verticalSpacing="5dp"
-            android:visibility="gone" >
-        
-		</GridView>
-    </LinearLayout>
+		    <RelativeLayout
+		        android:id="@+id/ly_2st_addversting"
+		       android:layout_width="412dp"
+		        android:layout_height="178dp"
+		        android:layout_centerHorizontal="true"
+		        android:layout_below="@+id/ly_1st_addversting"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:background="#ffffff" >
+	
+		        <RelativeLayout
+		            android:id="@+id/ly_2st_riht"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentRight="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_2st_left"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentLeft="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_2st_bottom"
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:layout_alignParentBottom="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <!-- 图片 -->
+		        <ImageView
+		            android:id="@+id/iv_2st_add"
+		            android:layout_width="400dp"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/ly_2st_bottom"
+		            android:layout_alignParentTop="true"
+		            android:layout_margin="5dp"
+		            android:scaleType="centerCrop"
+		             />
+		    </RelativeLayout>
+<!-- **********************第三个广告位置**************************************************************** -->
+
+		    <RelativeLayout
+		        android:id="@+id/ly_3st_addversting"
+		        android:layout_width="412dp"
+		        android:layout_height="178dp"
+		        android:layout_centerHorizontal="true"
+		        android:layout_below="@+id/ly_2st_addversting"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:background="#ffffff" >
+	
+		        <RelativeLayout
+		            android:id="@+id/ly_3st_riht"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentRight="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_3st_left"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentLeft="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_3st_bottom"
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:layout_alignParentBottom="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <!-- 图片 -->
+		        <ImageView
+		            android:id="@+id/iv_3st_add"
+		            android:layout_width="400dp"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/ly_3st_bottom"
+		            android:layout_alignParentTop="true"
+		            android:layout_margin="5dp"
+		            android:scaleType="centerCrop"
+		             />
+		    </RelativeLayout>
+<!-- **********************第四个广告位置**************************************************************** -->
+
+		    <RelativeLayout
+		        android:id="@+id/ly_4st_addversting"
+		        android:layout_width="412dp"
+		        android:layout_height="178dp"
+		        android:layout_centerHorizontal="true"
+		        android:layout_below="@+id/ly_3st_addversting"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:background="#ffffff" >
+	
+		        <RelativeLayout
+		            android:id="@+id/ly_4st_riht"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentRight="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_4st_left"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentLeft="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_4st_bottom"
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:layout_alignParentBottom="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <!-- 图片 -->
+		        <ImageView
+		            android:id="@+id/iv_4st_add"
+		            android:layout_width="400dp"
+		            android:layout_height="wrap_content"
+		           android:layout_above="@+id/ly_4st_bottom"
+		            android:layout_alignParentTop="true"
+		            android:layout_margin="5dp"
+		            android:scaleType="centerCrop"
+		             />
+		    </RelativeLayout>
+<!-- **********************第五个广告位置**************************************************************** -->
+
+		    <RelativeLayout
+		        android:id="@+id/ly_5st_addversting"
+		        android:layout_width="412dp"
+		        android:layout_height="178dp"
+		        android:layout_below="@+id/ly_4st_addversting"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:background="#ffffff" >
+	
+		        <RelativeLayout
+		            android:id="@+id/ly_5st_riht"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentRight="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_5st_left"
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:layout_alignParentLeft="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/ly_5st_bottom"
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:layout_alignParentBottom="true"
+		            android:background="#999999" >
+		        </RelativeLayout>
+		        <!-- 图片 -->
+		        <ImageView
+		            android:id="@+id/iv_5st_add"
+		            android:layout_width="400dp"
+		            android:layout_height="wrap_content"
+		            android:layout_above="@+id/ly_5st_bottom"
+		            android:layout_alignParentTop="true"
+		            android:layout_margin="5dp"
+		            android:scaleType="centerCrop"
+		             />
+		    </RelativeLayout>
+	    </RelativeLayout>
+	</ScrollView>
+    
 	<RelativeLayout
 		        android:id="@+id/no_cart_item"
 		        android:layout_width="fill_parent"
@@ -86,7 +266,7 @@
 		        android:layout_marginRight="15.0dip"
 		        android:layout_marginTop="15.0dip"
 		        android:padding="15.0dip"
-		        android:visibility="visible" 
+		        android:visibility="gone" 
 		        android:layout_below="@+id/shoppingcar_top_layout">
 
 	        <ImageView
@@ -105,5 +285,6 @@
 	            android:layout_marginTop="20.0dip"
 	            android:text="功能暂未开放，敬请期待！"
 	            android:textColor="#999999" />
-    		</RelativeLayout>
+    </RelativeLayout>
+
 </RelativeLayout>

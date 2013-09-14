@@ -67,7 +67,14 @@ public class HomeActivity extends Activity implements OnClickListener{
 			switch (msg.what) {
 			//从网络获取广告资源完毕
 			case MyMessages.CHANGE_PWD_OK:
+				
+				break;
+			//从网络获取广告图片完毕
+			case MyMessages.GET_ADD_PIC_OK:
 				showAddversting();
+				SharedPreferences userInfo = getSharedPreferences(MySharedPreferences.GET_ADDVER_OK, 0);  
+				userInfo.edit().putBoolean(MySharedPreferences.GET_ADDVER_OK, true).commit();
+				Log.e("！！！！！！！！！！！",  "获取广告完毕");
 				break;
 			case MyMessages.CHANGE_PWD_FAILD:
 				pb.setVisibility(View.GONE);
@@ -227,7 +234,7 @@ public class HomeActivity extends Activity implements OnClickListener{
 			Message msg = new Message();
 			//获取广告对象
 			posters = ParseXml.getPosterInfo(null, null, "GetAllAdvertising");
-			if(posters!=null){
+			if(posters != null){
 				//根据广告对象获取对应的图片
 				for (int i = 0; i < posters.size(); i++) {
 					String url = posters.get(i).getImageUri();
@@ -254,14 +261,13 @@ public class HomeActivity extends Activity implements OnClickListener{
 			        }
 			        bitmap.add(result);
 				}
+				if(bitmap.size() == 5){
+		        	msg.what = MyMessages.GET_ADD_PIC_OK;
+		        }else{
+		        	msg.what = MyMessages.CHANGE_PWD_FAILD;
+		        }
+		        handler .sendMessage(msg);
 			}
-			if(posters!=null){
-				msg.what = MyMessages.CHANGE_PWD_OK;
-			}
-			else{
-				msg.what = MyMessages.CHANGE_PWD_FAILD;
-			}
-			handler .sendMessage(msg);
 			}
 		}).start();
 	}

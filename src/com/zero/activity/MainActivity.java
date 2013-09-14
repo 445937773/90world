@@ -1,12 +1,5 @@
 package com.zero.activity;
-
-
-
-
-import com.zero.tools.ConnectionDetector;
-import com.zero.tools.DialogHelper;
 import com.zero.tools.MyApplication;
-import com.zero.tools.UpdateManager;
 import com.zero.www.R;
 
 import android.os.Bundle;
@@ -22,7 +15,6 @@ import android.widget.ViewFlipper;
 import android.app.Activity;
 import android.app.ActivityGroup;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.app.AlertDialog.Builder;
 import android.app.LocalActivityManager;
 import android.content.Context;
@@ -147,7 +139,6 @@ public class MainActivity extends ActivityGroup{
 			case R.id.btn_shopping:
 				intent = getIntent();
 				Bundle b = intent.getExtras();
-				
 				intent = new Intent(MainActivity.this,ShoppingCarActivity.class);
 				if(b!=null){
 					intent.putExtras(b);

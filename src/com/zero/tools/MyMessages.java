@@ -74,6 +74,7 @@ public class MyMessages {
 	public static final int GET_ADDRESS_FAILD = 59;
 	public static final int BTN_CANCEL_VIVIBLTY = 60;
 	public static final int SEND_SMS_OK = 61;
+	public static final int GET_ADD_PIC_OK = 62;
 	
 	
 }
