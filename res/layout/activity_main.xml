@@ -10,14 +10,12 @@
     	android:layout_above="@+id/layout_bbar"
     	android:layout_alignParentTop="true"
     	>
-    	
 	</ViewFlipper>
 	<include
 	    android:id="@+id/layout_bbar"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentBottom="true"
-	    
 	    layout="@layout/bbar" />
 	<FrameLayout 
 	    android:id="@+id/home_gard"

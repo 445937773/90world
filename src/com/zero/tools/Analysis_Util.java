@@ -13,7 +13,6 @@ public class Analysis_Util {
 	private static final String NAMESPACE = "http://tempuri.org/";
 
 	private static final String URL = "http://90world.51idctg.com/Service1.asmx";
-	
 	public static SoapObject getDetail(List<String> parameters,List<String> values, String METHOD_NAME){
 		
 		try {

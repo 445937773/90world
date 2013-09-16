@@ -1,0 +1,983 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
+android.support.v4.app.FragmentTabHost$SavedState
+android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
+android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
+android.support.v4.view.PagerTabStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.PagerTabStrip: void setBackgroundColor(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundResource(int)
+android.support.v4.view.PagerTabStrip: void setDrawFullUnderline(boolean)
+android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
+android.support.v4.view.PagerTabStrip: int getMinHeight()
+android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
+android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTitleStrip: int getTextSpacing()
+android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
+android.support.v4.view.PagerTitleStrip: void setTextColor(int)
+android.support.v4.view.PagerTitleStrip: void setGravity(int)
+android.support.v4.view.PagerTitleStrip: int getMinHeight()
+android.support.v4.view.ViewPager
+android.support.v4.view.ViewPager: ViewPager(android.content.Context)
+android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager: void setScrollState(int)
+android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+android.support.v4.view.ViewPager: void setCurrentItem(int)
+android.support.v4.view.ViewPager: int getCurrentItem()
+android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: void setChildrenDrawingOrderEnabledCompat(boolean)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
+android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
+android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
+android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+cn.jpush.android.service.AlarmReceiver
+cn.jpush.android.service.AlarmReceiver: AlarmReceiver()
+cn.jpush.android.service.DownloadService
+cn.jpush.android.service.DownloadService: DownloadService()
+cn.jpush.android.service.PushProtocol
+cn.jpush.android.service.PushProtocol: int InitConn()
+cn.jpush.android.service.PushProtocol: int HbJPush(int,long)
+cn.jpush.android.service.PushProtocol: int RegPush(int,java.lang.String,java.lang.String,java.lang.String)
+cn.jpush.android.service.PushProtocol: int LogPush(int,long,java.lang.String,long)
+cn.jpush.android.service.PushProtocol: int MsgResponse(int,int,long,byte,long)
+cn.jpush.android.service.PushProtocol: int RecvPush(int,byte[],int)
+cn.jpush.android.service.PushProtocol: int RepPush(int,long,byte,java.lang.String)
+cn.jpush.android.service.PushProtocol: int GetChnelId(int,long,java.lang.String,java.lang.String)
+cn.jpush.android.service.PushProtocol: int UnChnelId(int,long,java.lang.String,java.lang.String)
+cn.jpush.android.service.PushProtocol: int EnChannel(int,long,java.lang.String,java.lang.String)
+cn.jpush.android.service.PushProtocol: int UnRegPush(int,long,java.lang.String,java.lang.String)
+cn.jpush.android.service.PushProtocol: int TagAlias(int,long,java.lang.String,java.lang.String)
+cn.jpush.android.service.PushProtocol: int PushTime(int,long,java.lang.String,java.lang.String)
+cn.jpush.android.service.PushProtocol: int Close(int)
+cn.jpush.android.service.PushProtocol: int GetCmd(int)
+cn.jpush.android.service.PushProtocol: int Stop(int)
+cn.jpush.android.service.PushProtocol: int InitPush(int,java.lang.String,int)
+cn.jpush.android.service.PushProtocol: java.lang.String GetEsg(int)
+cn.jpush.android.service.PushProtocol: int GetSdkVersion()
+cn.jpush.android.service.PushReceiver
+cn.jpush.android.service.PushReceiver: PushReceiver()
+cn.jpush.android.service.PushService
+cn.jpush.android.service.PushService: PushService()
+cn.jpush.android.ui.JPushRemoteViews
+cn.jpush.android.ui.PushActivity
+cn.jpush.android.ui.PushActivity: PushActivity()
+com.zero.activity.AddAddressActivity
+com.zero.activity.AddAddressActivity: AddAddressActivity()
+com.zero.activity.AddressActivity
+com.zero.activity.AddressActivity: AddressActivity()
+com.zero.activity.AddressActivity: void onClick(android.view.View)
+com.zero.activity.AddressEditActivity
+com.zero.activity.AddressEditActivity: AddressEditActivity()
+com.zero.activity.AddressEditActivity: void onClick(android.view.View)
+com.zero.activity.AddressItemActivity
+com.zero.activity.AddressItemActivity: AddressItemActivity()
+com.zero.activity.Agreement
+com.zero.activity.Agreement: Agreement()
+com.zero.activity.ChangePwdActivity
+com.zero.activity.ChangePwdActivity: ChangePwdActivity()
+com.zero.activity.DishDetailActivity
+com.zero.activity.DishDetailActivity: DishDetailActivity()
+com.zero.activity.DishDetailActivity: void onClick(android.view.View)
+com.zero.activity.FoodsCategoryResActivity
+com.zero.activity.FoodsCategoryResActivity: FoodsCategoryResActivity()
+com.zero.activity.FoodsCategoryResActivity: void onClick(android.view.View)
+com.zero.activity.GoodsCategoryActivity
+com.zero.activity.GoodsCategoryActivity: GoodsCategoryActivity()
+com.zero.activity.GoodsLastCategoryActivity
+com.zero.activity.GoodsLastCategoryActivity: GoodsLastCategoryActivity()
+com.zero.activity.GoodsLastCategoryActivity: void setAddShoppingcarListener(android.view.View)
+com.zero.activity.GoodsParticularInfoActivity
+com.zero.activity.GoodsParticularInfoActivity: GoodsParticularInfoActivity()
+com.zero.activity.GoodsParticularInfoActivity: void onClick(android.view.View)
+com.zero.activity.GoodscategorySmallActivity
+com.zero.activity.GoodscategorySmallActivity: GoodscategorySmallActivity()
+com.zero.activity.HomeActivity
+com.zero.activity.HomeActivity: HomeActivity()
+com.zero.activity.HomeActivity: void onClick(android.view.View)
+com.zero.activity.IndentDetailsActivity
+com.zero.activity.IndentDetailsActivity: IndentDetailsActivity()
+com.zero.activity.IndentInfoActivity
+com.zero.activity.IndentInfoActivity: IndentInfoActivity()
+com.zero.activity.IntentAddressActivity
+com.zero.activity.IntentAddressActivity: IntentAddressActivity()
+com.zero.activity.Intentctivity
+com.zero.activity.Intentctivity: Intentctivity()
+com.zero.activity.Login
+com.zero.activity.Login: Login()
+com.zero.activity.Login: void onClick(android.view.View)
+com.zero.activity.MainActivity
+com.zero.activity.MainActivity: MainActivity()
+com.zero.activity.MoreActivity
+com.zero.activity.MoreActivity: MoreActivity()
+com.zero.activity.MoreActivity: void onClick(android.view.View)
+com.zero.activity.MyFavoriteActivity
+com.zero.activity.MyFavoriteActivity: MyFavoriteActivity()
+com.zero.activity.MyFavoriteActivity: void onClick(android.view.View)
+com.zero.activity.MyOrderCategoryActivity
+com.zero.activity.MyOrderCategoryActivity: MyOrderCategoryActivity()
+com.zero.activity.MyOrderCategoryActivity: void onClick(android.view.View)
+com.zero.activity.MyOrderListActivity
+com.zero.activity.MyOrderListActivity: MyOrderListActivity()
+com.zero.activity.MyOrderListActivity: void onClick(android.view.View)
+com.zero.activity.MyWebViewActivity
+com.zero.activity.MyWebViewActivity: MyWebViewActivity()
+com.zero.activity.OrderFoodDetailActivity
+com.zero.activity.OrderFoodDetailActivity: OrderFoodDetailActivity()
+com.zero.activity.Register
+com.zero.activity.Register: Register()
+com.zero.activity.Register: void onClick(android.view.View)
+com.zero.activity.SearchActivity
+com.zero.activity.SearchActivity: SearchActivity()
+com.zero.activity.SearchActivity: void onClick(android.view.View)
+com.zero.activity.SearchActivity: void setAddShoppingcarListener(android.view.View)
+com.zero.activity.SearchActivity: void setAddFoodShoppingcarListener(android.view.View)
+com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity
+com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity: SearchFoodsCategoryByRestaurantNameActivity()
+com.zero.activity.SettingsActivity
+com.zero.activity.SettingsActivity: SettingsActivity()
+com.zero.activity.SettingsActivity: void onClick(android.view.View)
+com.zero.activity.ShakeActivity
+com.zero.activity.ShakeActivity: ShakeActivity()
+com.zero.activity.ShakeActivity: void setAddFoodShoppingcarListener(android.view.View)
+com.zero.activity.ShoppingCarActivity
+com.zero.activity.ShoppingCarActivity: ShoppingCarActivity()
+com.zero.activity.ShoppingCarActivity: void onClick(android.view.View)
+com.zero.activity.SomeProductActivity
+com.zero.activity.SomeProductActivity: SomeProductActivity()
+com.zero.activity.SomeProductActivity: void onClick(android.view.View)
+com.zero.activity.SortFoodActivity
+com.zero.activity.SortFoodActivity: SortFoodActivity()
+com.zero.activity.SortFoodActivity: void setAddFoodShoppingcarListener(android.view.View)
+com.zero.activity.SortFoodInfoActivity
+com.zero.activity.SortFoodInfoActivity: SortFoodInfoActivity()
+com.zero.activity.UserInfoActivity
+com.zero.activity.UserInfoActivity: UserInfoActivity()
+com.zero.activity.WellcomeActivity
+com.zero.activity.WellcomeActivity: WellcomeActivity()
+com.zero.service.ExampleApplication
+com.zero.service.ExampleApplication: ExampleApplication()
+com.zero.service.MyReceiver
+com.zero.service.MyReceiver: MyReceiver()
+com.zero.tools.MyImageView
+com.zero.tools.MyImageView: MyImageView(android.content.Context)
+com.zero.tools.MyImageView: MyImageView(android.content.Context,android.util.AttributeSet)
+com.zero.tools.MyImageView: void setOnClickIntent(com.zero.tools.MyImageView$OnViewClick)
+com.zero.tools.MyImageView: int getDegree()
+com.zero.tools.MyImageView: void setDegree(int)
+com.zero.tools.MyImageView: float getScale()
+com.zero.tools.MyImageView: void setScale(float)
+com.zero.www.R$anim: int translate_left
+com.zero.www.R$anim: int translate_one
+com.zero.www.R$anim: int translate_right
+com.zero.www.R$anim: int zoom_out_enter
+com.zero.www.R$anim: int zoom_out_exit
+com.zero.www.R$color: int TextColor
+com.zero.www.R$color: int about_normal
+com.zero.www.R$color: int about_pressed
+com.zero.www.R$color: int address_normal
+com.zero.www.R$color: int address_pressed
+com.zero.www.R$color: int bgColor
+com.zero.www.R$color: int btn_normal
+com.zero.www.R$color: int btn_preesed
+com.zero.www.R$color: int checked
+com.zero.www.R$color: int favrit_normal
+com.zero.www.R$color: int favrit_pressed
+com.zero.www.R$color: int info_normal
+com.zero.www.R$color: int info_pressed
+com.zero.www.R$color: int search_bgcolor
+com.zero.www.R$color: int setting_normal
+com.zero.www.R$color: int setting_pressed
+com.zero.www.R$dimen: int activity_horizontal_margin
+com.zero.www.R$dimen: int activity_vertical_margin
+com.zero.www.R$drawable: int about_pressed
+com.zero.www.R$drawable: int ad_1
+com.zero.www.R$drawable: int ad_2
+com.zero.www.R$drawable: int ad_3
+com.zero.www.R$drawable: int ad_4
+com.zero.www.R$drawable: int ad_5
+com.zero.www.R$drawable: int add_to_shoppingcar_normal
+com.zero.www.R$drawable: int add_to_shoppingcar_pressed
+com.zero.www.R$drawable: int address_pressed
+com.zero.www.R$drawable: int android_list_idex
+com.zero.www.R$drawable: int android_my_order_button_selector
+com.zero.www.R$drawable: int android_my_order_focus
+com.zero.www.R$drawable: int android_my_order_item_bg
+com.zero.www.R$drawable: int android_my_order_normal
+com.zero.www.R$drawable: int android_search_button
+com.zero.www.R$drawable: int android_search_button_focused
+com.zero.www.R$drawable: int android_search_button_selector
+com.zero.www.R$drawable: int android_search_icon
+com.zero.www.R$drawable: int back
+com.zero.www.R$drawable: int background_corners
+com.zero.www.R$drawable: int background_corners_for_busy
+com.zero.www.R$drawable: int background_corners_for_gridview
+com.zero.www.R$drawable: int bar_home_normal
+com.zero.www.R$drawable: int bar_home_selected
+com.zero.www.R$drawable: int bar_more_normal
+com.zero.www.R$drawable: int bar_more_selected
+com.zero.www.R$drawable: int bar_search_normal
+com.zero.www.R$drawable: int bar_search_selected
+com.zero.www.R$drawable: int bar_shoppingcart_normal
+com.zero.www.R$drawable: int bar_shoppingcart_selected
+com.zero.www.R$drawable: int bar_tuijian_normal
+com.zero.www.R$drawable: int bar_tuijian_selected
+com.zero.www.R$drawable: int bottom
+com.zero.www.R$drawable: int bottom_a_selector
+com.zero.www.R$drawable: int bottom_b_selector
+com.zero.www.R$drawable: int bottom_c_selector
+com.zero.www.R$drawable: int bottom_d_selector
+com.zero.www.R$drawable: int bottom_e_selector
+com.zero.www.R$drawable: int btn_add_to_shoppingcar
+com.zero.www.R$drawable: int btn_back
+com.zero.www.R$drawable: int btn_back_selector
+com.zero.www.R$drawable: int btn_green
+com.zero.www.R$drawable: int btn_top_pressed
+com.zero.www.R$drawable: int button_bg_trans_gray
+com.zero.www.R$drawable: int collect
+com.zero.www.R$drawable: int default_pic
+com.zero.www.R$drawable: int dot_focused
+com.zero.www.R$drawable: int dot_normal
+com.zero.www.R$drawable: int edit_product_num_add_focus
+com.zero.www.R$drawable: int edit_product_num_add_no_enable
+com.zero.www.R$drawable: int edit_product_num_add_normal
+com.zero.www.R$drawable: int edit_product_num_add_selector
+com.zero.www.R$drawable: int edit_product_num_des_focus
+com.zero.www.R$drawable: int edit_product_num_des_no_enable
+com.zero.www.R$drawable: int edit_product_num_des_normal
+com.zero.www.R$drawable: int edit_product_num_des_selector
+com.zero.www.R$drawable: int empty_car
+com.zero.www.R$drawable: int empty_favraite
+com.zero.www.R$drawable: int empty_sort
+com.zero.www.R$drawable: int favrit_pressed
+com.zero.www.R$drawable: int foods_default_pic
+com.zero.www.R$drawable: int home_gard
+com.zero.www.R$drawable: int ic_launcher
+com.zero.www.R$drawable: int ic_preference_first_normal
+com.zero.www.R$drawable: int ic_preference_first_pressed
+com.zero.www.R$drawable: int ic_preference_last_normal
+com.zero.www.R$drawable: int ic_preference_last_pressed
+com.zero.www.R$drawable: int ic_preference_normal
+com.zero.www.R$drawable: int ic_preference_pressed
+com.zero.www.R$drawable: int ic_preference_single_normal
+com.zero.www.R$drawable: int ic_preference_single_pressed
+com.zero.www.R$drawable: int icon_delete
+com.zero.www.R$drawable: int info_pressed
+com.zero.www.R$drawable: int item_preesed
+com.zero.www.R$drawable: int left_bottom
+com.zero.www.R$drawable: int left_top
+com.zero.www.R$drawable: int list_bottom_round
+com.zero.www.R$drawable: int list_top_round
+com.zero.www.R$drawable: int loading_add
+com.zero.www.R$drawable: int login_edit_normal
+com.zero.www.R$drawable: int login_edit_pressed
+com.zero.www.R$drawable: int login_editbox
+com.zero.www.R$drawable: int metro_home_login
+com.zero.www.R$drawable: int metro_home_login_hover
+com.zero.www.R$drawable: int metro_home_login_selector
+com.zero.www.R$drawable: int mm_submenu
+com.zero.www.R$drawable: int mm_submenu_normal
+com.zero.www.R$drawable: int mm_submenu_pressed
+com.zero.www.R$drawable: int mm_title_btn_focused
+com.zero.www.R$drawable: int mm_title_btn_normal
+com.zero.www.R$drawable: int mm_title_btn_pressed
+com.zero.www.R$drawable: int more_about
+com.zero.www.R$drawable: int more_favrait
+com.zero.www.R$drawable: int more_logo
+com.zero.www.R$drawable: int more_order
+com.zero.www.R$drawable: int more_settings
+com.zero.www.R$drawable: int mylogo
+com.zero.www.R$drawable: int not_order
+com.zero.www.R$drawable: int order_commint_succ
+com.zero.www.R$drawable: int order_commit_cl
+com.zero.www.R$drawable: int order_commit_normal
+com.zero.www.R$drawable: int order_commit_presse
+com.zero.www.R$drawable: int page_indicator_bg
+com.zero.www.R$drawable: int page_indicator_focused
+com.zero.www.R$drawable: int page_indicator_unfocused
+com.zero.www.R$drawable: int preference_first_item
+com.zero.www.R$drawable: int preference_item
+com.zero.www.R$drawable: int preference_last_item
+com.zero.www.R$drawable: int preference_single_item
+com.zero.www.R$drawable: int res_image
+com.zero.www.R$drawable: int restrant_backgrount
+com.zero.www.R$drawable: int right
+com.zero.www.R$drawable: int round_bg
+com.zero.www.R$drawable: int search
+com.zero.www.R$drawable: int search_button_delete
+com.zero.www.R$drawable: int search_delete_normal
+com.zero.www.R$drawable: int search_delete_pressed
+com.zero.www.R$drawable: int search_home_pressed
+com.zero.www.R$drawable: int search_preesed
+com.zero.www.R$drawable: int setting_pressed
+com.zero.www.R$drawable: int shake_icon
+com.zero.www.R$drawable: int shape_button_normal_gray_ds
+com.zero.www.R$drawable: int shape_button_trans_nm
+com.zero.www.R$drawable: int shoppingcar_check
+com.zero.www.R$drawable: int shoppingcar_check_checked
+com.zero.www.R$drawable: int shoppingcar_check_click
+com.zero.www.R$drawable: int shoppingcar_check_normal
+com.zero.www.R$drawable: int shoppingcar_item_background
+com.zero.www.R$drawable: int shoppingcar_jiesuan
+com.zero.www.R$drawable: int splash
+com.zero.www.R$drawable: int takeout_line_xuxian_short
+com.zero.www.R$drawable: int title_bar_green
+com.zero.www.R$drawable: int title_bar_green_deep
+com.zero.www.R$drawable: int title_bk
+com.zero.www.R$drawable: int title_btn_right
+com.zero.www.R$drawable: int title_function_bg
+com.zero.www.R$drawable: int un_open
+com.zero.www.R$drawable: int widget_btn_radio_label_background
+com.zero.www.R$drawable: int youxiang
+com.zero.www.R$id: int Button01
+com.zero.www.R$id: int aaaaaaa
+com.zero.www.R$id: int actv_autoComplete
+com.zero.www.R$id: int actv_delete
+com.zero.www.R$id: int body_webview
+com.zero.www.R$id: int btn_add_address_address_list
+com.zero.www.R$id: int btn_add_shoppingcar
+com.zero.www.R$id: int btn_add_to_shoppingcar
+com.zero.www.R$id: int btn_all_select_my_favorite
+com.zero.www.R$id: int btn_back_order_produce
+com.zero.www.R$id: int btn_cancel_order_detail
+com.zero.www.R$id: int btn_categry
+com.zero.www.R$id: int btn_changepwd_userinfo
+com.zero.www.R$id: int btn_collect_shopingcar
+com.zero.www.R$id: int btn_complete_password_change
+com.zero.www.R$id: int btn_confirm_password_find
+com.zero.www.R$id: int btn_delete_address_edit_detail
+com.zero.www.R$id: int btn_delete_my_favorite
+com.zero.www.R$id: int btn_getvalidate
+com.zero.www.R$id: int btn_home
+com.zero.www.R$id: int btn_keep_address_edit_detail
+com.zero.www.R$id: int btn_loading_html
+com.zero.www.R$id: int btn_login
+com.zero.www.R$id: int btn_more
+com.zero.www.R$id: int btn_ok_address_edit_detail
+com.zero.www.R$id: int btn_order_submit_order_produce
+com.zero.www.R$id: int btn_pay_shoppingcar
+com.zero.www.R$id: int btn_register
+com.zero.www.R$id: int btn_return_my_favorite
+com.zero.www.R$id: int btn_search
+com.zero.www.R$id: int btn_search_food
+com.zero.www.R$id: int btn_search_restaurant
+com.zero.www.R$id: int btn_select_shoppingcar_all
+com.zero.www.R$id: int btn_shake
+com.zero.www.R$id: int btn_shopping
+com.zero.www.R$id: int btn_turntoagreement
+com.zero.www.R$id: int btn_turntogettingpassword
+com.zero.www.R$id: int c_constellation
+com.zero.www.R$id: int c_idea
+com.zero.www.R$id: int c_joke
+com.zero.www.R$id: int c_recommend
+com.zero.www.R$id: int canguan
+com.zero.www.R$id: int cb_auto_load_picture_setting
+com.zero.www.R$id: int cb_get_push_setting
+com.zero.www.R$id: int cb_goodsselect_shoppinglist
+com.zero.www.R$id: int cb_goodsselect_shoppinglist_name
+com.zero.www.R$id: int cb_keepuserinfo_login
+com.zero.www.R$id: int cb_register
+com.zero.www.R$id: int cb_setaddress_address_edit_detail
+com.zero.www.R$id: int cheap_money_content
+com.zero.www.R$id: int cheap_money_id
+com.zero.www.R$id: int ck_select_my_favorite
+com.zero.www.R$id: int detail_order_address
+com.zero.www.R$id: int detail_order_address_comment
+com.zero.www.R$id: int detail_order_id_number
+com.zero.www.R$id: int detail_order_id_number_comment
+com.zero.www.R$id: int detail_order_status
+com.zero.www.R$id: int detail_order_status_comment
+com.zero.www.R$id: int details_top_layout
+com.zero.www.R$id: int edit_product_num_descense_details
+com.zero.www.R$id: int edit_product_num_descense_shoppinglist_jian
+com.zero.www.R$id: int edit_product_num_increse_details
+com.zero.www.R$id: int edit_product_num_increse_shoppinglist_jia
+com.zero.www.R$id: int edit_product_show_details
+com.zero.www.R$id: int edit_product_show_shoppinglist_number
+com.zero.www.R$id: int et_address_address_edit_detail_i
+com.zero.www.R$id: int et_name_address_edit_detail_i
+com.zero.www.R$id: int et_name_find
+com.zero.www.R$id: int et_newpassword_password_change
+com.zero.www.R$id: int et_number_find
+com.zero.www.R$id: int et_oldpassword_password_change
+com.zero.www.R$id: int et_password_confirm_password_change
+com.zero.www.R$id: int et_password_confirm_register
+com.zero.www.R$id: int et_password_login
+com.zero.www.R$id: int et_password_register
+com.zero.www.R$id: int et_phone_address_edit_detail_i
+com.zero.www.R$id: int et_phonenumber_login
+com.zero.www.R$id: int et_phonenumber_register
+com.zero.www.R$id: int et_username_register
+com.zero.www.R$id: int et_validate_register
+com.zero.www.R$id: int group
+com.zero.www.R$id: int home_gard
+com.zero.www.R$id: int image1
+com.zero.www.R$id: int image2
+com.zero.www.R$id: int image3
+com.zero.www.R$id: int image4
+com.zero.www.R$id: int image5
+com.zero.www.R$id: int image6
+com.zero.www.R$id: int imageView2
+com.zero.www.R$id: int info
+com.zero.www.R$id: int item_address
+com.zero.www.R$id: int iv_1st_add
+com.zero.www.R$id: int iv_2st_add
+com.zero.www.R$id: int iv_3st_add
+com.zero.www.R$id: int iv_4st_add
+com.zero.www.R$id: int iv_5st_add
+com.zero.www.R$id: int iv_back
+com.zero.www.R$id: int iv_busy_foodslist_item
+com.zero.www.R$id: int iv_busy_shoppingcar_item
+com.zero.www.R$id: int iv_category
+com.zero.www.R$id: int iv_foods
+com.zero.www.R$id: int iv_goods
+com.zero.www.R$id: int iv_goodsimage_order_detail
+com.zero.www.R$id: int iv_order_commint_succ
+com.zero.www.R$id: int iv_picture_my_favorite_i
+com.zero.www.R$id: int iv_picture_my_shoppingcar
+com.zero.www.R$id: int iv_res
+com.zero.www.R$id: int iv_right_goodsimage
+com.zero.www.R$id: int iv_supermarket_orderfood_list_item_firstimage
+com.zero.www.R$id: int iv_supermarket_orderfood_list_item_firstimage_text
+com.zero.www.R$id: int iv_supermarket_orderfood_list_item_title
+com.zero.www.R$id: int iv_top_login
+com.zero.www.R$id: int iv_top_search
+com.zero.www.R$id: int layout_addressId_address_edit_detail
+com.zero.www.R$id: int layout_address_address_edit_detail_i
+com.zero.www.R$id: int layout_address_selected_address_list
+com.zero.www.R$id: int layout_address_setting_more
+com.zero.www.R$id: int layout_address_show_address_edit_detail
+com.zero.www.R$id: int layout_agree
+com.zero.www.R$id: int layout_all_order_my_order
+com.zero.www.R$id: int layout_amount_and_submit
+com.zero.www.R$id: int layout_auto_load_picture_setting
+com.zero.www.R$id: int layout_bbar
+com.zero.www.R$id: int layout_check_version
+com.zero.www.R$id: int layout_clean_cache_setting
+com.zero.www.R$id: int layout_comfirm_password_find
+com.zero.www.R$id: int layout_comment_title
+com.zero.www.R$id: int layout_common_title
+com.zero.www.R$id: int layout_completed_order_my_order
+com.zero.www.R$id: int layout_delivery_order_my_order
+com.zero.www.R$id: int layout_frame_main
+com.zero.www.R$id: int layout_frame_show
+com.zero.www.R$id: int layout_header_search
+com.zero.www.R$id: int layout_help_more
+com.zero.www.R$id: int layout_home_page_top
+com.zero.www.R$id: int layout_keeppassword
+com.zero.www.R$id: int layout_login
+com.zero.www.R$id: int layout_logout
+com.zero.www.R$id: int layout_main_relative
+com.zero.www.R$id: int layout_my_favorite_more
+com.zero.www.R$id: int layout_my_order_more
+com.zero.www.R$id: int layout_name_address_edit_detail
+com.zero.www.R$id: int layout_newpassword_password_change
+com.zero.www.R$id: int layout_number_money_shoppinglist
+com.zero.www.R$id: int layout_numeber_change
+com.zero.www.R$id: int layout_oldpassword_password_change
+com.zero.www.R$id: int layout_password_confirm_password_change
+com.zero.www.R$id: int layout_password_confirm_register
+com.zero.www.R$id: int layout_password_register
+com.zero.www.R$id: int layout_passwordshow_password_find
+com.zero.www.R$id: int layout_phone_address_edit_detail
+com.zero.www.R$id: int layout_phone_register
+com.zero.www.R$id: int layout_product_show_my_favorite
+com.zero.www.R$id: int layout_register
+com.zero.www.R$id: int layout_school_register
+com.zero.www.R$id: int layout_search_condition
+com.zero.www.R$id: int layout_setaddress_address_edit_detail
+com.zero.www.R$id: int layout_setting_more
+com.zero.www.R$id: int layout_sort_lv
+com.zero.www.R$id: int layout_sort_top
+com.zero.www.R$id: int layout_sortlast_top
+com.zero.www.R$id: int layout_take_delivery_order_my_order
+com.zero.www.R$id: int layout_title_bar_address_edit_detail
+com.zero.www.R$id: int layout_title_bar_address_list
+com.zero.www.R$id: int layout_title_bar_order_detail
+com.zero.www.R$id: int layout_title_bar_order_list
+com.zero.www.R$id: int layout_title_bar_order_produce
+com.zero.www.R$id: int layout_title_my_favorite
+com.zero.www.R$id: int layout_title_my_order
+com.zero.www.R$id: int layout_userinfo_more
+com.zero.www.R$id: int layout_username_register
+com.zero.www.R$id: int layout_validate_register
+com.zero.www.R$id: int line_down
+com.zero.www.R$id: int line_up
+com.zero.www.R$id: int list_index
+com.zero.www.R$id: int login_top_layout
+com.zero.www.R$id: int lv_addressList_adddress_list
+com.zero.www.R$id: int lv_addressList_order_list
+com.zero.www.R$id: int lv_favoritelist_my_favorite
+com.zero.www.R$id: int lv_foods_category_res
+com.zero.www.R$id: int lv_menu_listview_right
+com.zero.www.R$id: int lv_search
+com.zero.www.R$id: int lv_shoppinglist_shoppingcar
+com.zero.www.R$id: int lv_sort
+com.zero.www.R$id: int ly_1st_addversting
+com.zero.www.R$id: int ly_1st_bottom
+com.zero.www.R$id: int ly_1st_left
+com.zero.www.R$id: int ly_1st_riht
+com.zero.www.R$id: int ly_2st_addversting
+com.zero.www.R$id: int ly_2st_bottom
+com.zero.www.R$id: int ly_2st_left
+com.zero.www.R$id: int ly_2st_riht
+com.zero.www.R$id: int ly_3st_addversting
+com.zero.www.R$id: int ly_3st_bottom
+com.zero.www.R$id: int ly_3st_left
+com.zero.www.R$id: int ly_3st_riht
+com.zero.www.R$id: int ly_4st_addversting
+com.zero.www.R$id: int ly_4st_bottom
+com.zero.www.R$id: int ly_4st_left
+com.zero.www.R$id: int ly_4st_riht
+com.zero.www.R$id: int ly_5st_addversting
+com.zero.www.R$id: int ly_5st_bottom
+com.zero.www.R$id: int ly_5st_left
+com.zero.www.R$id: int ly_5st_riht
+com.zero.www.R$id: int ly_address
+com.zero.www.R$id: int ly_address_item
+com.zero.www.R$id: int ly_all_addversting
+com.zero.www.R$id: int ly_back
+com.zero.www.R$id: int ly_buttons
+com.zero.www.R$id: int ly_cancel
+com.zero.www.R$id: int ly_check
+com.zero.www.R$id: int ly_no_order
+com.zero.www.R$id: int ly_pay_shoppingcar
+com.zero.www.R$id: int ly_picture_my_favorite_i
+com.zero.www.R$id: int ly_select_address
+com.zero.www.R$id: int ly_shoppinglist_shoppingcar
+com.zero.www.R$id: int main_dialog_layout
+com.zero.www.R$id: int mm_submenu_pic
+com.zero.www.R$id: int no_cart_item
+com.zero.www.R$id: int no_search_item
+com.zero.www.R$id: int no_sort_item
+com.zero.www.R$id: int order_detail_status_layout
+com.zero.www.R$id: int order_info_content
+com.zero.www.R$id: int order_item_Text
+com.zero.www.R$id: int order_item_Text_hint
+com.zero.www.R$id: int order_item_price_hint
+com.zero.www.R$id: int order_item_status
+com.zero.www.R$id: int order_item_subtime
+com.zero.www.R$id: int order_item_subtime_hint
+com.zero.www.R$id: int order_item_title
+com.zero.www.R$id: int order_item_totalPrice
+com.zero.www.R$id: int order_item_track
+com.zero.www.R$id: int order_list_item
+com.zero.www.R$id: int order_money_id
+com.zero.www.R$id: int order_money_layout
+com.zero.www.R$id: int order_produce_comment_layout
+com.zero.www.R$id: int order_product_item_name
+com.zero.www.R$id: int order_product_list
+com.zero.www.R$id: int order_product_list_order_produce
+com.zero.www.R$id: int order_status
+com.zero.www.R$id: int password_change_top_layout
+com.zero.www.R$id: int pb_home
+com.zero.www.R$id: int pb_search
+com.zero.www.R$id: int product_all_money_content
+com.zero.www.R$id: int product_all_money_id
+com.zero.www.R$id: int product_gallery_order_layout
+com.zero.www.R$id: int product_list_item_image_a
+com.zero.www.R$id: int product_list_item_image_b
+com.zero.www.R$id: int product_list_item_image_c
+com.zero.www.R$id: int progressBar1
+com.zero.www.R$id: int rb_food_select
+com.zero.www.R$id: int rb_goods_select
+com.zero.www.R$id: int rb_searchRadio_goods
+com.zero.www.R$id: int rea_lay_login
+com.zero.www.R$id: int relativeLayout1
+com.zero.www.R$id: int relativeLayout3
+com.zero.www.R$id: int rg_favorite
+com.zero.www.R$id: int rl_add_to_shoppingcar
+com.zero.www.R$id: int rl_mid_goods
+com.zero.www.R$id: int shopping_cat_icon
+com.zero.www.R$id: int shoppingcar_top_layout
+com.zero.www.R$id: int should_pay_content
+com.zero.www.R$id: int should_pay_id
+com.zero.www.R$id: int sort_list_id
+com.zero.www.R$id: int sort_list_name
+com.zero.www.R$id: int sp_school
+com.zero.www.R$id: int spinner_brand_goods
+com.zero.www.R$id: int standard_goods_item
+com.zero.www.R$id: int standard_restaurant
+com.zero.www.R$id: int standard_restaurant_shoppingcar
+com.zero.www.R$id: int sv_all_addversting
+com.zero.www.R$id: int text
+com.zero.www.R$id: int textView1
+com.zero.www.R$id: int textView2
+com.zero.www.R$id: int text_title_goods
+com.zero.www.R$id: int text_title_sortlast
+com.zero.www.R$id: int title
+com.zero.www.R$id: int tv_add_sort
+com.zero.www.R$id: int tv_addressId_address_edit_detail
+com.zero.www.R$id: int tv_address_address_edit_detail
+com.zero.www.R$id: int tv_address_address_edit_detail_i
+com.zero.www.R$id: int tv_amount
+com.zero.www.R$id: int tv_category
+com.zero.www.R$id: int tv_comment_order_detail
+com.zero.www.R$id: int tv_comment_order_produce
+com.zero.www.R$id: int tv_confirm_userinfo_password_find
+com.zero.www.R$id: int tv_default_address_list
+com.zero.www.R$id: int tv_detail_address_address_item
+com.zero.www.R$id: int tv_detail_address_address_list
+com.zero.www.R$id: int tv_details_of_goods
+com.zero.www.R$id: int tv_goodsname_order_detail
+com.zero.www.R$id: int tv_goodsnumber_order_detail_number
+com.zero.www.R$id: int tv_mony_my_favorite
+com.zero.www.R$id: int tv_name_address_edit_detail
+com.zero.www.R$id: int tv_name_address_edit_detail_i
+com.zero.www.R$id: int tv_name_address_item
+com.zero.www.R$id: int tv_name_address_item_gone
+com.zero.www.R$id: int tv_name_address_list
+com.zero.www.R$id: int tv_name_sort_item
+com.zero.www.R$id: int tv_order_money_id
+com.zero.www.R$id: int tv_order_money_rmb
+com.zero.www.R$id: int tv_passwordshow_password_find
+com.zero.www.R$id: int tv_phone_address_edit_detail
+com.zero.www.R$id: int tv_phone_address_edit_detail_i
+com.zero.www.R$id: int tv_phone_number_address_item
+com.zero.www.R$id: int tv_phone_number_address_list
+com.zero.www.R$id: int tv_phone_userinfo
+com.zero.www.R$id: int tv_please_remember_password_find
+com.zero.www.R$id: int tv_price_my_favorite
+com.zero.www.R$id: int tv_price_order_detail
+com.zero.www.R$id: int tv_price_total_shoppinglist_price
+com.zero.www.R$id: int tv_product_name_my_favorite
+com.zero.www.R$id: int tv_receiver_address_order_produce
+com.zero.www.R$id: int tv_receiver_order_produce
+com.zero.www.R$id: int tv_receiver_phoneNumber_order_produce
+com.zero.www.R$id: int tv_res
+com.zero.www.R$id: int tv_restaurant_my_favorite
+com.zero.www.R$id: int tv_restaurant_my_shoppingcar
+com.zero.www.R$id: int tv_right_item_goodsname
+com.zero.www.R$id: int tv_right_item_oldprice
+com.zero.www.R$id: int tv_right_item_oldpricevalue
+com.zero.www.R$id: int tv_school_userinfo
+com.zero.www.R$id: int tv_setaddress_address_edit_detail
+com.zero.www.R$id: int tv_shake_null
+com.zero.www.R$id: int tv_standard_goods_item
+com.zero.www.R$id: int tv_standard_res
+com.zero.www.R$id: int tv_standard_res_text
+com.zero.www.R$id: int tv_standard_restaurant
+com.zero.www.R$id: int tv_standard_restaurant_shoppingcar
+com.zero.www.R$id: int tv_text_amount
+com.zero.www.R$id: int tv_text_comment_order_detail
+com.zero.www.R$id: int tv_text_goodsnumber_order_detail
+com.zero.www.R$id: int tv_text_price_my_favorite
+com.zero.www.R$id: int tv_title
+com.zero.www.R$id: int tv_title_address
+com.zero.www.R$id: int tv_title_comment
+com.zero.www.R$id: int tv_title_order_list
+com.zero.www.R$id: int tv_title_sort
+com.zero.www.R$id: int tv_username_main
+com.zero.www.R$id: int tv_username_userinfo
+com.zero.www.R$id: int tv_usernameture
+com.zero.www.R$id: int tv_usernameture_main
+com.zero.www.R$id: int tv_version_code
+com.zero.www.R$id: int tv_yourpassword_password_find
+com.zero.www.R$id: int v_dot0
+com.zero.www.R$id: int v_dot1
+com.zero.www.R$id: int v_dot2
+com.zero.www.R$id: int v_dot3
+com.zero.www.R$id: int v_dot4
+com.zero.www.R$id: int vp
+com.zero.www.R$id: int wv_agreement
+com.zero.www.R$id: int wv_details_of_goods
+com.zero.www.R$id: int zoomControls_webview
+com.zero.www.R$layout: int activity_home
+com.zero.www.R$layout: int activity_main
+com.zero.www.R$layout: int address_add
+com.zero.www.R$layout: int address_check_list
+com.zero.www.R$layout: int address_edit_detail
+com.zero.www.R$layout: int address_item
+com.zero.www.R$layout: int address_list
+com.zero.www.R$layout: int agreement
+com.zero.www.R$layout: int bbar
+com.zero.www.R$layout: int dish_detailed
+com.zero.www.R$layout: int favarite_list_item
+com.zero.www.R$layout: int foods_category_res
+com.zero.www.R$layout: int foods_favorite_list_item
+com.zero.www.R$layout: int foods_list_item
+com.zero.www.R$layout: int goods_list_item
+com.zero.www.R$layout: int login
+com.zero.www.R$layout: int main_top_right_dialog
+com.zero.www.R$layout: int more
+com.zero.www.R$layout: int my_favorite
+com.zero.www.R$layout: int my_favorite_list_item
+com.zero.www.R$layout: int my_order
+com.zero.www.R$layout: int my_shoppingcar_list_item
+com.zero.www.R$layout: int my_webview
+com.zero.www.R$layout: int order_commit_succeed
+com.zero.www.R$layout: int order_detail
+com.zero.www.R$layout: int order_detail_goodslist_item
+com.zero.www.R$layout: int order_list
+com.zero.www.R$layout: int order_list_item
+com.zero.www.R$layout: int order_produce_check_address
+com.zero.www.R$layout: int order_produce_new
+com.zero.www.R$layout: int password_change
+com.zero.www.R$layout: int password_find
+com.zero.www.R$layout: int product_list_item_order
+com.zero.www.R$layout: int register
+com.zero.www.R$layout: int res_sort_item
+com.zero.www.R$layout: int rolate
+com.zero.www.R$layout: int schoolview
+com.zero.www.R$layout: int search
+com.zero.www.R$layout: int setting
+com.zero.www.R$layout: int shoppingcar
+com.zero.www.R$layout: int shoppingcar_list_item
+com.zero.www.R$layout: int sort
+com.zero.www.R$layout: int sort_item
+com.zero.www.R$layout: int sort_list
+com.zero.www.R$layout: int sortlast_menu_layout
+com.zero.www.R$layout: int supermarket_orderfood_list_item
+com.zero.www.R$layout: int supermarket_orderfood_main
+com.zero.www.R$layout: int userinfo
+com.zero.www.R$layout: int wellcome_layout
+com.zero.www.R$string: int about
+com.zero.www.R$string: int add_to_shoppingcar
+com.zero.www.R$string: int address_add
+com.zero.www.R$string: int address_eidit
+com.zero.www.R$string: int address_order
+com.zero.www.R$string: int address_setting
+com.zero.www.R$string: int agreement
+com.zero.www.R$string: int all_order
+com.zero.www.R$string: int all_select
+com.zero.www.R$string: int app_name
+com.zero.www.R$string: int auto_load_picture
+com.zero.www.R$string: int back
+com.zero.www.R$string: int cancel_delivery_order
+com.zero.www.R$string: int cart_item_hint
+com.zero.www.R$string: int characteristic
+com.zero.www.R$string: int check_version
+com.zero.www.R$string: int clean_cache
+com.zero.www.R$string: int collect
+com.zero.www.R$string: int comment
+com.zero.www.R$string: int complete
+com.zero.www.R$string: int completed_order
+com.zero.www.R$string: int confirm
+com.zero.www.R$string: int confirm_password
+com.zero.www.R$string: int confirm_userinfo
+com.zero.www.R$string: int content_cheap_money
+com.zero.www.R$string: int content_product_all_money
+com.zero.www.R$string: int content_should_pay_money
+com.zero.www.R$string: int delete
+com.zero.www.R$string: int delivery_order
+com.zero.www.R$string: int detail_of_receiver
+com.zero.www.R$string: int dialog_alert_title
+com.zero.www.R$string: int dialog_downfailed_btndown
+com.zero.www.R$string: int dialog_downfailed_btnnext
+com.zero.www.R$string: int dialog_downfailed_msg
+com.zero.www.R$string: int dialog_downloading_msg
+com.zero.www.R$string: int dialog_error_title
+com.zero.www.R$string: int dialog_update_btnnext
+com.zero.www.R$string: int dialog_update_btnupdate
+com.zero.www.R$string: int dialog_update_msg
+com.zero.www.R$string: int dialog_update_msg2
+com.zero.www.R$string: int dialog_update_title
+com.zero.www.R$string: int exit
+com.zero.www.R$string: int express
+com.zero.www.R$string: int feedback
+com.zero.www.R$string: int food_select
+com.zero.www.R$string: int forgetpassword
+com.zero.www.R$string: int getpush
+com.zero.www.R$string: int goods_number
+com.zero.www.R$string: int goods_select
+com.zero.www.R$string: int goshopping
+com.zero.www.R$string: int help
+com.zero.www.R$string: int import_confirm_newpassword
+com.zero.www.R$string: int import_name
+com.zero.www.R$string: int import_newpassword
+com.zero.www.R$string: int import_oldpassword
+com.zero.www.R$string: int import_password
+com.zero.www.R$string: int import_phonenumber
+com.zero.www.R$string: int import_register_confirm_password
+com.zero.www.R$string: int import_register_password
+com.zero.www.R$string: int import_stuid
+com.zero.www.R$string: int it_select
+com.zero.www.R$string: int login
+com.zero.www.R$string: int more
+com.zero.www.R$string: int my_favorite
+com.zero.www.R$string: int my_order
+com.zero.www.R$string: int name
+com.zero.www.R$string: int newpassword
+com.zero.www.R$string: int newprice
+com.zero.www.R$string: int nick
+com.zero.www.R$string: int oldprice
+com.zero.www.R$string: int order_bumber
+com.zero.www.R$string: int order_detail
+com.zero.www.R$string: int order_produce
+com.zero.www.R$string: int order_status
+com.zero.www.R$string: int orderfood
+com.zero.www.R$string: int password
+com.zero.www.R$string: int password_change
+com.zero.www.R$string: int password_change_page
+com.zero.www.R$string: int password_find
+com.zero.www.R$string: int pay_shoppingcar
+com.zero.www.R$string: int phone
+com.zero.www.R$string: int please_remember
+com.zero.www.R$string: int read_agree
+com.zero.www.R$string: int receiver
+com.zero.www.R$string: int receiver_address
+com.zero.www.R$string: int receiver_phoneNumber
+com.zero.www.R$string: int register
+com.zero.www.R$string: int register_school_tip
+com.zero.www.R$string: int remember_me
+com.zero.www.R$string: int school
+com.zero.www.R$string: int search
+com.zero.www.R$string: int searchRadio_food
+com.zero.www.R$string: int searchRadio_goods
+com.zero.www.R$string: int searchRadio_restaurant
+com.zero.www.R$string: int search_as_restaurant
+com.zero.www.R$string: int search_as_sort
+com.zero.www.R$string: int search_autoComplete
+com.zero.www.R$string: int search_nothing
+com.zero.www.R$string: int service
+com.zero.www.R$string: int setting
+com.zero.www.R$string: int shake
+com.zero.www.R$string: int shoppingcar
+com.zero.www.R$string: int stuid
+com.zero.www.R$string: int submit_order
+com.zero.www.R$string: int submit_time
+com.zero.www.R$string: int supermaket
+com.zero.www.R$string: int take_delivery_order
+com.zero.www.R$string: int title_agreement
+com.zero.www.R$string: int total_value
+com.zero.www.R$string: int tuijian
+com.zero.www.R$string: int userinfo
+com.zero.www.R$string: int userinfo_change
+com.zero.www.R$string: int userinfo_change_page
+com.zero.www.R$string: int write_order
+com.zero.www.R$string: int yourpassword
+com.zero.www.R$style: int AppBaseTheme
+com.zero.www.R$style: int AppTheme
+com.zero.www.R$style: int MyBuyButton
+com.zero.www.R$style: int dot_style
+com.zero.www.R$style: int line1
+com.zero.www.R$style: int takeout_base_listView
+org.xmlpull.v1.XmlPullParser
+org.xmlpull.v1.XmlPullParser: java.lang.String NO_NAMESPACE
+org.xmlpull.v1.XmlPullParser: int START_DOCUMENT
+org.xmlpull.v1.XmlPullParser: int END_DOCUMENT
+org.xmlpull.v1.XmlPullParser: int START_TAG
+org.xmlpull.v1.XmlPullParser: int END_TAG
+org.xmlpull.v1.XmlPullParser: int TEXT
+org.xmlpull.v1.XmlPullParser: int CDSECT
+org.xmlpull.v1.XmlPullParser: int ENTITY_REF
+org.xmlpull.v1.XmlPullParser: int IGNORABLE_WHITESPACE
+org.xmlpull.v1.XmlPullParser: int PROCESSING_INSTRUCTION
+org.xmlpull.v1.XmlPullParser: int COMMENT
+org.xmlpull.v1.XmlPullParser: int DOCDECL
+org.xmlpull.v1.XmlPullParser: java.lang.String[] TYPES
+org.xmlpull.v1.XmlPullParser: java.lang.String FEATURE_PROCESS_NAMESPACES
+org.xmlpull.v1.XmlPullParser: java.lang.String FEATURE_REPORT_NAMESPACE_ATTRIBUTES
+org.xmlpull.v1.XmlPullParser: java.lang.String FEATURE_PROCESS_DOCDECL
+org.xmlpull.v1.XmlPullParser: java.lang.String FEATURE_VALIDATION
+org.xmlpull.v1.XmlPullParser: void setFeature(java.lang.String,boolean)
+org.xmlpull.v1.XmlPullParser: boolean getFeature(java.lang.String)
+org.xmlpull.v1.XmlPullParser: void setProperty(java.lang.String,java.lang.Object)
+org.xmlpull.v1.XmlPullParser: java.lang.Object getProperty(java.lang.String)
+org.xmlpull.v1.XmlPullParser: void setInput(java.io.Reader)
+org.xmlpull.v1.XmlPullParser: void setInput(java.io.InputStream,java.lang.String)
+org.xmlpull.v1.XmlPullParser: java.lang.String getInputEncoding()
+org.xmlpull.v1.XmlPullParser: void defineEntityReplacementText(java.lang.String,java.lang.String)
+org.xmlpull.v1.XmlPullParser: int getNamespaceCount(int)
+org.xmlpull.v1.XmlPullParser: java.lang.String getNamespacePrefix(int)
+org.xmlpull.v1.XmlPullParser: java.lang.String getNamespaceUri(int)
+org.xmlpull.v1.XmlPullParser: java.lang.String getNamespace(java.lang.String)
+org.xmlpull.v1.XmlPullParser: int getDepth()
+org.xmlpull.v1.XmlPullParser: java.lang.String getPositionDescription()
+org.xmlpull.v1.XmlPullParser: int getLineNumber()
+org.xmlpull.v1.XmlPullParser: int getColumnNumber()
+org.xmlpull.v1.XmlPullParser: boolean isWhitespace()
+org.xmlpull.v1.XmlPullParser: java.lang.String getText()
+org.xmlpull.v1.XmlPullParser: char[] getTextCharacters(int[])
+org.xmlpull.v1.XmlPullParser: java.lang.String getNamespace()
+org.xmlpull.v1.XmlPullParser: java.lang.String getName()
+org.xmlpull.v1.XmlPullParser: java.lang.String getPrefix()
+org.xmlpull.v1.XmlPullParser: boolean isEmptyElementTag()
+org.xmlpull.v1.XmlPullParser: int getAttributeCount()
+org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeNamespace(int)
+org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeName(int)
+org.xmlpull.v1.XmlPullParser: java.lang.String getAttributePrefix(int)
+org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeType(int)
+org.xmlpull.v1.XmlPullParser: boolean isAttributeDefault(int)
+org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(int)
+org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)
+org.xmlpull.v1.XmlPullParser: int getEventType()
+org.xmlpull.v1.XmlPullParser: int next()
+org.xmlpull.v1.XmlPullParser: int nextToken()
+org.xmlpull.v1.XmlPullParser: void require(int,java.lang.String,java.lang.String)
+org.xmlpull.v1.XmlPullParser: java.lang.String nextText()
+org.xmlpull.v1.XmlPullParser: int nextTag()
+org.xmlpull.v1.XmlPullParser: void <clinit>()
+org.xmlpull.v1.XmlPullParserException
+org.xmlpull.v1.XmlPullParserException: java.lang.Throwable detail
+org.xmlpull.v1.XmlPullParserException: int row
+org.xmlpull.v1.XmlPullParserException: int column
+org.xmlpull.v1.XmlPullParserException: XmlPullParserException(java.lang.String)
+org.xmlpull.v1.XmlPullParserException: XmlPullParserException(java.lang.String,org.xmlpull.v1.XmlPullParser,java.lang.Throwable)
+org.xmlpull.v1.XmlPullParserException: java.lang.Throwable getDetail()
+org.xmlpull.v1.XmlPullParserException: int getLineNumber()
+org.xmlpull.v1.XmlPullParserException: int getColumnNumber()
+org.xmlpull.v1.XmlPullParserException: void printStackTrace()
+org.xmlpull.v1.XmlPullParserFactory
+org.xmlpull.v1.XmlPullParserFactory: java.lang.Class referenceContextClass
+org.xmlpull.v1.XmlPullParserFactory: java.lang.String PROPERTY_NAME
+org.xmlpull.v1.XmlPullParserFactory: java.lang.String RESOURCE_NAME
+org.xmlpull.v1.XmlPullParserFactory: java.util.Vector parserClasses
+org.xmlpull.v1.XmlPullParserFactory: java.lang.String classNamesLocation
+org.xmlpull.v1.XmlPullParserFactory: java.util.Vector serializerClasses
+org.xmlpull.v1.XmlPullParserFactory: java.util.Hashtable features
+org.xmlpull.v1.XmlPullParserFactory: XmlPullParserFactory()
+org.xmlpull.v1.XmlPullParserFactory: void setFeature(java.lang.String,boolean)
+org.xmlpull.v1.XmlPullParserFactory: boolean getFeature(java.lang.String)
+org.xmlpull.v1.XmlPullParserFactory: void setNamespaceAware(boolean)
+org.xmlpull.v1.XmlPullParserFactory: boolean isNamespaceAware()
+org.xmlpull.v1.XmlPullParserFactory: void setValidating(boolean)
+org.xmlpull.v1.XmlPullParserFactory: boolean isValidating()
+org.xmlpull.v1.XmlPullParserFactory: org.xmlpull.v1.XmlPullParser newPullParser()
+org.xmlpull.v1.XmlPullParserFactory: org.xmlpull.v1.XmlSerializer newSerializer()
+org.xmlpull.v1.XmlPullParserFactory: org.xmlpull.v1.XmlPullParserFactory newInstance()
+org.xmlpull.v1.XmlPullParserFactory: org.xmlpull.v1.XmlPullParserFactory newInstance(java.lang.String,java.lang.Class)
+org.xmlpull.v1.XmlPullParserFactory: void <clinit>()
+org.xmlpull.v1.XmlSerializer
+org.xmlpull.v1.XmlSerializer: void setFeature(java.lang.String,boolean)
+org.xmlpull.v1.XmlSerializer: boolean getFeature(java.lang.String)
+org.xmlpull.v1.XmlSerializer: void setProperty(java.lang.String,java.lang.Object)
+org.xmlpull.v1.XmlSerializer: java.lang.Object getProperty(java.lang.String)
+org.xmlpull.v1.XmlSerializer: void setOutput(java.io.OutputStream,java.lang.String)
+org.xmlpull.v1.XmlSerializer: void setOutput(java.io.Writer)
+org.xmlpull.v1.XmlSerializer: void startDocument(java.lang.String,java.lang.Boolean)
+org.xmlpull.v1.XmlSerializer: void endDocument()
+org.xmlpull.v1.XmlSerializer: void setPrefix(java.lang.String,java.lang.String)
+org.xmlpull.v1.XmlSerializer: java.lang.String getPrefix(java.lang.String,boolean)
+org.xmlpull.v1.XmlSerializer: int getDepth()
+org.xmlpull.v1.XmlSerializer: java.lang.String getNamespace()
+org.xmlpull.v1.XmlSerializer: java.lang.String getName()
+org.xmlpull.v1.XmlSerializer: org.xmlpull.v1.XmlSerializer startTag(java.lang.String,java.lang.String)
+org.xmlpull.v1.XmlSerializer: org.xmlpull.v1.XmlSerializer attribute(java.lang.String,java.lang.String,java.lang.String)
+org.xmlpull.v1.XmlSerializer: org.xmlpull.v1.XmlSerializer endTag(java.lang.String,java.lang.String)
+org.xmlpull.v1.XmlSerializer: org.xmlpull.v1.XmlSerializer text(java.lang.String)
+org.xmlpull.v1.XmlSerializer: org.xmlpull.v1.XmlSerializer text(char[],int,int)
+org.xmlpull.v1.XmlSerializer: void cdsect(java.lang.String)
+org.xmlpull.v1.XmlSerializer: void entityRef(java.lang.String)
+org.xmlpull.v1.XmlSerializer: void processingInstruction(java.lang.String)
+org.xmlpull.v1.XmlSerializer: void comment(java.lang.String)
+org.xmlpull.v1.XmlSerializer: void docdecl(java.lang.String)
+org.xmlpull.v1.XmlSerializer: void ignorableWhitespace(java.lang.String)
+org.xmlpull.v1.XmlSerializer: void flush()

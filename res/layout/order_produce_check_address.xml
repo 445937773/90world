@@ -392,7 +392,8 @@
 				        android:layout_gravity="left"
 				        android:layout_toLeftOf="@+id/btn_order_submit_order_produce"
 				        android:layout_toRightOf="@+id/tv_order_money_rmb"
-				        android:text="88.88"
+				        android:text="88.8888888888"
+				        android:maxLength="8"
 				        android:textColor="#FF0000"
 				        android:textSize="20sp"
 				        android:textStyle="bold|italic" />
@@ -416,7 +417,7 @@
 				   
 				<RelativeLayout
       			    android:id="@+id/relativeLayout3"
-      			    android:layout_width="40dp"
+      			    android:layout_width="30dp"
       			    android:layout_height="40dp"
       			    android:layout_alignParentBottom="true"
       			    android:layout_alignParentRight="true"

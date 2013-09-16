@@ -99,11 +99,11 @@ public class GoodsInfo implements Serializable {
 	}
 
 	public String getGoodsStandard() {
-		return goodsStandard;
+		return goodsStandard.trim();
 	}
 
 	public void setGoodsStandard(String goodsStandard) {
-		this.goodsStandard = goodsStandard;
+		this.goodsStandard = goodsStandard.trim();
 	}
 
 	public String getGoodsColorSort() {

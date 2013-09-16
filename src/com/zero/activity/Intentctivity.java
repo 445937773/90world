@@ -13,6 +13,7 @@ import com.zero.bean.Indent;
 import com.zero.bean.ShoppingCar;
 import com.zero.bean.Student;
 import com.zero.cache.ImageLoader;
+import com.zero.tools.Arith;
 import com.zero.tools.ConnectionDetector;
 import com.zero.tools.MyApplication;
 import com.zero.tools.MyMessages;
@@ -67,10 +68,9 @@ public class Intentctivity extends Activity {
 				foodsjin = 0;
 				for (int i = 0; i < shoppings.size(); i++) {
 					if(shoppings.get(i).getGoods()!=null){
-						
-						goodsjin = goodsjin + (shoppings.get(i).getGoodsNumber() * shoppings.get(i).getGoods().getPrice());
+						goodsjin = Arith.mul(shoppings.get(i).getGoodsNumber(), shoppings.get(i).getGoods().getPrice());
 					}else{
-						foodsjin = foodsjin + (shoppings.get(i).getGoodsNumber() * shoppings.get(i).getDish().getPrice());
+						foodsjin = Arith.mul(shoppings.get(i).getGoodsNumber(), shoppings.get(i).getDish().getPrice());
 					}
 				}
 				zongjine = goodsjin+foodsjin+"";

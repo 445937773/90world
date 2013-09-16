@@ -311,7 +311,9 @@ public class GoodsLastCategoryActivity extends Activity {
 				zhi.add(categoryName);
 				Message msg = new Message();
 				smalls = ParseXml.getbrandGoodsSort(names,zhi,MyMethods.GET_BRANDS_BY_GOODS_SMALL_CATEGORY);
-				smalls.add(0,"所有品牌");
+				if(smalls.size() > 1){
+					smalls.add(0,"所有品牌");
+				}
 				if(smalls!=null){
 					if(smalls.size() > 0){
 						List<String> goodsName = new ArrayList<String>();

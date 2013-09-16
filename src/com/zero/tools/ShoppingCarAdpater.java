@@ -93,6 +93,7 @@ public class ShoppingCarAdpater extends BaseAdapter{
 		holder.number.setText(info.getGoodsNumber()+"");
 		
 		if(info.getDish()!=null){
+			
 			holder.price.setText(info.getGoodsNumber()*info.getDish().getPrice()+"");
 			holder.image.setImageBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.res_image));
 			holder.tv_res.setText("所属餐馆:");
@@ -104,7 +105,8 @@ public class ShoppingCarAdpater extends BaseAdapter{
 				holder.manglu.setVisibility(View.GONE);
 			}
 		}else{
-			holder.price.setText(info.getGoodsNumber()*info.getGoods().getPrice()+"");
+			double total = Arith.mul(info.getGoodsNumber(), info.getGoods().getPrice());
+			holder.price.setText(total + "");
 			mImageLoader.addTask(info.getGoods().getImage(), holder.image); //添加任务
 			holder.tv_res.setText("商品规格:");
 			holder.name.setText(info.getGoods().getGoodsName());
