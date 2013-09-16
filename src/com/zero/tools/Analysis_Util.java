@@ -34,6 +34,7 @@ public class Analysis_Util {
 			
 			SoapObject result = (SoapObject)envelope.bodyIn;
 			SoapObject detail = (SoapObject)result.getProperty(METHOD_NAME+"Result");
+			androidHttpTransport.reset();
 			return detail;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

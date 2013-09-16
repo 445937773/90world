@@ -82,7 +82,6 @@ public class ShoppingCarAdpater extends BaseAdapter{
 			
 			convertView.setTag(holder);
 		}else{
-			//convertView = map.get(position);  
 			holder = (ViewHolder) convertView.getTag();
 		}
 		final ShoppingCar info =infos.get(position);
@@ -95,7 +94,6 @@ public class ShoppingCarAdpater extends BaseAdapter{
 		
 		if(info.getDish()!=null){
 			holder.price.setText(info.getGoodsNumber()*info.getDish().getPrice()+"");
-//			mImageLoader.addTask(info.getDish().getImage(), holder.image); //添加任务
 			holder.image.setImageBitmap(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.res_image));
 			holder.tv_res.setText("所属餐馆:");
 			holder.name.setText(info.getDish().getDishName());
@@ -131,9 +129,11 @@ public class ShoppingCarAdpater extends BaseAdapter{
 				info.setGoodsNumber(numberq);
 				holder.number.setText(numberq+"");
 				if(info.getGoods()!=null){
-					holder.price.setText(numberq*info.getGoods().getPrice()+"");
+					double total = Arith.mul(info.getGoods().getPrice(), numberq);
+					holder.price.setText(total + "");
 				}else{
-					holder.price.setText(numberq*info.getDish().getPrice()+"");
+					double total1 = Arith.mul(info.getDish().getPrice(), numberq);
+					holder.price.setText(total1 + "");
 				}
 				
 				numberq = -1;
@@ -151,9 +151,11 @@ public class ShoppingCarAdpater extends BaseAdapter{
 					info.setGoodsNumber(numberq);
 					holder.number.setText(numberq+"");
 					if(info.getGoods()!=null){
-						holder.price.setText(numberq*info.getGoods().getPrice()+"");
+						double total = Arith.mul(info.getGoods().getPrice(), numberq);
+						holder.price.setText(total+"");
 					}else{
-						holder.price.setText(numberq*info.getDish().getPrice()+"");
+						double total1 = Arith.mul(info.getGoods().getPrice(), numberq);
+						holder.price.setText(total1 + "");
 					}
 					number.add(1);
 				}
@@ -172,8 +174,6 @@ public class ShoppingCarAdpater extends BaseAdapter{
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				//Toast.makeText(mContext, "11", Toast.LENGTH_SHORT).show();
 				Intent intent;
 				if(info.getDish()!=null){
 					intent = new Intent(mContext,DishDetailActivity.class);

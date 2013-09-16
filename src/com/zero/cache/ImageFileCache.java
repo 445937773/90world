@@ -1,9 +1,11 @@
 package com.zero.cache;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -32,13 +34,24 @@ public class ImageFileCache {
         final String path = getDirectory() + "/" + convertUrlToFileName(url);
         File file = new File(path);
         if (file.exists()) {
-            Bitmap bmp = BitmapFactory.decodeFile(path);
-            if (bmp == null) {
-                file.delete();
-            } else {
-                updateFileTime(path);
-                return bmp;
-            }
+            BitmapFactory.Options opt = new BitmapFactory.Options();  
+            opt.inPreferredConfig = Bitmap.Config.RGB_565;   
+            opt.inPurgeable = true;  
+            opt.inInputShareable = true;  
+           //获取资源图片 
+            FileInputStream fis;
+			try {
+				fis = new FileInputStream( path );
+				Bitmap bmp =  BitmapFactory.decodeStream(fis,null,opt);
+				if (bmp == null) {
+	                file.delete();
+	            } else {
+	                updateFileTime(path);
+	                return bmp;
+	            }
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} 
         }
         return null;
     }

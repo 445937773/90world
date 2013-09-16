@@ -7,6 +7,7 @@ import com.zero.bean.GoodsFavorite;
 import com.zero.bean.GoodsInfo;
 import com.zero.bean.ShoppingCar;
 import com.zero.cache.ImageLoader;
+import com.zero.tools.Arith;
 import com.zero.tools.ConnectionDetector;
 import com.zero.tools.MyApplication;
 import com.zero.tools.MyMessages;
@@ -369,14 +370,16 @@ public class GoodsParticularInfoActivity extends Activity implements OnClickList
 				case R.id.edit_product_num_increse_details:
 					numberq+=1;
 					number.setText(numberq+"");
-					price.setText(dish.getPrice()*numberq+"");
+					double total = Arith.mul(dish.getPrice(), numberq);
+					price.setText(total + "");
 					
 					break;
 				case R.id.edit_product_num_descense_details:
 					if(Integer.parseInt(number.getText().toString())>1){
 						numberq-=1;
 						number.setText(numberq+"");
-						price.setText(dish.getPrice()*numberq+"");
+						double total1 = Arith.mul(dish.getPrice(), numberq);
+						price.setText(total1+"");
 						
 					}else if(Integer.parseInt(number.getText().toString())==2){
 						numberq-=1;

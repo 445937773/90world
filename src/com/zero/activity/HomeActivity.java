@@ -137,12 +137,6 @@ public class HomeActivity extends Activity implements OnClickListener{
 		}
 		
 	}
-	@Override
-	protected void onStart() {
-		// TODO Auto-generated method stub
-		
-		super.onStart();
-	}
 	/**
 	 * 开始播放广告
 	 */
@@ -372,7 +366,7 @@ public class HomeActivity extends Activity implements OnClickListener{
 				
 			case R.id.c_constellation:
 				b = new Bundle();
-				b.putString("names", "专区数码");
+				b.putString("names", "肯德基");
 				goTo(GoodscategorySmallActivity.class, b);
 				break;
 			

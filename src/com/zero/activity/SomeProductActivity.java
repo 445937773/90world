@@ -21,6 +21,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 public class SomeProductActivity extends Activity implements OnClickListener{
 	boolean getAddPic;
