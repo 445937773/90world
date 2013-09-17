@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.zero.bean.FoodsFavorite;
-import com.zero.cache.ImageLoader;
 import com.zero.www.R;
 
 
@@ -18,7 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 @SuppressLint("UseSparseArrays")

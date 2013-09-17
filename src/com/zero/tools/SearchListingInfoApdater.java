@@ -4,16 +4,13 @@ import java.util.List;
 
 import com.zero.activity.SearchActivity;
 import com.zero.bean.Dish;
-import com.zero.cache.ImageLoader;
 import com.zero.www.R;
 
 
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 

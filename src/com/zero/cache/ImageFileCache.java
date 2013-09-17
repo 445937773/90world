@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -135,7 +134,8 @@ public class ImageFileCache {
     /** 计算sdcard上的剩余空间 **/
     private int freeSpaceOnSd() {
         StatFs stat = new StatFs(Environment.getExternalStorageDirectory().getPath());
-        double sdFreeMB = ((double)stat.getAvailableBlocks() * (double) stat.getBlockSize()) / MB;
+        @SuppressWarnings("deprecation")
+		double sdFreeMB = ((double)stat.getAvailableBlocks() * (double) stat.getBlockSize()) / MB;
         return (int) sdFreeMB;
     } 
                                                                 

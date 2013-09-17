@@ -146,9 +146,9 @@
 -keep class com.zero.service.MyReceiver { <init>(...); }
 
 # view res/layout/rolate.xml #generated:27
-# view res/layout/rolate.xml #generated:38
-# view res/layout/rolate.xml #generated:50
-# view res/layout/rolate.xml #generated:62
+# view res/layout/rolate.xml #generated:37
+# view res/layout/rolate.xml #generated:49
+# view res/layout/rolate.xml #generated:61
 -keep class com.zero.tools.MyImageView { <init>(...); }
 
 # onClick res/layout/foods_list_item.xml #generated:106

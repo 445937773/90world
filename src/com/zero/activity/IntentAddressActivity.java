@@ -8,11 +8,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.zero.bean.Address;
-import com.zero.bean.FoodsShoppingCar;
 import com.zero.bean.Indent;
 import com.zero.bean.ShoppingCar;
 import com.zero.bean.Student;
-import com.zero.cache.ImageLoader;
 import com.zero.tools.Analysis_Util;
 import com.zero.tools.Arith;
 import com.zero.tools.ConnectionDetector;
@@ -32,7 +30,6 @@ import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -40,16 +37,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AbsListView.OnScrollListener;
 
 @SuppressLint("HandlerLeak")
 public class IntentAddressActivity extends Activity {

@@ -3,34 +3,20 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import com.zero.bean.Address;
-import com.zero.bean.FoodsShoppingCar;
-import com.zero.bean.Indent;
 import com.zero.bean.ShoppingCar;
-import com.zero.bean.Student;
 import com.zero.cache.ImageLoader;
 import com.zero.tools.Arith;
-import com.zero.tools.ConnectionDetector;
 import com.zero.tools.MyApplication;
 import com.zero.tools.MyMessages;
-import com.zero.tools.MyMethods;
-import com.zero.tools.MySharedPreferences;
 import com.zero.tools.OrderDetailApdater;
-import com.zero.tools.ParseXml;
 import com.zero.www.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.app.AlertDialog.Builder;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,12 +27,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AbsListView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AbsListView.OnScrollListener;
 
 @SuppressLint("HandlerLeak")

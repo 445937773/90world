@@ -22,7 +22,6 @@ import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -77,7 +76,6 @@ public class WellcomeActivity extends Activity {
            	//判断是不是第一次运行
         		SharedPreferences sharedPreferences = WellcomeActivity.this.getSharedPreferences("firstRun", MODE_PRIVATE);  
         		boolean isFirstRun = sharedPreferences.getBoolean("isFirstRun", true);  
-        		Editor editor = sharedPreferences.edit(); 
         		if (isFirstRun){  
        			Intent intent = new Intent(WellcomeActivity.this, MainActivity.class);
        			startActivity(intent);

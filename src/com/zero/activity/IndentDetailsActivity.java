@@ -36,7 +36,7 @@ import android.widget.AbsListView.OnScrollListener;
 @SuppressLint("HandlerLeak")
 public class IndentDetailsActivity extends Activity {
 
-	private TextView text1,text2,text3,text4,text5,text6,text7,text8,text9;
+	private TextView text1,text2,text3,text4,text5,text6,text7;
 	ListView list;
 	Indent indent;
 	Button btn_cancel;

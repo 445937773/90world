@@ -10,9 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 public class MyOrderCategoryActivity extends Activity implements OnClickListener{
 	private RelativeLayout allOrder, deliveryOrder, takeOrder, completedOrder, ly_back;

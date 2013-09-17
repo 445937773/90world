@@ -24,6 +24,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.SharedPreferences.Editor;
 import android.content.Intent;
 
+@SuppressWarnings("deprecation")
 public class MainActivity extends ActivityGroup{
 	public static MainActivity instance = null;
 	private static Activity activity;

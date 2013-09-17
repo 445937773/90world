@@ -20,6 +20,7 @@ import org.apache.http.params.HttpParams;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -32,7 +33,6 @@ import android.util.Log;
 
 public class UpdateManager {
 
-	private String curVersion;
 	private String newVersion;
 	private int curVersionCode;
 	private int newVersionCode;
@@ -93,7 +93,6 @@ public class UpdateManager {
 		try {
 			PackageInfo pInfo = ctx.getPackageManager().getPackageInfo(
 					ctx.getPackageName(), 0);
-			curVersion = pInfo.versionName;
 			curVersionCode = pInfo.versionCode;
 		} catch (NameNotFoundException e) {
 			Log.e("update", e.getMessage());
@@ -248,6 +247,7 @@ public class UpdateManager {
 		canceled = true;
 	}
 	
+	@SuppressLint("HandlerLeak")
 	Handler updateHandler = new Handler() 
 	{
 		@Override
