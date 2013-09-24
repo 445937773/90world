@@ -173,9 +173,9 @@ public class IntentAddressActivity extends Activity {
 		double foodsjin = 0;
 		for (int i = 0; i < shoppings.size(); i++) {
 			if(shoppings.get(i).getGoods()!=null){
-				goodsjin = Arith.mul(shoppings.get(i).getGoodsNumber(), shoppings.get(i).getGoods().getPrice());
+				goodsjin += Arith.mul(shoppings.get(i).getGoodsNumber(), shoppings.get(i).getGoods().getPrice());
 			}else{
-				foodsjin = Arith.mul(shoppings.get(i).getGoodsNumber(), shoppings.get(i).getDish().getPrice());
+				foodsjin += Arith.mul(shoppings.get(i).getGoodsNumber(), shoppings.get(i).getDish().getPrice());
 			}
 		}
 		zongjine = goodsjin+foodsjin+"";

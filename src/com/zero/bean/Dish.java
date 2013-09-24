@@ -57,11 +57,11 @@ public class Dish implements Serializable {
 	}
 
 	public String getDishName() {
-		return dishName;
+		return dishName.trim();
 	}
 
 	public void setDishName(String dishName) {
-		this.dishName = dishName;
+		this.dishName = dishName.trim();
 	}
 
 	public int getDishSortId() {

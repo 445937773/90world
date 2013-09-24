@@ -86,7 +86,7 @@ public class MoreActivity extends Activity implements OnClickListener{
 			case R.id.layout_help_more:
 				Intent intent = new Intent(MoreActivity.this, MyWebViewActivity.class);
 				Bundle b = new Bundle();
-				b.putString("addUrl", "http://90world.51idctg.com/html/about.html");
+				b.putString("addUrl", "http://90world.51idctg.com/html/about_v1.1.0.html");
 				b.putString("from", "about");
 				intent.putExtras(b);
 				startActivity(intent);

@@ -4811,17 +4811,16 @@ com.zero.tools.SortFoodApdater$ViewHolder -> com.zero.tools.at:
     android.widget.TextView text1 -> e
     com.zero.tools.SortFoodApdater this$0 -> f
 com.zero.tools.UpdateManager -> com.zero.tools.au:
-    java.lang.String curVersion -> b
-    java.lang.String newVersion -> c
-    int curVersionCode -> d
-    int newVersionCode -> e
-    java.lang.String updateInfo -> f
-    com.zero.tools.UpdateManager$UpdateCallback callback -> g
-    android.content.Context ctx -> h
-    int progress -> i
-    java.lang.Boolean hasNewVersion -> j
-    java.lang.Boolean canceled -> k
-    java.lang.String savefolder -> l
+    java.lang.String newVersion -> b
+    int curVersionCode -> c
+    int newVersionCode -> d
+    java.lang.String updateInfo -> e
+    com.zero.tools.UpdateManager$UpdateCallback callback -> f
+    android.content.Context ctx -> g
+    int progress -> h
+    java.lang.Boolean hasNewVersion -> i
+    java.lang.Boolean canceled -> j
+    java.lang.String savefolder -> k
     android.os.Handler updateHandler -> a
     java.lang.String getSDPath() -> d
     void getCurVersion() -> e

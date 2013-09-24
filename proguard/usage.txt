@@ -971,8 +971,6 @@ com.zero.activity.GoodsParticularInfoActivity:
 com.zero.activity.HomeActivity:
     android.widget.LinearLayout order
 com.zero.activity.IndentDetailsActivity:
-    private android.widget.TextView text8
-    private android.widget.TextView text9
     protected java.lang.String indentNumber
     protected com.zero.bean.Indent indents
 com.zero.activity.IntentAddressActivity:
@@ -1228,7 +1226,7 @@ com.zero.tools.UpdateManager:
     private static final int UPDATE_DOWNLOAD_CANCELED
     71:71:public java.lang.String getNewVersionName()
     76:76:public java.lang.String getUpdateInfo()
-    248:249:public void cancelDownload()
+    247:248:public void cancelDownload()
 com.zero.view.MyScrollLayout
 com.zero.www.BuildConfig
 com.zero.www.Manifest
