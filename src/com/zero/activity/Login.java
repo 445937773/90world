@@ -1,9 +1,13 @@
 package com.zero.activity;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 
+
+import cn.jpush.android.api.JPushInterface;
 
 import com.zero.bean.Student;
 import com.zero.tools.Analysis_Util;
@@ -241,6 +245,9 @@ public class Login extends Activity implements OnClickListener{
 		
 	}
 	private void setStudentIfo(){
+		Set<String> set = new LinkedHashSet<String>();
+		set.add(student.getStu_school().trim());
+		JPushInterface.setAliasAndTags(this, student.getPhone_num().trim(), set);
 		SharedPreferences userInfo = getSharedPreferences(MySharedPreferences.STUDENT_INFO, 0);  
 		userInfo.edit().putString(MySharedPreferences.STUDENT_NAME, student.getStu_name()).commit();  
 		userInfo.edit().putString(MySharedPreferences.STUDENT_ID, student.getStu_id()).commit();

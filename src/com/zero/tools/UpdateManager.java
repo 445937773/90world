@@ -45,9 +45,9 @@ public class UpdateManager {
 	private Boolean canceled;
 
 	//存放更新APK文件的路径
-	public static final String UPDATE_DOWNURL = "http://90world.51idctg.com/versionManager/90World.apk";
+	public static final String UPDATE_DOWNURL = "http://90world.51idctg.com/versionManager1/90World.apk";
 	//存放更新APK文件相应的版本说明路径
-	public static final String UPDATE_CHECKURL = "http://90world.51idctg.com/versionManager/versionInfo.txt";
+	public static final String UPDATE_CHECKURL = "http://90world.51idctg.com/versionManager1/versionInfo.txt";
 	public static final String UPDATE_APKNAME = "90World.apk";
 	//public static final String UPDATE_VERJSON = "ver.txt";
 	public static final String UPDATE_SAVENAME = "90World.apk";

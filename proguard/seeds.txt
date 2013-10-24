@@ -303,7 +303,6 @@ com.zero.www.R$drawable: int more_favrait
 com.zero.www.R$drawable: int more_logo
 com.zero.www.R$drawable: int more_order
 com.zero.www.R$drawable: int more_settings
-com.zero.www.R$drawable: int mylogo
 com.zero.www.R$drawable: int not_order
 com.zero.www.R$drawable: int order_commint_succ
 com.zero.www.R$drawable: int order_commit_cl
@@ -428,6 +427,7 @@ com.zero.www.R$id: int et_username_register
 com.zero.www.R$id: int et_validate_register
 com.zero.www.R$id: int group
 com.zero.www.R$id: int home_gard
+com.zero.www.R$id: int icon
 com.zero.www.R$id: int image1
 com.zero.www.R$id: int image2
 com.zero.www.R$id: int image3
@@ -445,14 +445,12 @@ com.zero.www.R$id: int iv_5st_add
 com.zero.www.R$id: int iv_back
 com.zero.www.R$id: int iv_busy_foodslist_item
 com.zero.www.R$id: int iv_busy_shoppingcar_item
-com.zero.www.R$id: int iv_category
 com.zero.www.R$id: int iv_foods
 com.zero.www.R$id: int iv_goods
 com.zero.www.R$id: int iv_goodsimage_order_detail
 com.zero.www.R$id: int iv_order_commint_succ
 com.zero.www.R$id: int iv_picture_my_favorite_i
 com.zero.www.R$id: int iv_picture_my_shoppingcar
-com.zero.www.R$id: int iv_res
 com.zero.www.R$id: int iv_right_goodsimage
 com.zero.www.R$id: int iv_supermarket_orderfood_list_item_firstimage
 com.zero.www.R$id: int iv_supermarket_orderfood_list_item_firstimage_text
@@ -628,7 +626,6 @@ com.zero.www.R$id: int tv_addressId_address_edit_detail
 com.zero.www.R$id: int tv_address_address_edit_detail
 com.zero.www.R$id: int tv_address_address_edit_detail_i
 com.zero.www.R$id: int tv_amount
-com.zero.www.R$id: int tv_category
 com.zero.www.R$id: int tv_comment_order_detail
 com.zero.www.R$id: int tv_comment_order_produce
 com.zero.www.R$id: int tv_confirm_userinfo_password_find
@@ -661,7 +658,6 @@ com.zero.www.R$id: int tv_product_name_my_favorite
 com.zero.www.R$id: int tv_receiver_address_order_produce
 com.zero.www.R$id: int tv_receiver_order_produce
 com.zero.www.R$id: int tv_receiver_phoneNumber_order_produce
-com.zero.www.R$id: int tv_res
 com.zero.www.R$id: int tv_restaurant_my_favorite
 com.zero.www.R$id: int tv_restaurant_my_shoppingcar
 com.zero.www.R$id: int tv_right_item_goodsname
@@ -708,6 +704,7 @@ com.zero.www.R$layout: int address_item
 com.zero.www.R$layout: int address_list
 com.zero.www.R$layout: int agreement
 com.zero.www.R$layout: int bbar
+com.zero.www.R$layout: int customer_notitfication_layout_a
 com.zero.www.R$layout: int dish_detailed
 com.zero.www.R$layout: int favarite_list_item
 com.zero.www.R$layout: int foods_category_res

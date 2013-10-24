@@ -50,7 +50,6 @@ public class EateryInfoImageApdater extends BaseAdapter{
 		}
 		Eatery eatery = infos.get(position);
 		convertView.setVisibility(View.VISIBLE);
-		holder.tupian1.setImageResource(R.drawable.mylogo);
 		holder.text.setText(eatery.getEateryId());
 		return convertView;
 	}

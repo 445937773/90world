@@ -1,5 +1,9 @@
 package com.zero.service;
 
+import org.json.JSONObject;
+
+import com.zero.activity.HomeActivity;
+import com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity;
 import com.zero.activity.WellcomeActivity;
 
 import android.content.BroadcastReceiver;
@@ -42,9 +46,10 @@ public class MyReceiver extends BroadcastReceiver {
         	
         } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
             Log.d(TAG, "用户点击打开了通知");
-            
+ //           openNotification(context, bundle);
         	//打开自定义的Activity
         	Intent i = new Intent(context,WellcomeActivity.class);
+        	i.putExtras(bundle);
         	i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         	context.startActivity(i);
         	
@@ -52,7 +57,32 @@ public class MyReceiver extends BroadcastReceiver {
         	Log.d(TAG, "Unhandled intent - " + intent.getAction());
         }
 	}
-
+	private void openNotification(Context context, Bundle bundle) {
+		String extras = bundle.getString(JPushInterface.EXTRA_EXTRA);
+        String myValue = "";
+        JSONObject extrasJson;
+        try {
+            extrasJson = new JSONObject(extras);
+            myValue = extrasJson.optString("myKey");
+            
+        } catch (Exception e) {
+            return;
+        }
+        if("canguan".equals(myValue)){
+        	String resName = extrasJson.optString("resName");
+        	Intent intent = new Intent(context, SearchFoodsCategoryByRestaurantNameActivity.class);
+        	Bundle b = new Bundle();
+        	b.putString("sort", resName);
+        	intent.putExtras(b);
+        	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        	context.startActivity(intent);
+        }else{
+        	Intent i = new Intent(context,WellcomeActivity.class);
+        	i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        	context.startActivity(i);
+        }
+	}
+	
 	// 打印所有的 intent extra 数据
 	private static String printBundle(Bundle bundle) {
 		StringBuilder sb = new StringBuilder();

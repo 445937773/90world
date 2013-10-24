@@ -10,7 +10,6 @@ import com.zero.tools.MyApplication;
 import com.zero.tools.MyMessages;
 import com.zero.tools.MyMethods;
 import com.zero.tools.ParseXml;
-import com.zero.tools.SortApdater;
 import com.zero.www.R;
 
 import android.annotation.SuppressLint;
@@ -19,7 +18,6 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -30,11 +28,9 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 @SuppressLint("HandlerLeak")
@@ -42,15 +38,15 @@ public class FoodsCategoryResActivity extends Activity implements OnClickListene
 	private String netWorkState;
 	private RelativeLayout ly_back;
 	private Button btn_shake;
-	private TextView tv_res, tv_category;
-	private ImageView iv_res, iv_category;
+//	private TextView tv_res, tv_category;
+//	private ImageView iv_res, iv_category;
 	private ListView list;
 	private ProgressBar pb_search;
 	
 	private List<Eatery> list_res = new ArrayList<Eatery>();
-	private List<String> categorys = new ArrayList<String>();
+//	private List<String> categorys = new ArrayList<String>();
 	private EateryApdater eateryAdapter;
-	private SortApdater categoryAdapter;
+//	private SortApdater categoryAdapter;
 	
 	private Handler mHandler = new Handler(){
 		public void handleMessage(Message msg){
@@ -60,11 +56,11 @@ public class FoodsCategoryResActivity extends Activity implements OnClickListene
 				pb_search.setVisibility(View.GONE);
 				list.setOnItemClickListener(resItemClickListener);
 				break;
-			case MyMessages.GET_CATEGORY_OK:
-				list.setAdapter(categoryAdapter);
-				pb_search.setVisibility(View.GONE);
-				list.setOnItemClickListener(categoryItemClickListener);
-				break;
+//			case MyMessages.GET_CATEGORY_OK:
+//				list.setAdapter(categoryAdapter);
+//				pb_search.setVisibility(View.GONE);
+//				list.setOnItemClickListener(categoryItemClickListener);
+//				break;
 			case MyMessages.TIME_OUT:
 				pb_search.setVisibility(View.GONE);
 				Builder builder = new AlertDialog.Builder(FoodsCategoryResActivity.this);
@@ -88,25 +84,25 @@ public class FoodsCategoryResActivity extends Activity implements OnClickListene
 			
 		};
 	};
-	private OnItemClickListener categoryItemClickListener = new OnItemClickListener() {
-		@Override
-		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-				long arg3) {
-			netWorkState = ConnectionDetector.getNetWorkState(FoodsCategoryResActivity.this);
-			if(netWorkState!=null){
-				Intent intent;
-				Bundle b = new Bundle();
-				String name = (String) list.getItemAtPosition(arg2);
-				intent = new Intent(FoodsCategoryResActivity.this,SortFoodActivity.class);
-				b.putString("sort", name);
-				intent.putExtras(b);
-				startActivity(intent);
-				overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-			}else{
-				Toast.makeText(FoodsCategoryResActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
-			}
-		}
-	};
+//	private OnItemClickListener categoryItemClickListener = new OnItemClickListener() {
+//		@Override
+//		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+//				long arg3) {
+//			netWorkState = ConnectionDetector.getNetWorkState(FoodsCategoryResActivity.this);
+//			if(netWorkState!=null){
+//				Intent intent;
+//				Bundle b = new Bundle();
+//				String name = (String) list.getItemAtPosition(arg2);
+//				intent = new Intent(FoodsCategoryResActivity.this,SortFoodActivity.class);
+//				b.putString("sort", name);
+//				intent.putExtras(b);
+//				startActivity(intent);
+//				overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+//			}else{
+//				Toast.makeText(FoodsCategoryResActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
+//			}
+//		}
+//	};
 	private OnItemClickListener resItemClickListener = new OnItemClickListener() {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -163,39 +159,39 @@ public class FoodsCategoryResActivity extends Activity implements OnClickListene
 		}).start();
 	}
 	
-	private void getCategory() {
-		pb_search.setVisibility(View.VISIBLE);
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				categorys = ParseXml.getDishSort(null, null, MyMethods.GET_ALL_FOOD_CATERGORYS);
-				categoryAdapter = new SortApdater(FoodsCategoryResActivity.this, categorys);
-				Message msg = new Message();
-				if(list_res != null){
-					msg.what = MyMessages.GET_CATEGORY_OK;
-				}else{
-					//超时
-					msg.what = MyMessages.TIME_OUT;
-				}
-				mHandler.sendMessage(msg);
-			}
-		}).start();
-		
-	}
+//	private void getCategory() {
+//		pb_search.setVisibility(View.VISIBLE);
+//		new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				categorys = ParseXml.getDishSort(null, null, MyMethods.GET_ALL_FOOD_CATERGORYS);
+//				categoryAdapter = new SortApdater(FoodsCategoryResActivity.this, categorys);
+//				Message msg = new Message();
+//				if(list_res != null){
+//					msg.what = MyMessages.GET_CATEGORY_OK;
+//				}else{
+//					//超时
+//					msg.what = MyMessages.TIME_OUT;
+//				}
+//				mHandler.sendMessage(msg);
+//			}
+//		}).start();
+//		
+//	}
 	private void findView() {
 		ly_back = (RelativeLayout) findViewById(R.id.ly_back);
 		btn_shake = (Button) findViewById(R.id.btn_shake);
-		tv_res = (TextView) findViewById(R.id.tv_res);
-		tv_category = (TextView) findViewById(R.id.tv_category);
-		iv_res = (ImageView) findViewById(R.id.iv_res);
-		iv_category = (ImageView) findViewById(R.id.iv_category);
+//		tv_res = (TextView) findViewById(R.id.tv_res);
+//		tv_category = (TextView) findViewById(R.id.tv_category);
+//		iv_res = (ImageView) findViewById(R.id.iv_res);
+//		iv_category = (ImageView) findViewById(R.id.iv_category);
 		pb_search = (ProgressBar) findViewById(R.id.pb_search);
 		list = (ListView) findViewById(R.id.lv_foods_category_res);
 		
 		ly_back.setOnClickListener(this);
 		btn_shake.setOnClickListener(this);
-		tv_res.setOnClickListener(this);
-		tv_category.setOnClickListener(this);
+//		tv_res.setOnClickListener(this);
+//		tv_category.setOnClickListener(this);
 	}
 
 	@Override
@@ -209,26 +205,26 @@ public class FoodsCategoryResActivity extends Activity implements OnClickListene
 			startActivity(intent);
 			overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 			break;
-		case R.id.tv_res:
-			iv_res.setBackgroundResource(R.drawable.btn_green);
-			iv_category.setBackgroundColor(Color.WHITE);
-			netWorkState = ConnectionDetector.getNetWorkState(FoodsCategoryResActivity.this);
-			if(netWorkState!=null){
-				getRes();
-			}else{
-				Toast.makeText(FoodsCategoryResActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
-			}
-			break;
-		case R.id.tv_category:
-			iv_category.setBackgroundResource(R.drawable.btn_green);
-			iv_res.setBackgroundColor(Color.WHITE);
-			netWorkState = ConnectionDetector.getNetWorkState(FoodsCategoryResActivity.this);
-			if(netWorkState!=null){
-				getCategory();
-			}else{
-				Toast.makeText(FoodsCategoryResActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
-			}
-			break;
+//		case R.id.tv_res:
+//			iv_res.setBackgroundResource(R.drawable.btn_green);
+//			iv_category.setBackgroundColor(Color.WHITE);
+//			netWorkState = ConnectionDetector.getNetWorkState(FoodsCategoryResActivity.this);
+//			if(netWorkState!=null){
+//				getRes();
+//			}else{
+//				Toast.makeText(FoodsCategoryResActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
+//			}
+//			break;
+//		case R.id.tv_category:
+//			iv_category.setBackgroundResource(R.drawable.btn_green);
+//			iv_res.setBackgroundColor(Color.WHITE);
+//			netWorkState = ConnectionDetector.getNetWorkState(FoodsCategoryResActivity.this);
+//			if(netWorkState!=null){
+//				getCategory();
+//			}else{
+//				Toast.makeText(FoodsCategoryResActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
+//			}
+//			break;
 
 		default:
 			break;

@@ -934,29 +934,18 @@ android.support.v4.widget.SearchViewCompatIcs$MySearchView
 android.support.v4.widget.SimpleCursorAdapter
 android.support.v4.widget.SimpleCursorAdapter$CursorToStringConverter
 android.support.v4.widget.SimpleCursorAdapter$ViewBinder
-cn.jpush.android.api.CustomPushNotificationBuilder:
-    public CustomPushNotificationBuilder(android.content.Context,int,int,int,int)
 cn.jpush.android.api.JPushInterface:
     public JPushInterface()
     public static void setDefaultPushNotificationBuilder(cn.jpush.android.api.BasicPushNotificationBuilder)
     public static void setPushTime(android.content.Context,java.util.Set,int,int)
-    public static void setPushNotificationBuilder(java.lang.Integer,cn.jpush.android.api.BasicPushNotificationBuilder)
-    public static void setAliasAndTags(android.content.Context,java.lang.String,java.util.Set)
     private static void a(android.content.Context,boolean,java.lang.String)
-    private static java.lang.String a(java.util.Set)
     public static java.lang.String getUdid(android.content.Context)
     public static void clearAllNotifications(android.content.Context)
     public static void clearNotificationById(android.content.Context,int)
 cn.jpush.android.api.b:
     public static void a(android.content.Context)
-cn.jpush.android.c.b:
-    protected static void a(java.lang.String,java.lang.String)
-cn.jpush.android.c.n
-cn.jpush.android.c.p:
-    public static void c(java.lang.String,java.lang.String)
 cn.jpush.android.service.ServiceInterface:
     public ServiceInterface()
-    public static void a(android.content.Context,java.lang.String,java.lang.String)
     public static void a(android.content.Context,boolean,java.lang.String)
     public static void k(android.content.Context)
 cn.jpush.android.ui.ListViewActivity
@@ -1143,6 +1132,7 @@ com.zero.service.ExampleApplication:
     private static final java.lang.String TAG
 com.zero.service.MyReceiver:
     private static final java.lang.String TAG
+    61:84:private void openNotification(android.content.Context,android.os.Bundle)
 com.zero.tools.Analysis_Util:
     private static final java.lang.String NAMESPACE
     private static final java.lang.String URL

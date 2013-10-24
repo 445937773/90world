@@ -11,7 +11,7 @@ public class FoodsFavorite implements Serializable {
 	private String RestaurantName;
 	private double price;
 	private String RestaruantAddress;
-	private String FoodPicture;
+	private String FoodPicture = "";
 	private String isBusy;
 	public FoodsFavorite() {
 		// TODO Auto-generated constructor stub

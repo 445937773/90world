@@ -2,21 +2,29 @@ package com.zero.activity;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+
+import cn.jpush.android.api.JPushInterface;
 
 import com.zero.bean.Student;
 import com.zero.tools.Analysis_Util;
 import com.zero.tools.ConnectionDetector;
+import com.zero.tools.DialogHelper;
 import com.zero.tools.MyApplication;
 import com.zero.tools.MyMessages;
 import com.zero.tools.MyMethods;
 import com.zero.tools.MySharedPreferences;
 import com.zero.tools.ParseXml;
+import com.zero.tools.UpdateManager;
 import com.zero.www.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.app.AlertDialog.Builder;
 import android.content.ComponentName;
 import android.content.DialogInterface;
@@ -33,15 +41,13 @@ public class WellcomeActivity extends Activity {
 	String netWorkState = null;
 	Handler handler;
 	Student student;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wellcome_layout);
 		MyApplication.getInstance().addActivity(this);
-		
-		
-		
 		handler = new Handler(){
 			public void handleMessage(Message msg) {
 				switch (msg.what) {
@@ -76,15 +82,29 @@ public class WellcomeActivity extends Activity {
            	//判断是不是第一次运行
         		SharedPreferences sharedPreferences = WellcomeActivity.this.getSharedPreferences("firstRun", MODE_PRIVATE);  
         		boolean isFirstRun = sharedPreferences.getBoolean("isFirstRun", true);  
-        		if (isFirstRun){  
-       			Intent intent = new Intent(WellcomeActivity.this, MainActivity.class);
-       			startActivity(intent);
+        		if (isFirstRun){
+        		Intent intent = getIntent();
+        		Intent intent1 = new Intent(WellcomeActivity.this, MainActivity.class);
+        		if(intent != null){
+        			Bundle b = intent.getExtras();
+        			if(b != null){
+        				intent1.putExtras(b);
+        			}
+        		}
+       			startActivity(intent1);
        		    Log.e("debug", "第一次运行");  
        		    
        		}else{  
        		    Log.e("debug", "不是第一次运行");
-       		    Intent intent = new Intent(WellcomeActivity.this, MainActivity.class);
-                startActivity(intent);
+       		    Intent intent = getIntent();
+	     		Intent intent1 = new Intent(WellcomeActivity.this, MainActivity.class);
+	     		if(intent != null){
+	     			Bundle b = intent.getExtras();
+	     			if(b != null){
+	     				intent1.putExtras(b);
+	     			}
+	     		}
+	    			startActivity(intent1);
                 switch (loginMsg) {
 				case MyMessages.CHANGE_PWD_OK:
 					Toast.makeText(WellcomeActivity.this, "自动登录成功！", Toast.LENGTH_SHORT).show();
@@ -169,10 +189,12 @@ public class WellcomeActivity extends Activity {
 								if(students != null){
 									if(students.size() > 0){
 										student = students.get(0);
+										Set<String> set = new LinkedHashSet<String>();
+										set.add(student.getStu_school().trim());
+										JPushInterface.setAliasAndTags(WellcomeActivity.this, student.getPhone_num().trim(), set);
 										msg.what = MyMessages.CHANGE_PWD_OK;
 									}else{
 										msg.what = MyMessages.LOGIN_PWD_ERROR;
-										
 									}
 								}else{
 									msg.what = MyMessages.LOGIN_PWD_ERROR;
@@ -192,4 +214,5 @@ public class WellcomeActivity extends Activity {
 		}
 		
 	}
+	
 }

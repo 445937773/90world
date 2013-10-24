@@ -1,5 +1,12 @@
 package com.zero.activity;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import cn.jpush.android.api.JPushInterface;
+
+import com.zero.tools.DialogHelper;
 import com.zero.tools.MyApplication;
+import com.zero.tools.UpdateManager;
 import com.zero.www.R;
 
 import android.os.Bundle;
@@ -15,6 +22,7 @@ import android.widget.ViewFlipper;
 import android.app.Activity;
 import android.app.ActivityGroup;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.app.AlertDialog.Builder;
 import android.app.LocalActivityManager;
 import android.content.Context;
@@ -34,6 +42,8 @@ public class MainActivity extends ActivityGroup{
 	//声明LocalActivityManager对象
 	private LocalActivityManager m_ActivityManager;
 	RadioButton home_radio, category_radio, search_radio, shopping_radio, more_radio;
+	private UpdateManager updateMan;
+	private ProgressDialog updateProgressDialog;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,7 +70,30 @@ public class MainActivity extends ActivityGroup{
         	else{
         		home_radio.setChecked(true);
         	}
+        	String extras = bundle.getString(JPushInterface.EXTRA_EXTRA);
+        	if(extras != null && !"".equals(extras)){
+        		String myValue = "";
+        		JSONObject extrasJson;
+        		try {
+					extrasJson = new JSONObject(extras);
+					myValue = extrasJson.optString("canguan");
+				} catch (JSONException e) {
+					e.printStackTrace();
+					return;
+				}
+        		if(!"".equals(myValue)){
+        			Intent intent = new Intent(this, SearchFoodsCategoryByRestaurantNameActivity.class);
+        			Bundle b = new Bundle();
+        			b.putString("sort", myValue);
+        			intent.putExtras(b);
+        			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        			startActivity(intent);
+        		}
+        		
+        		//
+        	}
     	}
+    	checkVesin();
 	}
 	
 		
@@ -215,5 +248,70 @@ public class MainActivity extends ActivityGroup{
 	public static void setActivity(Activity activity){
 		MainActivity.activity = activity;
 	}
+	//更新所用
+		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		private void checkVesin() {
+			updateMan = new UpdateManager(this, appUpdateCb);
+			updateMan.checkUpdate();
+		}
+		// 自动更新回调函数
+		UpdateManager.UpdateCallback appUpdateCb = new UpdateManager.UpdateCallback() 
+		{
+			public void downloadProgressChanged(int progress) {
+				if (updateProgressDialog != null
+						&& updateProgressDialog.isShowing()) {
+					updateProgressDialog.setProgress(progress);
+				}
 
+			}
+			public void downloadCompleted(Boolean sucess, CharSequence errorMsg) {
+				if (updateProgressDialog != null
+						&& updateProgressDialog.isShowing()) {
+					updateProgressDialog.dismiss();
+				}
+				if (sucess) {
+					updateMan.update();
+				} else {
+					DialogHelper.Confirm(MainActivity.this,
+					R.string.dialog_error_title,
+					R.string.dialog_downfailed_msg,
+					R.string.dialog_downfailed_btndown,
+					new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,
+								int which) {
+							updateMan.downloadPackage();
+						}
+					}, R.string.dialog_downfailed_btnnext, null);
+				}
+			}
+			public void downloadCanceled(){}
+			public void checkUpdateCompleted(Boolean hasUpdate, CharSequence updateInfo) {
+				if (hasUpdate) {
+					DialogHelper.Confirm(MainActivity.this,
+							getText(R.string.dialog_update_title),
+							getText(R.string.dialog_update_msg).toString()
+							+updateInfo+
+							getText(R.string.dialog_update_msg2).toString(),
+									getText(R.string.dialog_update_btnupdate),
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int which) {
+									updateProgressDialog = new ProgressDialog(
+											MainActivity.this);
+									updateProgressDialog
+											.setMessage(getText(R.string.dialog_downloading_msg));
+									updateProgressDialog.setIndeterminate(false);
+									updateProgressDialog
+											.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+									updateProgressDialog.setMax(100);
+									updateProgressDialog.setProgress(0);
+									updateProgressDialog.show();
+									updateMan.downloadPackage();
+								}
+							},getText( R.string.dialog_update_btnnext), null);
+				}else{
+				}
+			}
+		};
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 }

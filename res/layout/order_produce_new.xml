@@ -53,7 +53,6 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_above="@+id/layout_amount_and_submit"
-            android:layout_below="@+id/layout_title_bar_order_produce"
             android:layout_marginBottom="3dp"
             android:layout_marginLeft="6.0dip"
             android:layout_marginRight="6.0dip"
@@ -117,7 +116,6 @@
 				        android:layout_height="wrap_content"
 				        android:layout_centerVertical="true"
 				        android:layout_gravity="left"
-				        android:layout_toLeftOf="@+id/btn_order_submit_order_produce"
 				        android:layout_toRightOf="@+id/tv_order_money_rmb"
 				        android:text="88.88"
 				        android:textColor="#FF0000"
@@ -129,20 +127,20 @@
       			
 				<Button
 				    android:id="@+id/btn_order_submit_order_produce"
-				    android:layout_width="40sp"
+				    android:layout_width="wrap_content"
 				    android:layout_height="55dp"
 				    android:layout_alignParentTop="true"
 				    android:layout_marginBottom="5dp"
 				    android:layout_toRightOf="@+id/relativeLayout1"
 				    android:layout_toLeftOf="@+id/relativeLayout3"
 				    android:background="@drawable/order_commit_cl"
-				    android:text="确    认"
+				    android:text="下一步"
 				    android:textSize="20sp" />
 
 				   
 				<RelativeLayout
       			    android:id="@+id/relativeLayout3"
-      			    android:layout_width="50dp"
+      			    android:layout_width="20dp"
       			    android:layout_height="40dp"
       			    android:layout_alignParentBottom="true"
       			    android:layout_alignParentRight="true"

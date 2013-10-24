@@ -168,42 +168,66 @@ public class HomeActivity extends Activity implements OnClickListener{
 		super.onPause();
 	}
 	//广告的点击事件
-		@Override
-		protected void onResume() {	
-			for(int i=0;i<imageViews.size();i++){
-				imageViews.get(i).setOnClickListener(new OnClickListener() {
-					
-					public void onClick(View v) {
-						netWorkState = ConnectionDetector.getNetWorkState(HomeActivity.this);
-						if(netWorkState!=null){
-							Bundle b = new Bundle();
-							Poster p = posters.get(imageViews.get(currentItem).getId());
-							if(p.getPointer()!=0){
-								
-								b.putInt("poster", p.getGoodsId());
-								Intent intent = new Intent(HomeActivity.this, GoodsParticularInfoActivity.class);
-								intent.putExtras(b);
-								startActivity(intent);
-								overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-							}else{
-								Intent it = new Intent(HomeActivity.this, MyWebViewActivity.class); 
-								Bundle bundle = new Bundle();
-								bundle.putString("addUrl", p.getPosterChaining());
-								it.putExtras(bundle);
-								startActivity(it);
-								overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-							}
-						}else{
-							Toast.makeText(HomeActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
+	@Override
+	protected void onResume() {	
+		for(int i=0;i<imageViews.size();i++){
+			imageViews.get(i).setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					netWorkState = ConnectionDetector.getNetWorkState(HomeActivity.this);
+					if(netWorkState!=null){
+						Bundle b = new Bundle();
+						Poster p = posters.get(imageViews.get(currentItem).getId());
+						int pointer = p.getPointer();
+						switch (pointer) {
+						case 0: // 0=跳转到网页
+							Intent it = new Intent(HomeActivity.this, MyWebViewActivity.class); 
+							b.putString("addUrl", p.getPosterChaining());
+							it.putExtras(b);
+							startActivity(it);
+							break;
+						case 1: // 1=跳转到商品详情
+							b.putInt("poster", p.getGoodsId());
+							Intent intent = new Intent(HomeActivity.this, GoodsParticularInfoActivity.class);
+							intent.putExtras(b);
+							startActivity(intent);
+							break;
+						case 2: //直接进入超市
+							b.putString("goto", "超市");
+							Intent intent2 = new Intent(HomeActivity.this, GoodsCategoryActivity.class);
+							intent2.putExtras(b);
+							startActivity(intent2);
+							break;
+						case 3: //跳转到商品小分类
+							String categorysName = p.getPosterChaining();
+							b.putString("names", categorysName);
+							Intent intent3 = new Intent(HomeActivity.this, GoodscategorySmallActivity.class);
+							intent3.putExtras(b);
+							startActivity(intent3);
+							break;
+						case 4: //跳转到指定餐馆
+							String resName = p.getPosterChaining();
+							b.putString("sort", resName);
+							Intent intent4 = new Intent(HomeActivity.this, SearchFoodsCategoryByRestaurantNameActivity.class);
+							intent4.putExtras(b);
+							startActivity(intent4);
+							break;
+						case 5: //直接进入快餐
+							Intent intent5 = new Intent(HomeActivity.this, FoodsCategoryResActivity.class);
+							startActivity(intent5);
+							break;
+						default:
+							//哪里也不去
+							break;
 						}
-						
-						
-
+						overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+					}else{
+						Toast.makeText(HomeActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
 					}
-				});
-			}
-			super.onResume();
+				}
+			});
 		}
+		super.onResume();
+	}
 		
 //
 //		@Override

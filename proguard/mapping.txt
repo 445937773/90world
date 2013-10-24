@@ -1486,10 +1486,13 @@ cn.jpush.android.api.JPushInterface -> cn.jpush.android.b.f:
     void resumePush(android.content.Context) -> b
     void stopPush(android.content.Context) -> c
     void setDebugMode(boolean) -> a
+    void setPushNotificationBuilder(java.lang.Integer,cn.jpush.android.api.BasicPushNotificationBuilder) -> a
     boolean a(int) -> a
     cn.jpush.android.api.PushNotificationBuilder b(int) -> b
     void activityStarted(android.app.Activity) -> a
     void activityStopped(android.app.Activity) -> b
+    void setAliasAndTags(android.content.Context,java.lang.String,java.util.Set) -> a
+    java.lang.String a(java.util.Set) -> a
     void setLatestNotifactionNumber(android.content.Context,int) -> a
     int a() -> a
     boolean a(boolean) -> b
@@ -1804,7 +1807,8 @@ cn.jpush.android.c.b -> cn.jpush.android.d.b:
     android.content.SharedPreferences a -> a
     android.content.SharedPreferences$Editor b -> b
     void a(android.content.Context) -> a
-    java.lang.String b(java.lang.String,java.lang.String) -> a
+    void a(java.lang.String,java.lang.String) -> a
+    java.lang.String b(java.lang.String,java.lang.String) -> b
 cn.jpush.android.c.c -> cn.jpush.android.d.c:
     java.lang.String[] z -> a
     byte[] a(java.io.File) -> a
@@ -1879,7 +1883,16 @@ cn.jpush.android.c.m -> cn.jpush.android.d.m:
     java.lang.String c -> c
     int d -> d
     java.lang.String toString() -> toString
-cn.jpush.android.c.o -> cn.jpush.android.d.n:
+cn.jpush.android.c.n -> cn.jpush.android.d.n:
+    java.util.regex.Pattern a -> a
+    java.util.regex.Pattern b -> b
+    java.util.regex.Pattern c -> c
+    java.util.regex.Pattern d -> d
+    java.util.regex.Pattern e -> e
+    java.util.regex.Pattern f -> f
+    java.lang.String[] z -> g
+    boolean a(java.lang.String) -> a
+cn.jpush.android.c.o -> cn.jpush.android.d.o:
     java.lang.String[] z -> a
     java.lang.String a(byte[],int,int) -> a
     int b(byte[],int,int) -> b
@@ -1891,10 +1904,11 @@ cn.jpush.android.c.o -> cn.jpush.android.d.n:
     byte[] a(int,int) -> a
     byte[] a(int) -> a
     byte[] b(int) -> b
-cn.jpush.android.c.p -> cn.jpush.android.d.o:
+cn.jpush.android.c.p -> cn.jpush.android.d.p:
     java.lang.String z -> a
+    void c(java.lang.String,java.lang.String) -> c
     java.lang.String a(java.lang.String) -> a
-cn.jpush.android.c.q -> cn.jpush.android.d.p:
+cn.jpush.android.c.q -> cn.jpush.android.d.q:
     android.content.SharedPreferences a -> a
     java.lang.String[] z -> b
     void a() -> a
@@ -1907,12 +1921,12 @@ cn.jpush.android.c.q -> cn.jpush.android.d.p:
     long a(android.content.Context,java.lang.String,long) -> a
     void b(android.content.Context,java.lang.String,long) -> b
     android.content.SharedPreferences b(android.content.Context) -> b
-cn.jpush.android.c.r -> cn.jpush.android.d.q:
+cn.jpush.android.c.r -> cn.jpush.android.d.r:
     java.lang.String a -> a
     java.lang.String[] z -> b
     boolean a(java.lang.String) -> a
     java.lang.String b(java.lang.String) -> b
-cn.jpush.android.c.s -> cn.jpush.android.d.r:
+cn.jpush.android.c.s -> cn.jpush.android.d.s:
     java.lang.String[] z -> a
     org.json.JSONArray a(android.content.Context) -> a
 cn.jpush.android.service.AlarmReceiver -> cn.jpush.android.service.AlarmReceiver:
@@ -2091,6 +2105,7 @@ cn.jpush.android.service.ServiceInterface -> cn.jpush.android.service.a:
     void d(android.content.Context) -> d
     void e(android.content.Context) -> e
     void f(android.content.Context) -> f
+    void a(android.content.Context,java.lang.String,java.lang.String) -> a
     void a(android.content.Context,cn.jpush.android.a.c) -> a
     void g(android.content.Context) -> g
     void a(android.content.Context,int) -> a
@@ -2110,7 +2125,7 @@ cn.jpush.android.service.ServiceInterface -> cn.jpush.android.service.a:
     java.lang.String a(int,java.lang.String,org.json.JSONArray,int,int) -> a
     int a(int,byte[]) -> a
     void j(android.content.Context) -> j
-    void b(android.content.Context,java.lang.String,java.lang.String) -> a
+    void b(android.content.Context,java.lang.String,java.lang.String) -> b
     void b(android.content.Context,int) -> b
     boolean a() -> a
     void a(android.content.Context,java.lang.String,int,org.json.JSONArray,java.lang.String) -> a
@@ -2754,23 +2769,15 @@ com.zero.activity.FoodsCategoryResActivity -> com.zero.activity.FoodsCategoryRes
     java.lang.String netWorkState -> a
     android.widget.RelativeLayout ly_back -> b
     android.widget.Button btn_shake -> c
-    android.widget.TextView tv_res -> d
-    android.widget.TextView tv_category -> e
-    android.widget.ImageView iv_res -> f
-    android.widget.ImageView iv_category -> g
-    android.widget.ListView list -> h
-    android.widget.ProgressBar pb_search -> i
-    java.util.List list_res -> j
-    java.util.List categorys -> k
-    com.zero.tools.EateryApdater eateryAdapter -> l
-    com.zero.tools.SortApdater categoryAdapter -> m
-    android.os.Handler mHandler -> n
-    android.widget.AdapterView$OnItemClickListener categoryItemClickListener -> o
-    android.widget.AdapterView$OnItemClickListener resItemClickListener -> p
+    android.widget.ListView list -> d
+    android.widget.ProgressBar pb_search -> e
+    java.util.List list_res -> f
+    com.zero.tools.EateryApdater eateryAdapter -> g
+    android.os.Handler mHandler -> h
+    android.widget.AdapterView$OnItemClickListener resItemClickListener -> i
     void onCreate(android.os.Bundle) -> onCreate
     void getRes() -> a
-    void getCategory() -> b
-    void findView() -> c
+    void findView() -> b
     void onClick(android.view.View) -> onClick
     void onBackPressed() -> onBackPressed
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
@@ -2779,18 +2786,13 @@ com.zero.activity.FoodsCategoryResActivity -> com.zero.activity.FoodsCategoryRes
     com.zero.tools.EateryApdater access$1(com.zero.activity.FoodsCategoryResActivity) -> b
     android.widget.ProgressBar access$2(com.zero.activity.FoodsCategoryResActivity) -> c
     android.widget.AdapterView$OnItemClickListener access$3(com.zero.activity.FoodsCategoryResActivity) -> d
-    com.zero.tools.SortApdater access$4(com.zero.activity.FoodsCategoryResActivity) -> e
-    android.widget.AdapterView$OnItemClickListener access$5(com.zero.activity.FoodsCategoryResActivity) -> f
-    void access$6(com.zero.activity.FoodsCategoryResActivity) -> g
-    void access$7(com.zero.activity.FoodsCategoryResActivity,java.lang.String) -> a
-    java.lang.String access$8(com.zero.activity.FoodsCategoryResActivity) -> h
-    void access$9(com.zero.activity.FoodsCategoryResActivity,java.util.List) -> a
-    java.util.List access$10(com.zero.activity.FoodsCategoryResActivity) -> i
-    void access$11(com.zero.activity.FoodsCategoryResActivity,com.zero.tools.EateryApdater) -> a
-    android.os.Handler access$12(com.zero.activity.FoodsCategoryResActivity) -> j
-    void access$13(com.zero.activity.FoodsCategoryResActivity,java.util.List) -> b
-    java.util.List access$14(com.zero.activity.FoodsCategoryResActivity) -> k
-    void access$15(com.zero.activity.FoodsCategoryResActivity,com.zero.tools.SortApdater) -> a
+    void access$4(com.zero.activity.FoodsCategoryResActivity) -> e
+    void access$5(com.zero.activity.FoodsCategoryResActivity,java.lang.String) -> a
+    java.lang.String access$6(com.zero.activity.FoodsCategoryResActivity) -> f
+    void access$7(com.zero.activity.FoodsCategoryResActivity,java.util.List) -> a
+    java.util.List access$8(com.zero.activity.FoodsCategoryResActivity) -> g
+    void access$9(com.zero.activity.FoodsCategoryResActivity,com.zero.tools.EateryApdater) -> a
+    android.os.Handler access$10(com.zero.activity.FoodsCategoryResActivity) -> h
 com.zero.activity.FoodsCategoryResActivity$1 -> com.zero.activity.aj:
     com.zero.activity.FoodsCategoryResActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
@@ -2805,12 +2807,6 @@ com.zero.activity.FoodsCategoryResActivity$2 -> com.zero.activity.am:
     com.zero.activity.FoodsCategoryResActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
 com.zero.activity.FoodsCategoryResActivity$3 -> com.zero.activity.an:
-    com.zero.activity.FoodsCategoryResActivity this$0 -> a
-    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.FoodsCategoryResActivity$4 -> com.zero.activity.ao:
-    com.zero.activity.FoodsCategoryResActivity this$0 -> a
-    void run() -> run
-com.zero.activity.FoodsCategoryResActivity$5 -> com.zero.activity.ap:
     com.zero.activity.FoodsCategoryResActivity this$0 -> a
     void run() -> run
 com.zero.activity.GoodsCategoryActivity -> com.zero.activity.GoodsCategoryActivity:
@@ -2831,23 +2827,23 @@ com.zero.activity.GoodsCategoryActivity -> com.zero.activity.GoodsCategoryActivi
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
     android.widget.RelativeLayout access$0(com.zero.activity.GoodsCategoryActivity) -> a
     void access$1(com.zero.activity.GoodsCategoryActivity,java.lang.String) -> a
-com.zero.activity.GoodsCategoryActivity$1 -> com.zero.activity.aq:
+com.zero.activity.GoodsCategoryActivity$1 -> com.zero.activity.ao:
     com.zero.activity.GoodsCategoryActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.GoodsCategoryActivity access$0(com.zero.activity.GoodsCategoryActivity$1) -> a
-com.zero.activity.GoodsCategoryActivity$1$1 -> com.zero.activity.ar:
+com.zero.activity.GoodsCategoryActivity$1$1 -> com.zero.activity.ap:
     com.zero.activity.GoodsCategoryActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsCategoryActivity$1$2 -> com.zero.activity.as:
+com.zero.activity.GoodsCategoryActivity$1$2 -> com.zero.activity.aq:
     com.zero.activity.GoodsCategoryActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsCategoryActivity$2 -> com.zero.activity.at:
+com.zero.activity.GoodsCategoryActivity$2 -> com.zero.activity.ar:
     com.zero.activity.GoodsCategoryActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.GoodsCategoryActivity$3 -> com.zero.activity.au:
+com.zero.activity.GoodsCategoryActivity$3 -> com.zero.activity.as:
     com.zero.activity.GoodsCategoryActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.GoodsCategoryActivity$4 -> com.zero.activity.av:
+com.zero.activity.GoodsCategoryActivity$4 -> com.zero.activity.at:
     com.zero.activity.GoodsCategoryActivity this$0 -> a
     java.lang.String val$where -> b
     void run() -> run
@@ -2876,42 +2872,42 @@ com.zero.activity.GoodsLastCategoryActivity -> com.zero.activity.GoodsLastCatego
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
     android.app.ProgressDialog access$0(com.zero.activity.GoodsLastCategoryActivity) -> a
     java.lang.String access$1(com.zero.activity.GoodsLastCategoryActivity) -> b
-com.zero.activity.GoodsLastCategoryActivity$1 -> com.zero.activity.aw:
+com.zero.activity.GoodsLastCategoryActivity$1 -> com.zero.activity.au:
     com.zero.activity.GoodsLastCategoryActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.GoodsLastCategoryActivity access$0(com.zero.activity.GoodsLastCategoryActivity$1) -> a
-com.zero.activity.GoodsLastCategoryActivity$1$1 -> com.zero.activity.ax:
+com.zero.activity.GoodsLastCategoryActivity$1$1 -> com.zero.activity.av:
     com.zero.activity.GoodsLastCategoryActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsLastCategoryActivity$1$2 -> com.zero.activity.ay:
+com.zero.activity.GoodsLastCategoryActivity$1$2 -> com.zero.activity.aw:
     com.zero.activity.GoodsLastCategoryActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsLastCategoryActivity$2 -> com.zero.activity.az:
+com.zero.activity.GoodsLastCategoryActivity$2 -> com.zero.activity.ax:
     com.zero.activity.GoodsLastCategoryActivity this$0 -> a
     void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
     void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
     com.zero.activity.GoodsLastCategoryActivity access$0(com.zero.activity.GoodsLastCategoryActivity$2) -> a
-com.zero.activity.GoodsLastCategoryActivity$2$1 -> com.zero.activity.ba:
+com.zero.activity.GoodsLastCategoryActivity$2$1 -> com.zero.activity.ay:
     com.zero.activity.GoodsLastCategoryActivity$2 this$1 -> a
     java.lang.String val$rand -> b
     java.lang.String val$name -> c
     void run() -> run
-com.zero.activity.GoodsLastCategoryActivity$3 -> com.zero.activity.bb:
+com.zero.activity.GoodsLastCategoryActivity$3 -> com.zero.activity.az:
     com.zero.activity.GoodsLastCategoryActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.GoodsLastCategoryActivity$4 -> com.zero.activity.bc:
+com.zero.activity.GoodsLastCategoryActivity$4 -> com.zero.activity.ba:
     com.zero.activity.GoodsLastCategoryActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.GoodsLastCategoryActivity$5 -> com.zero.activity.bd:
+com.zero.activity.GoodsLastCategoryActivity$5 -> com.zero.activity.bb:
     com.zero.activity.GoodsLastCategoryActivity this$0 -> a
     void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
     void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
-com.zero.activity.GoodsLastCategoryActivity$6 -> com.zero.activity.be:
+com.zero.activity.GoodsLastCategoryActivity$6 -> com.zero.activity.bc:
     com.zero.activity.GoodsLastCategoryActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$zhi -> c
     void run() -> run
-com.zero.activity.GoodsLastCategoryActivity$7 -> com.zero.activity.bf:
+com.zero.activity.GoodsLastCategoryActivity$7 -> com.zero.activity.bd:
     com.zero.activity.GoodsLastCategoryActivity this$0 -> a
     void run() -> run
 com.zero.activity.GoodsParticularInfoActivity -> com.zero.activity.GoodsParticularInfoActivity:
@@ -2965,51 +2961,51 @@ com.zero.activity.GoodsParticularInfoActivity -> com.zero.activity.GoodsParticul
     java.lang.String access$3(com.zero.activity.GoodsParticularInfoActivity) -> c
     void access$4(com.zero.activity.GoodsParticularInfoActivity,java.lang.String) -> b
     java.lang.String access$5(com.zero.activity.GoodsParticularInfoActivity) -> d
-com.zero.activity.GoodsParticularInfoActivity$1 -> com.zero.activity.bg:
+com.zero.activity.GoodsParticularInfoActivity$1 -> com.zero.activity.be:
     com.zero.activity.GoodsParticularInfoActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.GoodsParticularInfoActivity access$0(com.zero.activity.GoodsParticularInfoActivity$1) -> a
-com.zero.activity.GoodsParticularInfoActivity$1$1 -> com.zero.activity.bh:
+com.zero.activity.GoodsParticularInfoActivity$1$1 -> com.zero.activity.bf:
     com.zero.activity.GoodsParticularInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$1$2 -> com.zero.activity.bi:
+com.zero.activity.GoodsParticularInfoActivity$1$2 -> com.zero.activity.bg:
     com.zero.activity.GoodsParticularInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$1$3 -> com.zero.activity.bj:
+com.zero.activity.GoodsParticularInfoActivity$1$3 -> com.zero.activity.bh:
     com.zero.activity.GoodsParticularInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$1$4 -> com.zero.activity.bk:
+com.zero.activity.GoodsParticularInfoActivity$1$4 -> com.zero.activity.bi:
     com.zero.activity.GoodsParticularInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$1$5 -> com.zero.activity.bl:
+com.zero.activity.GoodsParticularInfoActivity$1$5 -> com.zero.activity.bj:
     com.zero.activity.GoodsParticularInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$1$6 -> com.zero.activity.bm:
+com.zero.activity.GoodsParticularInfoActivity$1$6 -> com.zero.activity.bk:
     com.zero.activity.GoodsParticularInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$1$7 -> com.zero.activity.bn:
+com.zero.activity.GoodsParticularInfoActivity$1$7 -> com.zero.activity.bl:
     com.zero.activity.GoodsParticularInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$1$8 -> com.zero.activity.bo:
+com.zero.activity.GoodsParticularInfoActivity$1$8 -> com.zero.activity.bm:
     com.zero.activity.GoodsParticularInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$2 -> com.zero.activity.bp:
+com.zero.activity.GoodsParticularInfoActivity$2 -> com.zero.activity.bn:
     com.zero.activity.GoodsParticularInfoActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$3 -> com.zero.activity.bq:
+com.zero.activity.GoodsParticularInfoActivity$3 -> com.zero.activity.bo:
     com.zero.activity.GoodsParticularInfoActivity this$0 -> a
     void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
-com.zero.activity.GoodsParticularInfoActivity$4 -> com.zero.activity.br:
+com.zero.activity.GoodsParticularInfoActivity$4 -> com.zero.activity.bp:
     com.zero.activity.GoodsParticularInfoActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.GoodsParticularInfoActivity$5 -> com.zero.activity.bs:
+com.zero.activity.GoodsParticularInfoActivity$5 -> com.zero.activity.bq:
     com.zero.activity.GoodsParticularInfoActivity this$0 -> a
     int val$poster -> b
     void run() -> run
-com.zero.activity.GoodsParticularInfoActivity$6 -> com.zero.activity.bt:
+com.zero.activity.GoodsParticularInfoActivity$6 -> com.zero.activity.br:
     com.zero.activity.GoodsParticularInfoActivity this$0 -> a
     void run() -> run
-com.zero.activity.GoodsParticularInfoActivity$7 -> com.zero.activity.bu:
+com.zero.activity.GoodsParticularInfoActivity$7 -> com.zero.activity.bs:
     com.zero.activity.GoodsParticularInfoActivity this$0 -> a
     void run() -> run
 com.zero.activity.GoodscategorySmallActivity -> com.zero.activity.GoodscategorySmallActivity:
@@ -3028,23 +3024,23 @@ com.zero.activity.GoodscategorySmallActivity -> com.zero.activity.GoodscategoryS
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
     android.widget.RelativeLayout access$0(com.zero.activity.GoodscategorySmallActivity) -> a
-com.zero.activity.GoodscategorySmallActivity$1 -> com.zero.activity.bv:
+com.zero.activity.GoodscategorySmallActivity$1 -> com.zero.activity.bt:
     com.zero.activity.GoodscategorySmallActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.GoodscategorySmallActivity access$0(com.zero.activity.GoodscategorySmallActivity$1) -> a
-com.zero.activity.GoodscategorySmallActivity$1$1 -> com.zero.activity.bw:
+com.zero.activity.GoodscategorySmallActivity$1$1 -> com.zero.activity.bu:
     com.zero.activity.GoodscategorySmallActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodscategorySmallActivity$1$2 -> com.zero.activity.bx:
+com.zero.activity.GoodscategorySmallActivity$1$2 -> com.zero.activity.bv:
     com.zero.activity.GoodscategorySmallActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.GoodscategorySmallActivity$2 -> com.zero.activity.by:
+com.zero.activity.GoodscategorySmallActivity$2 -> com.zero.activity.bw:
     com.zero.activity.GoodscategorySmallActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.GoodscategorySmallActivity$3 -> com.zero.activity.bz:
+com.zero.activity.GoodscategorySmallActivity$3 -> com.zero.activity.bx:
     com.zero.activity.GoodscategorySmallActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.GoodscategorySmallActivity$4 -> com.zero.activity.ca:
+com.zero.activity.GoodscategorySmallActivity$4 -> com.zero.activity.by:
     com.zero.activity.GoodscategorySmallActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$zhi -> c
@@ -3093,22 +3089,22 @@ com.zero.activity.HomeActivity -> com.zero.activity.HomeActivity:
     java.util.ArrayList access$4(com.zero.activity.HomeActivity) -> d
     void access$5(com.zero.activity.HomeActivity,java.lang.Object) -> a
     java.lang.Object access$6(com.zero.activity.HomeActivity) -> e
-com.zero.activity.HomeActivity$1 -> com.zero.activity.cb:
+com.zero.activity.HomeActivity$1 -> com.zero.activity.bz:
     com.zero.activity.HomeActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zero.activity.HomeActivity$2 -> com.zero.activity.cc:
+com.zero.activity.HomeActivity$2 -> com.zero.activity.ca:
     com.zero.activity.HomeActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.HomeActivity$3 -> com.zero.activity.cd:
+com.zero.activity.HomeActivity$3 -> com.zero.activity.cb:
     com.zero.activity.HomeActivity this$0 -> a
     void run() -> run
-com.zero.activity.HomeActivity$4 -> com.zero.activity.ce:
+com.zero.activity.HomeActivity$4 -> com.zero.activity.cc:
     com.zero.activity.HomeActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.HomeActivity$5 -> com.zero.activity.cf:
+com.zero.activity.HomeActivity$5 -> com.zero.activity.cd:
     com.zero.activity.HomeActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.HomeActivity$MyAdapter -> com.zero.activity.cg:
+com.zero.activity.HomeActivity$MyAdapter -> com.zero.activity.ce:
     com.zero.activity.HomeActivity this$0 -> a
     int getCount() -> a
     java.lang.Object instantiateItem(android.view.View,int) -> a
@@ -3118,13 +3114,13 @@ com.zero.activity.HomeActivity$MyAdapter -> com.zero.activity.cg:
     android.os.Parcelable saveState() -> b
     void startUpdate(android.view.View) -> a
     void finishUpdate(android.view.View) -> b
-com.zero.activity.HomeActivity$MyPageChangeListener -> com.zero.activity.ch:
+com.zero.activity.HomeActivity$MyPageChangeListener -> com.zero.activity.cf:
     int oldPosition -> b
     com.zero.activity.HomeActivity this$0 -> a
     void onPageSelected(int) -> a
     void onPageScrollStateChanged(int) -> b
     void onPageScrolled(int,float,int) -> a
-com.zero.activity.HomeActivity$ScrollTask -> com.zero.activity.ci:
+com.zero.activity.HomeActivity$ScrollTask -> com.zero.activity.cg:
     com.zero.activity.HomeActivity this$0 -> a
     void run() -> run
 com.zero.activity.IndentDetailsActivity -> com.zero.activity.IndentDetailsActivity:
@@ -3166,42 +3162,42 @@ com.zero.activity.IndentDetailsActivity -> com.zero.activity.IndentDetailsActivi
     void access$10(com.zero.activity.IndentDetailsActivity) -> k
     void access$11(com.zero.activity.IndentDetailsActivity,com.zero.cache.ImageLoader) -> a
     com.zero.cache.ImageLoader access$12(com.zero.activity.IndentDetailsActivity) -> l
-com.zero.activity.IndentDetailsActivity$1 -> com.zero.activity.cj:
+com.zero.activity.IndentDetailsActivity$1 -> com.zero.activity.ch:
     com.zero.activity.IndentDetailsActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.IndentDetailsActivity access$0(com.zero.activity.IndentDetailsActivity$1) -> a
-com.zero.activity.IndentDetailsActivity$1$1 -> com.zero.activity.ck:
+com.zero.activity.IndentDetailsActivity$1$1 -> com.zero.activity.ci:
     com.zero.activity.IndentDetailsActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.IndentDetailsActivity$1$2 -> com.zero.activity.cl:
+com.zero.activity.IndentDetailsActivity$1$2 -> com.zero.activity.cj:
     com.zero.activity.IndentDetailsActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.IndentDetailsActivity$1$3 -> com.zero.activity.cm:
+com.zero.activity.IndentDetailsActivity$1$3 -> com.zero.activity.ck:
     com.zero.activity.IndentDetailsActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.IndentDetailsActivity$1$4 -> com.zero.activity.cn:
+com.zero.activity.IndentDetailsActivity$1$4 -> com.zero.activity.cl:
     com.zero.activity.IndentDetailsActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.IndentDetailsActivity$2 -> com.zero.activity.co:
+com.zero.activity.IndentDetailsActivity$2 -> com.zero.activity.cm:
     com.zero.activity.IndentDetailsActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.IndentDetailsActivity$3 -> com.zero.activity.cp:
+com.zero.activity.IndentDetailsActivity$3 -> com.zero.activity.cn:
     com.zero.activity.IndentDetailsActivity this$0 -> a
     void onClick(android.view.View) -> onClick
     com.zero.activity.IndentDetailsActivity access$0(com.zero.activity.IndentDetailsActivity$3) -> a
-com.zero.activity.IndentDetailsActivity$3$1 -> com.zero.activity.cq:
+com.zero.activity.IndentDetailsActivity$3$1 -> com.zero.activity.co:
     com.zero.activity.IndentDetailsActivity$3 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.IndentDetailsActivity$3$2 -> com.zero.activity.cr:
+com.zero.activity.IndentDetailsActivity$3$2 -> com.zero.activity.cp:
     com.zero.activity.IndentDetailsActivity$3 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.IndentDetailsActivity$4 -> com.zero.activity.cs:
+com.zero.activity.IndentDetailsActivity$4 -> com.zero.activity.cq:
     com.zero.activity.IndentDetailsActivity this$0 -> a
     void run() -> run
-com.zero.activity.IndentDetailsActivity$5 -> com.zero.activity.ct:
+com.zero.activity.IndentDetailsActivity$5 -> com.zero.activity.cr:
     com.zero.activity.IndentDetailsActivity this$0 -> a
     void run() -> run
-com.zero.activity.IndentDetailsActivity$6 -> com.zero.activity.cu:
+com.zero.activity.IndentDetailsActivity$6 -> com.zero.activity.cs:
     com.zero.activity.IndentDetailsActivity this$0 -> a
     void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
     void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
@@ -3227,16 +3223,16 @@ com.zero.activity.IndentInfoActivity -> com.zero.activity.IndentInfoActivity:
     void onBackPressed() -> onBackPressed
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
-com.zero.activity.IndentInfoActivity$1 -> com.zero.activity.cv:
+com.zero.activity.IndentInfoActivity$1 -> com.zero.activity.ct:
     com.zero.activity.IndentInfoActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zero.activity.IndentInfoActivity$2 -> com.zero.activity.cw:
+com.zero.activity.IndentInfoActivity$2 -> com.zero.activity.cu:
     com.zero.activity.IndentInfoActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.IndentInfoActivity$3 -> com.zero.activity.cx:
+com.zero.activity.IndentInfoActivity$3 -> com.zero.activity.cv:
     com.zero.activity.IndentInfoActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.IndentInfoActivity$4 -> com.zero.activity.cy:
+com.zero.activity.IndentInfoActivity$4 -> com.zero.activity.cw:
     com.zero.activity.IndentInfoActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.zero.activity.IntentAddressActivity -> com.zero.activity.IntentAddressActivity:
@@ -3274,38 +3270,38 @@ com.zero.activity.IntentAddressActivity -> com.zero.activity.IntentAddressActivi
     void access$0(com.zero.activity.IntentAddressActivity) -> a
     void access$1(com.zero.activity.IntentAddressActivity,int) -> a
     int access$2(com.zero.activity.IntentAddressActivity) -> b
-com.zero.activity.IntentAddressActivity$1 -> com.zero.activity.cz:
+com.zero.activity.IntentAddressActivity$1 -> com.zero.activity.cx:
     com.zero.activity.IntentAddressActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.IntentAddressActivity access$0(com.zero.activity.IntentAddressActivity$1) -> a
-com.zero.activity.IntentAddressActivity$1$1 -> com.zero.activity.da:
+com.zero.activity.IntentAddressActivity$1$1 -> com.zero.activity.cy:
     com.zero.activity.IntentAddressActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.IntentAddressActivity$1$2 -> com.zero.activity.db:
+com.zero.activity.IntentAddressActivity$1$2 -> com.zero.activity.cz:
     com.zero.activity.IntentAddressActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.IntentAddressActivity$2 -> com.zero.activity.dc:
+com.zero.activity.IntentAddressActivity$2 -> com.zero.activity.da:
     com.zero.activity.IntentAddressActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.IntentAddressActivity$3 -> com.zero.activity.dd:
+com.zero.activity.IntentAddressActivity$3 -> com.zero.activity.db:
     com.zero.activity.IntentAddressActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.IntentAddressActivity$4 -> com.zero.activity.de:
+com.zero.activity.IntentAddressActivity$4 -> com.zero.activity.dc:
     com.zero.activity.IntentAddressActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.IntentAddressActivity$5 -> com.zero.activity.df:
+com.zero.activity.IntentAddressActivity$5 -> com.zero.activity.dd:
     com.zero.activity.IntentAddressActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.IntentAddressActivity$6 -> com.zero.activity.dg:
+com.zero.activity.IntentAddressActivity$6 -> com.zero.activity.de:
     com.zero.activity.IntentAddressActivity this$0 -> a
     void run() -> run
-com.zero.activity.IntentAddressActivity$7 -> com.zero.activity.dh:
+com.zero.activity.IntentAddressActivity$7 -> com.zero.activity.df:
     com.zero.activity.IntentAddressActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$p -> c
     java.lang.String val$stuAddress -> d
     void run() -> run
-com.zero.activity.IntentAddressActivity$8 -> com.zero.activity.di:
+com.zero.activity.IntentAddressActivity$8 -> com.zero.activity.dg:
     com.zero.activity.IntentAddressActivity this$0 -> a
     void run() -> run
 com.zero.activity.Intentctivity -> com.zero.activity.Intentctivity:
@@ -3325,16 +3321,16 @@ com.zero.activity.Intentctivity -> com.zero.activity.Intentctivity:
     void onBackPressed() -> onBackPressed
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
-com.zero.activity.Intentctivity$1 -> com.zero.activity.dj:
+com.zero.activity.Intentctivity$1 -> com.zero.activity.dh:
     com.zero.activity.Intentctivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zero.activity.Intentctivity$2 -> com.zero.activity.dk:
+com.zero.activity.Intentctivity$2 -> com.zero.activity.di:
     com.zero.activity.Intentctivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.Intentctivity$3 -> com.zero.activity.dl:
+com.zero.activity.Intentctivity$3 -> com.zero.activity.dj:
     com.zero.activity.Intentctivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.Intentctivity$4 -> com.zero.activity.dm:
+com.zero.activity.Intentctivity$4 -> com.zero.activity.dk:
     com.zero.activity.Intentctivity this$0 -> a
     void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
     void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
@@ -3367,20 +3363,20 @@ com.zero.activity.Login -> com.zero.activity.Login:
     void access$2(com.zero.activity.Login,com.zero.bean.Student) -> a
     void access$3(com.zero.activity.Login,java.lang.String) -> a
     void access$4(com.zero.activity.Login) -> c
-com.zero.activity.Login$1 -> com.zero.activity.dn:
+com.zero.activity.Login$1 -> com.zero.activity.dl:
     com.zero.activity.Login this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.Login access$0(com.zero.activity.Login$1) -> a
-com.zero.activity.Login$1$1 -> com.zero.activity.do:
+com.zero.activity.Login$1$1 -> com.zero.activity.dm:
     com.zero.activity.Login$1 this$1 -> a
     void run() -> run
-com.zero.activity.Login$2 -> com.zero.activity.dp:
+com.zero.activity.Login$2 -> com.zero.activity.dn:
     com.zero.activity.Login this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.Login$3 -> com.zero.activity.dq:
+com.zero.activity.Login$3 -> com.zero.activity.do:
     com.zero.activity.Login this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.Login$4 -> com.zero.activity.dr:
+com.zero.activity.Login$4 -> com.zero.activity.dp:
     com.zero.activity.Login this$0 -> a
     java.util.List val$PNames -> b
     java.util.List val$PValues -> c
@@ -3389,17 +3385,20 @@ com.zero.activity.Login$4 -> com.zero.activity.dr:
     void run() -> run
 com.zero.activity.MainActivity -> com.zero.activity.MainActivity:
     com.zero.activity.MainActivity instance -> a
-    android.app.Activity activity -> g
-    android.widget.RadioGroup radioGroup -> h
-    android.widget.ViewFlipper body -> i
-    android.widget.FrameLayout gard -> j
-    android.app.LocalActivityManager m_ActivityManager -> k
+    android.app.Activity activity -> h
+    android.widget.RadioGroup radioGroup -> i
+    android.widget.ViewFlipper body -> j
+    android.widget.FrameLayout gard -> k
+    android.app.LocalActivityManager m_ActivityManager -> l
     android.widget.RadioButton home_radio -> b
     android.widget.RadioButton category_radio -> c
     android.widget.RadioButton search_radio -> d
     android.widget.RadioButton shopping_radio -> e
     android.widget.RadioButton more_radio -> f
-    android.widget.RadioGroup$OnCheckedChangeListener onCheckedChangeListener -> l
+    com.zero.tools.UpdateManager updateMan -> m
+    android.app.ProgressDialog updateProgressDialog -> n
+    android.widget.RadioGroup$OnCheckedChangeListener onCheckedChangeListener -> o
+    com.zero.tools.UpdateManager$UpdateCallback appUpdateCb -> g
     void onCreate(android.os.Bundle) -> onCreate
     void addView() -> a
     void findViews() -> b
@@ -3409,19 +3408,36 @@ com.zero.activity.MainActivity -> com.zero.activity.MainActivity:
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
     void setActivity(android.app.Activity) -> a
+    void checkVesin() -> d
     android.widget.ViewFlipper access$0(com.zero.activity.MainActivity) -> a
     android.app.LocalActivityManager access$1(com.zero.activity.MainActivity) -> b
-    android.widget.FrameLayout access$2(com.zero.activity.MainActivity) -> c
-com.zero.activity.MainActivity$1 -> com.zero.activity.ds:
+    android.app.ProgressDialog access$2(com.zero.activity.MainActivity) -> c
+    com.zero.tools.UpdateManager access$3(com.zero.activity.MainActivity) -> d
+    void access$4(com.zero.activity.MainActivity,android.app.ProgressDialog) -> a
+    android.widget.FrameLayout access$5(com.zero.activity.MainActivity) -> e
+com.zero.activity.MainActivity$1 -> com.zero.activity.dq:
     com.zero.activity.MainActivity this$0 -> a
     void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
-com.zero.activity.MainActivity$2 -> com.zero.activity.dt:
+com.zero.activity.MainActivity$2 -> com.zero.activity.dr:
     com.zero.activity.MainActivity this$0 -> a
-    void onClick(android.view.View) -> onClick
+    void downloadProgressChanged(int) -> a
+    void downloadCompleted(java.lang.Boolean,java.lang.CharSequence) -> a
+    void downloadCanceled() -> a
+    void checkUpdateCompleted(java.lang.Boolean,java.lang.CharSequence) -> b
+    com.zero.activity.MainActivity access$0(com.zero.activity.MainActivity$2) -> a
+com.zero.activity.MainActivity$2$1 -> com.zero.activity.ds:
+    com.zero.activity.MainActivity$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.zero.activity.MainActivity$2$2 -> com.zero.activity.dt:
+    com.zero.activity.MainActivity$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
 com.zero.activity.MainActivity$3 -> com.zero.activity.du:
     com.zero.activity.MainActivity this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
+    void onClick(android.view.View) -> onClick
 com.zero.activity.MainActivity$4 -> com.zero.activity.dv:
+    com.zero.activity.MainActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.zero.activity.MainActivity$5 -> com.zero.activity.dw:
     com.zero.activity.MainActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.zero.activity.MoreActivity -> com.zero.activity.MoreActivity:
@@ -3466,54 +3482,54 @@ com.zero.activity.MyFavoriteActivity -> com.zero.activity.MyFavoriteActivity:
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
     void onClick(android.view.View) -> onClick
     android.app.ProgressDialog access$0(com.zero.activity.MyFavoriteActivity) -> a
-com.zero.activity.MyFavoriteActivity$1 -> com.zero.activity.dw:
+com.zero.activity.MyFavoriteActivity$1 -> com.zero.activity.dx:
     com.zero.activity.MyFavoriteActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.MyFavoriteActivity access$0(com.zero.activity.MyFavoriteActivity$1) -> a
-com.zero.activity.MyFavoriteActivity$1$1 -> com.zero.activity.dx:
+com.zero.activity.MyFavoriteActivity$1$1 -> com.zero.activity.dy:
     com.zero.activity.MyFavoriteActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyFavoriteActivity$1$2 -> com.zero.activity.dy:
+com.zero.activity.MyFavoriteActivity$1$2 -> com.zero.activity.dz:
     com.zero.activity.MyFavoriteActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyFavoriteActivity$1$3 -> com.zero.activity.dz:
+com.zero.activity.MyFavoriteActivity$1$3 -> com.zero.activity.ea:
     com.zero.activity.MyFavoriteActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyFavoriteActivity$1$4 -> com.zero.activity.ea:
+com.zero.activity.MyFavoriteActivity$1$4 -> com.zero.activity.eb:
     com.zero.activity.MyFavoriteActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyFavoriteActivity$1$5 -> com.zero.activity.eb:
+com.zero.activity.MyFavoriteActivity$1$5 -> com.zero.activity.ec:
     com.zero.activity.MyFavoriteActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyFavoriteActivity$1$6 -> com.zero.activity.ec:
+com.zero.activity.MyFavoriteActivity$1$6 -> com.zero.activity.ed:
     com.zero.activity.MyFavoriteActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyFavoriteActivity$1$7 -> com.zero.activity.ed:
+com.zero.activity.MyFavoriteActivity$1$7 -> com.zero.activity.ee:
     com.zero.activity.MyFavoriteActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyFavoriteActivity$1$8 -> com.zero.activity.ee:
+com.zero.activity.MyFavoriteActivity$1$8 -> com.zero.activity.ef:
     com.zero.activity.MyFavoriteActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyFavoriteActivity$2 -> com.zero.activity.ef:
+com.zero.activity.MyFavoriteActivity$2 -> com.zero.activity.eg:
     com.zero.activity.MyFavoriteActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.MyFavoriteActivity$3 -> com.zero.activity.eg:
+com.zero.activity.MyFavoriteActivity$3 -> com.zero.activity.eh:
     com.zero.activity.MyFavoriteActivity this$0 -> a
     void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
     void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
-com.zero.activity.MyFavoriteActivity$4 -> com.zero.activity.eh:
+com.zero.activity.MyFavoriteActivity$4 -> com.zero.activity.ei:
     com.zero.activity.MyFavoriteActivity this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.zero.activity.MyFavoriteActivity$5 -> com.zero.activity.ei:
+com.zero.activity.MyFavoriteActivity$5 -> com.zero.activity.ej:
     com.zero.activity.MyFavoriteActivity this$0 -> a
     void run() -> run
-com.zero.activity.MyFavoriteActivity$6 -> com.zero.activity.ej:
+com.zero.activity.MyFavoriteActivity$6 -> com.zero.activity.ek:
     com.zero.activity.MyFavoriteActivity this$0 -> a
     void run() -> run
-com.zero.activity.MyFavoriteActivity$7 -> com.zero.activity.ek:
+com.zero.activity.MyFavoriteActivity$7 -> com.zero.activity.el:
     com.zero.activity.MyFavoriteActivity this$0 -> a
     void run() -> run
-com.zero.activity.MyFavoriteActivity$8 -> com.zero.activity.el:
+com.zero.activity.MyFavoriteActivity$8 -> com.zero.activity.em:
     com.zero.activity.MyFavoriteActivity this$0 -> a
     void run() -> run
 com.zero.activity.MyOrderCategoryActivity -> com.zero.activity.MyOrderCategoryActivity:
@@ -3528,7 +3544,7 @@ com.zero.activity.MyOrderCategoryActivity -> com.zero.activity.MyOrderCategoryAc
     void onBackPressed() -> onBackPressed
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
-com.zero.activity.MyOrderCategoryActivity$1 -> com.zero.activity.em:
+com.zero.activity.MyOrderCategoryActivity$1 -> com.zero.activity.en:
     com.zero.activity.MyOrderCategoryActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.zero.activity.MyOrderListActivity -> com.zero.activity.MyOrderListActivity:
@@ -3562,29 +3578,29 @@ com.zero.activity.MyOrderListActivity -> com.zero.activity.MyOrderListActivity:
     int access$6(com.zero.activity.MyOrderListActivity) -> g
     void access$7(com.zero.activity.MyOrderListActivity,java.util.List) -> a
     java.util.List access$8(com.zero.activity.MyOrderListActivity) -> h
-com.zero.activity.MyOrderListActivity$1 -> com.zero.activity.en:
+com.zero.activity.MyOrderListActivity$1 -> com.zero.activity.eo:
     com.zero.activity.MyOrderListActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.MyOrderListActivity access$0(com.zero.activity.MyOrderListActivity$1) -> a
-com.zero.activity.MyOrderListActivity$1$1 -> com.zero.activity.eo:
+com.zero.activity.MyOrderListActivity$1$1 -> com.zero.activity.ep:
     com.zero.activity.MyOrderListActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyOrderListActivity$1$2 -> com.zero.activity.ep:
+com.zero.activity.MyOrderListActivity$1$2 -> com.zero.activity.eq:
     com.zero.activity.MyOrderListActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyOrderListActivity$1$3 -> com.zero.activity.eq:
+com.zero.activity.MyOrderListActivity$1$3 -> com.zero.activity.er:
     com.zero.activity.MyOrderListActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyOrderListActivity$1$4 -> com.zero.activity.er:
+com.zero.activity.MyOrderListActivity$1$4 -> com.zero.activity.es:
     com.zero.activity.MyOrderListActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.MyOrderListActivity$2 -> com.zero.activity.es:
+com.zero.activity.MyOrderListActivity$2 -> com.zero.activity.et:
     com.zero.activity.MyOrderListActivity this$0 -> a
     void run() -> run
-com.zero.activity.MyOrderListActivity$3 -> com.zero.activity.et:
+com.zero.activity.MyOrderListActivity$3 -> com.zero.activity.eu:
     com.zero.activity.MyOrderListActivity this$0 -> a
     void run() -> run
-com.zero.activity.MyOrderListActivity$4 -> com.zero.activity.eu:
+com.zero.activity.MyOrderListActivity$4 -> com.zero.activity.ev:
     com.zero.activity.MyOrderListActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.zero.activity.MyWebViewActivity -> com.zero.activity.MyWebViewActivity:
@@ -3594,21 +3610,21 @@ com.zero.activity.MyWebViewActivity -> com.zero.activity.MyWebViewActivity:
     java.lang.String from -> d
     void onCreate(android.os.Bundle) -> onCreate
     void getUrl() -> a
-com.zero.activity.MyWebViewActivity$1 -> com.zero.activity.ev:
+com.zero.activity.MyWebViewActivity$1 -> com.zero.activity.ew:
     com.zero.activity.MyWebViewActivity this$0 -> a
     void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
     void onReceivedTitle(android.webkit.WebView,java.lang.String) -> onReceivedTitle
-com.zero.activity.MyWebViewActivity$2 -> com.zero.activity.ew:
+com.zero.activity.MyWebViewActivity$2 -> com.zero.activity.ex:
     com.zero.activity.MyWebViewActivity this$0 -> a
     void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
     boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
-com.zero.activity.MyWebViewActivity$3 -> com.zero.activity.ex:
+com.zero.activity.MyWebViewActivity$3 -> com.zero.activity.ey:
     com.zero.activity.MyWebViewActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.MyWebViewActivity$4 -> com.zero.activity.ey:
+com.zero.activity.MyWebViewActivity$4 -> com.zero.activity.ez:
     com.zero.activity.MyWebViewActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.MyWebViewActivity$5 -> com.zero.activity.ez:
+com.zero.activity.MyWebViewActivity$5 -> com.zero.activity.fa:
     com.zero.activity.MyWebViewActivity this$0 -> a
     boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
 com.zero.activity.OrderFoodDetailActivity -> com.zero.activity.OrderFoodDetailActivity:
@@ -3657,41 +3673,41 @@ com.zero.activity.Register -> com.zero.activity.Register:
     android.widget.Button access$5(com.zero.activity.Register) -> f
     android.widget.Button access$6(com.zero.activity.Register) -> g
     java.lang.String access$7(com.zero.activity.Register) -> h
-com.zero.activity.Register$1 -> com.zero.activity.fa:
+com.zero.activity.Register$1 -> com.zero.activity.fb:
     com.zero.activity.Register this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zero.activity.Register$10 -> com.zero.activity.fb:
+com.zero.activity.Register$10 -> com.zero.activity.fc:
     com.zero.activity.Register this$0 -> a
     java.util.List val$p -> b
     java.util.List val$values -> c
     void run() -> run
-com.zero.activity.Register$11 -> com.zero.activity.fc:
+com.zero.activity.Register$11 -> com.zero.activity.fd:
     com.zero.activity.Register this$0 -> a
     android.os.Message val$msg -> b
     void run() -> run
-com.zero.activity.Register$2 -> com.zero.activity.fd:
+com.zero.activity.Register$2 -> com.zero.activity.fe:
     com.zero.activity.Register this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.Register$3 -> com.zero.activity.fe:
+com.zero.activity.Register$3 -> com.zero.activity.ff:
     com.zero.activity.Register this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.Register$4 -> com.zero.activity.ff:
+com.zero.activity.Register$4 -> com.zero.activity.fg:
     com.zero.activity.Register this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.Register$5 -> com.zero.activity.fg:
+com.zero.activity.Register$5 -> com.zero.activity.fh:
     com.zero.activity.Register this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.Register$6 -> com.zero.activity.fh:
+com.zero.activity.Register$6 -> com.zero.activity.fi:
     com.zero.activity.Register this$0 -> a
     void run() -> run
-com.zero.activity.Register$7 -> com.zero.activity.fi:
+com.zero.activity.Register$7 -> com.zero.activity.fj:
     com.zero.activity.Register this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.zero.activity.Register$8 -> com.zero.activity.fj:
+com.zero.activity.Register$8 -> com.zero.activity.fk:
     com.zero.activity.Register this$0 -> a
     void onTick(long) -> onTick
     void onFinish() -> onFinish
-com.zero.activity.Register$9 -> com.zero.activity.fk:
+com.zero.activity.Register$9 -> com.zero.activity.fl:
     com.zero.activity.Register this$0 -> a
     java.util.List val$p -> b
     java.util.List val$values -> c
@@ -3730,56 +3746,56 @@ com.zero.activity.SearchActivity -> com.zero.activity.SearchActivity:
     android.widget.RelativeLayout access$0(com.zero.activity.SearchActivity) -> a
     void access$1(com.zero.activity.SearchActivity,java.lang.String) -> a
     java.lang.String access$2(com.zero.activity.SearchActivity) -> b
-com.zero.activity.SearchActivity$1 -> com.zero.activity.fl:
+com.zero.activity.SearchActivity$1 -> com.zero.activity.fm:
     com.zero.activity.SearchActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.SearchActivity access$0(com.zero.activity.SearchActivity$1) -> a
-com.zero.activity.SearchActivity$1$1 -> com.zero.activity.fm:
+com.zero.activity.SearchActivity$1$1 -> com.zero.activity.fn:
     com.zero.activity.SearchActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SearchActivity$1$2 -> com.zero.activity.fn:
+com.zero.activity.SearchActivity$1$2 -> com.zero.activity.fo:
     com.zero.activity.SearchActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SearchActivity$1$3 -> com.zero.activity.fo:
+com.zero.activity.SearchActivity$1$3 -> com.zero.activity.fp:
     com.zero.activity.SearchActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SearchActivity$1$4 -> com.zero.activity.fp:
+com.zero.activity.SearchActivity$1$4 -> com.zero.activity.fq:
     com.zero.activity.SearchActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SearchActivity$1$5 -> com.zero.activity.fq:
+com.zero.activity.SearchActivity$1$5 -> com.zero.activity.fr:
     com.zero.activity.SearchActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SearchActivity$1$6 -> com.zero.activity.fr:
+com.zero.activity.SearchActivity$1$6 -> com.zero.activity.fs:
     com.zero.activity.SearchActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SearchActivity$10 -> com.zero.activity.fs:
+com.zero.activity.SearchActivity$10 -> com.zero.activity.ft:
     com.zero.activity.SearchActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$zhi -> c
     void run() -> run
-com.zero.activity.SearchActivity$2 -> com.zero.activity.ft:
+com.zero.activity.SearchActivity$2 -> com.zero.activity.fu:
     com.zero.activity.SearchActivity this$0 -> a
     void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
     void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
-com.zero.activity.SearchActivity$3 -> com.zero.activity.fu:
+com.zero.activity.SearchActivity$3 -> com.zero.activity.fv:
     com.zero.activity.SearchActivity this$0 -> a
     void run() -> run
-com.zero.activity.SearchActivity$4 -> com.zero.activity.fv:
+com.zero.activity.SearchActivity$4 -> com.zero.activity.fw:
     com.zero.activity.SearchActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.SearchActivity$5 -> com.zero.activity.fw:
+com.zero.activity.SearchActivity$5 -> com.zero.activity.fx:
     com.zero.activity.SearchActivity this$0 -> a
     void run() -> run
-com.zero.activity.SearchActivity$6 -> com.zero.activity.fx:
+com.zero.activity.SearchActivity$6 -> com.zero.activity.fy:
     com.zero.activity.SearchActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.SearchActivity$7 -> com.zero.activity.fy:
+com.zero.activity.SearchActivity$7 -> com.zero.activity.fz:
     com.zero.activity.SearchActivity this$0 -> a
     void run() -> run
-com.zero.activity.SearchActivity$8 -> com.zero.activity.fz:
+com.zero.activity.SearchActivity$8 -> com.zero.activity.ga:
     com.zero.activity.SearchActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.SearchActivity$9 -> com.zero.activity.ga:
+com.zero.activity.SearchActivity$9 -> com.zero.activity.gb:
     com.zero.activity.SearchActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$zhi -> c
@@ -3800,24 +3816,24 @@ com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity -> com.zero.activi
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
     void getView() -> a
     android.widget.RelativeLayout access$0(com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity) -> a
-com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1 -> com.zero.activity.gb:
+com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1 -> com.zero.activity.gc:
     com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity access$0(com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1) -> a
-com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1$1 -> com.zero.activity.gc:
+com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1$1 -> com.zero.activity.gd:
     com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1$2 -> com.zero.activity.gd:
+com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1$2 -> com.zero.activity.ge:
     com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$2 -> com.zero.activity.ge:
+com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$2 -> com.zero.activity.gf:
     com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity this$0 -> a
     android.os.Bundle val$b1 -> b
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$3 -> com.zero.activity.gf:
+com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$3 -> com.zero.activity.gg:
     com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$4 -> com.zero.activity.gg:
+com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity$4 -> com.zero.activity.gh:
     com.zero.activity.SearchFoodsCategoryByRestaurantNameActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$zhi -> c
@@ -3851,29 +3867,29 @@ com.zero.activity.SettingsActivity -> com.zero.activity.SettingsActivity:
     void access$2(com.zero.activity.SettingsActivity,android.app.ProgressDialog) -> a
     android.content.SharedPreferences access$3(com.zero.activity.SettingsActivity) -> c
     java.lang.String access$4(com.zero.activity.SettingsActivity) -> d
-com.zero.activity.SettingsActivity$1 -> com.zero.activity.gh:
+com.zero.activity.SettingsActivity$1 -> com.zero.activity.gi:
     com.zero.activity.SettingsActivity this$0 -> a
     void downloadProgressChanged(int) -> a
     void downloadCompleted(java.lang.Boolean,java.lang.CharSequence) -> a
     void downloadCanceled() -> a
     void checkUpdateCompleted(java.lang.Boolean,java.lang.CharSequence) -> b
     com.zero.activity.SettingsActivity access$0(com.zero.activity.SettingsActivity$1) -> a
-com.zero.activity.SettingsActivity$1$1 -> com.zero.activity.gi:
+com.zero.activity.SettingsActivity$1$1 -> com.zero.activity.gj:
     com.zero.activity.SettingsActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SettingsActivity$1$2 -> com.zero.activity.gj:
+com.zero.activity.SettingsActivity$1$2 -> com.zero.activity.gk:
     com.zero.activity.SettingsActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SettingsActivity$2 -> com.zero.activity.gk:
+com.zero.activity.SettingsActivity$2 -> com.zero.activity.gl:
     com.zero.activity.SettingsActivity this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.zero.activity.SettingsActivity$3 -> com.zero.activity.gl:
+com.zero.activity.SettingsActivity$3 -> com.zero.activity.gm:
     com.zero.activity.SettingsActivity this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.zero.activity.SettingsActivity$4 -> com.zero.activity.gm:
+com.zero.activity.SettingsActivity$4 -> com.zero.activity.gn:
     com.zero.activity.SettingsActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SettingsActivity$5 -> com.zero.activity.gn:
+com.zero.activity.SettingsActivity$5 -> com.zero.activity.go:
     com.zero.activity.SettingsActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.zero.activity.ShakeActivity -> com.zero.activity.ShakeActivity:
@@ -3898,32 +3914,32 @@ com.zero.activity.ShakeActivity -> com.zero.activity.ShakeActivity:
     void setAddFoodShoppingcarListener(android.view.View) -> setAddFoodShoppingcarListener
     android.app.ProgressDialog access$0(com.zero.activity.ShakeActivity) -> a
     android.widget.RelativeLayout access$1(com.zero.activity.ShakeActivity) -> b
-com.zero.activity.ShakeActivity$1 -> com.zero.activity.go:
+com.zero.activity.ShakeActivity$1 -> com.zero.activity.gp:
     com.zero.activity.ShakeActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.ShakeActivity access$0(com.zero.activity.ShakeActivity$1) -> a
-com.zero.activity.ShakeActivity$1$1 -> com.zero.activity.gp:
+com.zero.activity.ShakeActivity$1$1 -> com.zero.activity.gq:
     com.zero.activity.ShakeActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.ShakeActivity$1$2 -> com.zero.activity.gq:
+com.zero.activity.ShakeActivity$1$2 -> com.zero.activity.gr:
     com.zero.activity.ShakeActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.ShakeActivity$2 -> com.zero.activity.gr:
+com.zero.activity.ShakeActivity$2 -> com.zero.activity.gs:
     com.zero.activity.ShakeActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.ShakeActivity$3 -> com.zero.activity.gs:
+com.zero.activity.ShakeActivity$3 -> com.zero.activity.gt:
     com.zero.activity.ShakeActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.ShakeActivity$4 -> com.zero.activity.gt:
+com.zero.activity.ShakeActivity$4 -> com.zero.activity.gu:
     com.zero.activity.ShakeActivity this$0 -> a
     void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
     void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
-com.zero.activity.ShakeActivity$5 -> com.zero.activity.gu:
+com.zero.activity.ShakeActivity$5 -> com.zero.activity.gv:
     com.zero.activity.ShakeActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$zhi -> c
     void run() -> run
-com.zero.activity.ShakeActivity$6 -> com.zero.activity.gv:
+com.zero.activity.ShakeActivity$6 -> com.zero.activity.gw:
     com.zero.activity.ShakeActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$zhi -> c
@@ -3957,38 +3973,38 @@ com.zero.activity.ShoppingCarActivity -> com.zero.activity.ShoppingCarActivity:
     void updateShoppingCar() -> c
     void onClick(android.view.View) -> onClick
     android.app.ProgressDialog access$0(com.zero.activity.ShoppingCarActivity) -> a
-com.zero.activity.ShoppingCarActivity$1 -> com.zero.activity.gw:
+com.zero.activity.ShoppingCarActivity$1 -> com.zero.activity.gx:
     com.zero.activity.ShoppingCarActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.ShoppingCarActivity access$0(com.zero.activity.ShoppingCarActivity$1) -> a
-com.zero.activity.ShoppingCarActivity$1$1 -> com.zero.activity.gx:
+com.zero.activity.ShoppingCarActivity$1$1 -> com.zero.activity.gy:
     com.zero.activity.ShoppingCarActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.ShoppingCarActivity$1$2 -> com.zero.activity.gy:
+com.zero.activity.ShoppingCarActivity$1$2 -> com.zero.activity.gz:
     com.zero.activity.ShoppingCarActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.ShoppingCarActivity$1$3 -> com.zero.activity.gz:
+com.zero.activity.ShoppingCarActivity$1$3 -> com.zero.activity.ha:
     com.zero.activity.ShoppingCarActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.ShoppingCarActivity$1$4 -> com.zero.activity.ha:
+com.zero.activity.ShoppingCarActivity$1$4 -> com.zero.activity.hb:
     com.zero.activity.ShoppingCarActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.ShoppingCarActivity$1$5 -> com.zero.activity.hb:
+com.zero.activity.ShoppingCarActivity$1$5 -> com.zero.activity.hc:
     com.zero.activity.ShoppingCarActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.ShoppingCarActivity$1$6 -> com.zero.activity.hc:
+com.zero.activity.ShoppingCarActivity$1$6 -> com.zero.activity.hd:
     com.zero.activity.ShoppingCarActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.ShoppingCarActivity$2 -> com.zero.activity.hd:
+com.zero.activity.ShoppingCarActivity$2 -> com.zero.activity.he:
     com.zero.activity.ShoppingCarActivity this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.zero.activity.ShoppingCarActivity$3 -> com.zero.activity.he:
+com.zero.activity.ShoppingCarActivity$3 -> com.zero.activity.hf:
     com.zero.activity.ShoppingCarActivity this$0 -> a
     void run() -> run
-com.zero.activity.ShoppingCarActivity$4 -> com.zero.activity.hf:
+com.zero.activity.ShoppingCarActivity$4 -> com.zero.activity.hg:
     com.zero.activity.ShoppingCarActivity this$0 -> a
     void run() -> run
-com.zero.activity.ShoppingCarActivity$5 -> com.zero.activity.hg:
+com.zero.activity.ShoppingCarActivity$5 -> com.zero.activity.hh:
     com.zero.activity.ShoppingCarActivity this$0 -> a
     void run() -> run
 com.zero.activity.SomeProductActivity -> com.zero.activity.SomeProductActivity:
@@ -4008,14 +4024,14 @@ com.zero.activity.SomeProductActivity -> com.zero.activity.SomeProductActivity:
     void getGuanggao() -> d
     void onClick(android.view.View) -> onClick
     void access$0(com.zero.activity.SomeProductActivity) -> a
-com.zero.activity.SomeProductActivity$1 -> com.zero.activity.hh:
+com.zero.activity.SomeProductActivity$1 -> com.zero.activity.hi:
     com.zero.activity.SomeProductActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.zero.activity.SomeProductActivity$2 -> com.zero.activity.hi:
+com.zero.activity.SomeProductActivity$2 -> com.zero.activity.hj:
     com.zero.activity.SomeProductActivity this$0 -> a
     java.util.Timer val$timer -> b
     void run() -> run
-com.zero.activity.SomeProductActivity$3 -> com.zero.activity.hj:
+com.zero.activity.SomeProductActivity$3 -> com.zero.activity.hk:
     com.zero.activity.SomeProductActivity this$0 -> a
     void run() -> run
 com.zero.activity.SortFoodActivity -> com.zero.activity.SortFoodActivity:
@@ -4040,31 +4056,31 @@ com.zero.activity.SortFoodActivity -> com.zero.activity.SortFoodActivity:
     void setAddFoodShoppingcarListener(android.view.View) -> setAddFoodShoppingcarListener
     android.widget.RelativeLayout access$0(com.zero.activity.SortFoodActivity) -> a
     android.app.ProgressDialog access$1(com.zero.activity.SortFoodActivity) -> b
-com.zero.activity.SortFoodActivity$1 -> com.zero.activity.hk:
+com.zero.activity.SortFoodActivity$1 -> com.zero.activity.hl:
     com.zero.activity.SortFoodActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.SortFoodActivity access$0(com.zero.activity.SortFoodActivity$1) -> a
-com.zero.activity.SortFoodActivity$1$1 -> com.zero.activity.hl:
+com.zero.activity.SortFoodActivity$1$1 -> com.zero.activity.hm:
     com.zero.activity.SortFoodActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SortFoodActivity$1$2 -> com.zero.activity.hm:
+com.zero.activity.SortFoodActivity$1$2 -> com.zero.activity.hn:
     com.zero.activity.SortFoodActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SortFoodActivity$2 -> com.zero.activity.hn:
+com.zero.activity.SortFoodActivity$2 -> com.zero.activity.ho:
     com.zero.activity.SortFoodActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.SortFoodActivity$3 -> com.zero.activity.ho:
+com.zero.activity.SortFoodActivity$3 -> com.zero.activity.hp:
     com.zero.activity.SortFoodActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.SortFoodActivity$4 -> com.zero.activity.hp:
+com.zero.activity.SortFoodActivity$4 -> com.zero.activity.hq:
     com.zero.activity.SortFoodActivity this$0 -> a
     void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
     void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
-com.zero.activity.SortFoodActivity$5 -> com.zero.activity.hq:
+com.zero.activity.SortFoodActivity$5 -> com.zero.activity.hr:
     com.zero.activity.SortFoodActivity this$0 -> a
     android.os.Bundle val$b -> b
     void run() -> run
-com.zero.activity.SortFoodActivity$6 -> com.zero.activity.hr:
+com.zero.activity.SortFoodActivity$6 -> com.zero.activity.hs:
     com.zero.activity.SortFoodActivity this$0 -> a
     java.util.List val$names -> b
     java.util.List val$zhi -> c
@@ -4087,24 +4103,24 @@ com.zero.activity.SortFoodInfoActivity -> com.zero.activity.SortFoodInfoActivity
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
     void getView() -> a
     android.widget.RelativeLayout access$0(com.zero.activity.SortFoodInfoActivity) -> a
-com.zero.activity.SortFoodInfoActivity$1 -> com.zero.activity.hs:
+com.zero.activity.SortFoodInfoActivity$1 -> com.zero.activity.ht:
     com.zero.activity.SortFoodInfoActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.SortFoodInfoActivity access$0(com.zero.activity.SortFoodInfoActivity$1) -> a
-com.zero.activity.SortFoodInfoActivity$1$1 -> com.zero.activity.ht:
+com.zero.activity.SortFoodInfoActivity$1$1 -> com.zero.activity.hu:
     com.zero.activity.SortFoodInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SortFoodInfoActivity$1$2 -> com.zero.activity.hu:
+com.zero.activity.SortFoodInfoActivity$1$2 -> com.zero.activity.hv:
     com.zero.activity.SortFoodInfoActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.SortFoodInfoActivity$2 -> com.zero.activity.hv:
+com.zero.activity.SortFoodInfoActivity$2 -> com.zero.activity.hw:
     com.zero.activity.SortFoodInfoActivity this$0 -> a
     android.os.Bundle val$b1 -> b
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.zero.activity.SortFoodInfoActivity$3 -> com.zero.activity.hw:
+com.zero.activity.SortFoodInfoActivity$3 -> com.zero.activity.hx:
     com.zero.activity.SortFoodInfoActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.SortFoodInfoActivity$4 -> com.zero.activity.hx:
+com.zero.activity.SortFoodInfoActivity$4 -> com.zero.activity.hy:
     com.zero.activity.SortFoodInfoActivity this$0 -> a
     android.os.Bundle val$b1 -> b
     void run() -> run
@@ -4120,10 +4136,10 @@ com.zero.activity.UserInfoActivity -> com.zero.activity.UserInfoActivity:
     void onBackPressed() -> onBackPressed
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
-com.zero.activity.UserInfoActivity$1 -> com.zero.activity.hy:
+com.zero.activity.UserInfoActivity$1 -> com.zero.activity.hz:
     com.zero.activity.UserInfoActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.zero.activity.UserInfoActivity$2 -> com.zero.activity.hz:
+com.zero.activity.UserInfoActivity$2 -> com.zero.activity.ia:
     com.zero.activity.UserInfoActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.zero.activity.WellcomeActivity -> com.zero.activity.WellcomeActivity:
@@ -4135,24 +4151,24 @@ com.zero.activity.WellcomeActivity -> com.zero.activity.WellcomeActivity:
     void onRestart() -> onRestart
     void checkNet() -> a
     void autoLogin() -> b
-com.zero.activity.WellcomeActivity$1 -> com.zero.activity.ia:
+com.zero.activity.WellcomeActivity$1 -> com.zero.activity.ib:
     com.zero.activity.WellcomeActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
     com.zero.activity.WellcomeActivity access$0(com.zero.activity.WellcomeActivity$1) -> a
-com.zero.activity.WellcomeActivity$1$1 -> com.zero.activity.ib:
+com.zero.activity.WellcomeActivity$1$1 -> com.zero.activity.ic:
     com.zero.activity.WellcomeActivity$1 this$1 -> a
     void run() -> run
-com.zero.activity.WellcomeActivity$2 -> com.zero.activity.ic:
+com.zero.activity.WellcomeActivity$2 -> com.zero.activity.id:
     com.zero.activity.WellcomeActivity this$0 -> a
     int val$loginMsg -> b
     void run() -> run
-com.zero.activity.WellcomeActivity$3 -> com.zero.activity.id:
+com.zero.activity.WellcomeActivity$3 -> com.zero.activity.ie:
     com.zero.activity.WellcomeActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.WellcomeActivity$4 -> com.zero.activity.ie:
+com.zero.activity.WellcomeActivity$4 -> com.zero.activity.if:
     com.zero.activity.WellcomeActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.zero.activity.WellcomeActivity$5 -> com.zero.activity.if:
+com.zero.activity.WellcomeActivity$5 -> com.zero.activity.ig:
     com.zero.activity.WellcomeActivity this$0 -> a
     java.util.List val$PNames -> b
     java.util.List val$PValues -> c

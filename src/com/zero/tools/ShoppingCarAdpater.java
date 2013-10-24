@@ -6,6 +6,8 @@ import java.util.List;
 
 import com.zero.activity.DishDetailActivity;
 import com.zero.activity.GoodsParticularInfoActivity;
+import com.zero.bean.Dish;
+import com.zero.bean.GoodsInfo;
 import com.zero.bean.ShoppingCar;
 import com.zero.cache.ImageLoader;
 import com.zero.www.R;
@@ -156,7 +158,7 @@ public class ShoppingCarAdpater extends BaseAdapter{
 						double total = Arith.mul(info.getGoods().getPrice(), numberq);
 						holder.price.setText(total+"");
 					}else{
-						double total1 = Arith.mul(info.getGoods().getPrice(), numberq);
+						double total1 = Arith.mul(info.getDish().getPrice(), numberq);
 						holder.price.setText(total1 + "");
 					}
 					number.add(1);

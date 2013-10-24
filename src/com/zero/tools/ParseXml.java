@@ -305,10 +305,10 @@ public class ParseXml {
 							OrderInfo goods = new OrderInfo();
 							goods.setId(ob.getInt("GoodsId"));
 							goods.setNumber(ob.getInt("Amount"));
-							goods.setName(ob.getString("GoodsName"));
+							goods.setName(ob.getString("GoodsName").trim());
 							goods.setImage(ob.getString("GoodPicture"));
 							goods.setPrice(ob.getDouble("Price"));
-							goods.setGoodsStandard(ob.getString("Standard"));
+							goods.setGoodsStandard(ob.getString("Standard").trim());
 							goodsinfo.add(goods);
 						}
 					}
@@ -321,8 +321,8 @@ public class ParseXml {
 							goods.setNumber(ob.getInt("Amount"));
 							goods.setImage(ob.getString("FoodPicture"));
 							goods.setPrice(ob.getDouble("Price"));
-							goods.setName(ob.getString("Name"));
-							goods.setRestaurantName(ob.getString("RestaurantName"));
+							goods.setName(ob.getString("Name").trim());
+							goods.setRestaurantName(ob.getString("RestaurantName").trim());
 							goodsinfo.add(goods);
 						}
 					}
@@ -374,7 +374,7 @@ public class ParseXml {
 				poster.setTitle(((SoapObject)detail.getProperty(i)).getProperty("Title").toString());
 				poster.setPointer(Integer.parseInt(((SoapObject)detail.getProperty(i)).getProperty("Pointer").toString()));
 				poster.setGoodsId(Integer.parseInt(((SoapObject)detail.getProperty(i)).getProperty("GoodsId").toString()));
-				if(((SoapObject)detail.getProperty(i)).getProperty("Pointer").toString().equals("0")){
+				if(((SoapObject)detail.getProperty(i)).hasProperty("ADUrl")){
 					poster.setPosterChaining(((SoapObject)detail.getProperty(i)).getProperty("ADUrl").toString());
 				}
 				schools.add(poster);
@@ -677,7 +677,9 @@ public class ParseXml {
 				goods.setFoodId(Integer.parseInt(((SoapObject)detail.getProperty(i)).getProperty("FoodId").toString()));
 				goods.setFoodName(((SoapObject)detail.getProperty(i)).getProperty("FoodName").toString());
 				goods.setPrice(Double.parseDouble(((SoapObject)detail.getProperty(i)).getProperty("Price").toString()));
-				goods.setFoodPicture(((SoapObject)detail.getProperty(i)).getProperty("FoodPicture").toString());
+				if(((SoapObject)detail.getProperty(i)).hasProperty("FoodPicture")){
+					goods.setFoodPicture(((SoapObject)detail.getProperty(i)).getProperty("FoodPicture").toString());
+				}
 				goods.setIsBusy(((SoapObject)detail.getProperty(i)).getProperty("IsBusy").toString());
 				if(((SoapObject)detail.getProperty(i)).getProperty("RestaurantName")!=null){
 					goods.setRestaurantName(((SoapObject)detail.getProperty(i)).getProperty("RestaurantName").toString());

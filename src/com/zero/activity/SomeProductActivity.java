@@ -6,7 +6,9 @@ import java.util.TimerTask;
 
 import com.zero.bean.Poster;
 import com.zero.cache.ImageLoader;
+import com.zero.tools.ConnectionDetector;
 import com.zero.tools.MyApplication;
+import com.zero.tools.MyMethods;
 import com.zero.tools.MySharedPreferences;
 import com.zero.tools.ParseXml;
 import com.zero.www.R;
@@ -21,6 +23,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class SomeProductActivity extends Activity implements OnClickListener{
 	boolean getAddPic;
@@ -114,55 +117,98 @@ public class SomeProductActivity extends Activity implements OnClickListener{
 			}
 		}).start();
 	}
-
 	@Override
 	public void onClick(View arg0) {
 		int flag = -1;
 		int item = -1;
 		switch (arg0.getId()) {
 		case R.id.iv_1st_add:
-			flag = posters.get(0).getPointer();
 			item = 0;
 			break;
 		case R.id.iv_2st_add:
-			flag = posters.get(1).getPointer();
 			item = 1;
 			break;
 		case R.id.iv_3st_add:
-			flag = posters.get(2).getPointer();
 			item = 2;
 			break;
 		case R.id.iv_4st_add:
-			flag = posters.get(3).getPointer();
 			item = 3;
 			break;
 		case R.id.iv_5st_add:
-			flag = posters.get(4).getPointer();
 			item = 4;
 			break;
 		default:
 			break;
 		}
-		Bundle b = new Bundle();
-		switch (flag) {
-		case 0:
-			Intent it = new Intent(SomeProductActivity.this, MyWebViewActivity.class); 
-			Bundle bundle = new Bundle();
-			bundle.putString("addUrl", posters.get(item).getPosterChaining());
-			it.putExtras(bundle);
-			startActivity(it);
+		Poster p = posters.get(item);
+		flag = p.getPointer();
+		String netWorkState = ConnectionDetector.getNetWorkState(SomeProductActivity.this);
+		if(netWorkState!=null){
+			Bundle b = new Bundle();
+			switch (flag) {
+			case 0: // 0=跳转到网页
+				Intent it = new Intent(SomeProductActivity.this, MyWebViewActivity.class); 
+				b.putString("addUrl", p.getPosterChaining());
+				it.putExtras(b);
+				startActivity(it);
+				break;
+			case 1: // 1=跳转到商品详情
+				b.putInt("poster", p.getGoodsId());
+				Intent intent = new Intent(SomeProductActivity.this, GoodsParticularInfoActivity.class);
+				intent.putExtras(b);
+				startActivity(intent);
+				break;
+			case 2: //直接进入超市
+				b.putString("goto", "超市");
+				Intent intent2 = new Intent(SomeProductActivity.this, GoodsCategoryActivity.class);
+				intent2.putExtras(b);
+				startActivity(intent2);
+				break;
+			case 3: //跳转到商品小分类
+				String categorysName = p.getPosterChaining();
+				b.putString("names", categorysName);
+				Intent intent3 = new Intent(SomeProductActivity.this, GoodscategorySmallActivity.class);
+				intent3.putExtras(b);
+				startActivity(intent3);
+				break;
+			case 4: //跳转到指定餐馆
+				String resName = p.getPosterChaining();
+				b.putString("sort", resName);
+				Intent intent4 = new Intent(SomeProductActivity.this, SearchFoodsCategoryByRestaurantNameActivity.class);
+				intent4.putExtras(b);
+				startActivity(intent4);
+				break;
+			case 5: //直接进入快餐
+				Intent intent5 = new Intent(SomeProductActivity.this, FoodsCategoryResActivity.class);
+				startActivity(intent5);
+				break;
+			default:
+				//哪里也不去
+				break;
+			}
 			overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-			break;
-		case 1:
-			b.putInt("poster", posters.get(item).getGoodsId());
-			Intent intent = new Intent(SomeProductActivity.this, GoodsParticularInfoActivity.class);
-			intent.putExtras(b);
-			startActivity(intent);
-			overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-			break;
-		default:
-			break;
+		}else{
+			Toast.makeText(SomeProductActivity.this, MyMethods.NETWORK_MESSAGE, Toast.LENGTH_SHORT).show();
 		}
+//		switch (flag) {
+//		case 0:
+//			Intent it = new Intent(SomeProductActivity.this, MyWebViewActivity.class); 
+//			Bundle bundle = new Bundle();
+//			bundle.putString("addUrl", posters.get(item).getPosterChaining());
+//			it.putExtras(bundle);
+//			startActivity(it);
+//			overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+//			break;
+//		case 1:
+//			b.putInt("poster", posters.get(item).getGoodsId());
+//			Intent intent = new Intent(SomeProductActivity.this, GoodsParticularInfoActivity.class);
+//			intent.putExtras(b);
+//			startActivity(intent);
+//			overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+//			break;
+//		default:
+//			break;
+//		}
 	}
 
 }
